@@ -1,14 +1,16 @@
-<script>
-    import MethodCard from "./MethodCard.svelte";
+<script lang="ts">
+	import type { Method } from '$lib/types';
+	import MethodCard from './MethodCard.svelte';
+
+	export let methodsList: Array<Method>;
 </script>
 
-<style>
-    /* your styles go here */
-</style>
-
 <section>
-    <MethodCard />
-    <MethodCard />
-    <MethodCard />
-    <MethodCard />
+	{#each methodsList as method}
+		<MethodCard {method} />
+	{/each}
 </section>
+
+<style>
+	/* your styles go here */
+</style>

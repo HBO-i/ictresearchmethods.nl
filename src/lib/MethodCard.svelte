@@ -1,22 +1,23 @@
-<script>
-	// your script goes here
+<script lang="ts">
+	import type { Method } from '$lib/types';
+
+	export let method: Method;
 </script>
 
 <article>
 	<div class="card-heading">
 		<div class="card-heading__img">
-			<div class="img" />
+			<img src={method.image} class="img" alt="" />
 		</div>
 		<div class="card-heading__text">
-			<h1>Available product analysis</h1>
-			<h2>Library</h2>
+			<h1>{method.name}</h1>
+			<h2>{method.category}</h2>
 		</div>
 	</div>
 	<div class="card-content">
 		<p class="card-content__heading">Why?</p>
 		<p class="card-content__body">
-			Find out what you are planning to do has already been done (in full or in part) by someone
-			else
+			{method.why}
 		</p>
 	</div>
 	<button class="btn btn-primary">More info</button>
@@ -34,6 +35,7 @@
 		font-weight: 500;
 		margin: 0.2em 0;
 		font-size: 1em;
+		width: 10em;
 	}
 
 	h2 {
@@ -45,6 +47,7 @@
 
 	.card-heading {
 		display: flex;
+		align-items: center;
 		gap: 1em;
 		margin-bottom: 1.5em;
 
@@ -54,11 +57,11 @@
 			max-width: 50%;
 		}
 
-		&__img .img {
+		&__img img {
 			height: 4.375em;
 			width: 4.375em;
 			border-radius: 1em;
-			background-color: antiquewhite;
+			object-fit: cover;
 		}
 	}
 
@@ -75,7 +78,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			max-width: fit-content;
+			width: 1200px;
 
 			&:hover {
 				transform: scale(1.005);
@@ -85,6 +88,19 @@
 
 		button {
 			margin-left: 5em;
+		}
+
+		.card-heading {
+			margin-bottom: 0;
+
+			&__img img {
+				height: 5em;
+				width: 5em;
+			}
+		}
+
+		.card-content__body {
+			width: 42.5em;
 		}
 	}
 </style>
