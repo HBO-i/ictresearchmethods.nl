@@ -9,9 +9,6 @@ const config = {
 
 	kit: {
 		adapter: adapter()
-	},
-	css: (css) => {
-		css.write('public/bundle.css');
 	}
 };
 
