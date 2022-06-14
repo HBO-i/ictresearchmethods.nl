@@ -20,7 +20,7 @@
 			{method.why}
 		</p>
 	</div>
-	<button class="btn btn-primary">More info</button>
+	<button class="btn btn-primary"><a href="/test">More info</a></button>
 </article>
 
 <style lang="scss">
@@ -43,6 +43,12 @@
 		font-size: 0.9em;
 		font-weight: normal;
 		line-height: 0;
+		text-transform: capitalize;
+	}
+
+	button a {
+		text-decoration: none;
+		color: var(--color-white);
 	}
 
 	.card-heading {
@@ -79,11 +85,6 @@
 			justify-content: space-between;
 			align-items: center;
 			width: 1200px;
-
-			&:hover {
-				transform: scale(1.005);
-				cursor: pointer;
-			}
 		}
 
 		button {
@@ -96,6 +97,11 @@
 			&__img img {
 				height: 5em;
 				width: 5em;
+				transition: 0.2s ease-in;
+
+				&:hover {
+					transform: scale(1.5);
+				}
 			}
 		}
 

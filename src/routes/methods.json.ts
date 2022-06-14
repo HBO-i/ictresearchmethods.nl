@@ -1,12 +1,11 @@
 import type { Method } from '$lib/types';
-// import { category } from '$lib/enums';
 
 enum category {
-	library = 'Library',
-	field = 'Field',
-	lab = 'Lab',
-	showroom = 'Showroom',
-	workshop = 'Workshop'
+	library = 'library',
+	field = 'field',
+	lab = 'lab',
+	showroom = 'showroom',
+	workshop = 'workshop'
 }
 
 export const get = (): unknown => {

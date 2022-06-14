@@ -1,37 +1,25 @@
-<script>
-	// your script goes here
+<script lang="ts">
+	import TabButton from '$lib/TabButton.svelte';
 </script>
 
 <ul>
 	<li>
-		<a href="?all">
-			<button class="selected">All methods</button>
-		</a>
+		<TabButton category="all" content="All methods" />
 	</li>
 	<li>
-		<a href="?library">
-			<button>Library</button>
-		</a>
+		<TabButton category="library" content="Library" />
 	</li>
 	<li>
-		<a href="?field">
-			<button>Field</button>
-		</a>
+		<TabButton category="field" content="Field" />
 	</li>
 	<li>
-		<a href="?lab">
-			<button>Lab</button>
-		</a>
+		<TabButton category="lab" content="Lab" />
 	</li>
 	<li>
-		<a href="?showroom">
-			<button>Showroom</button>
-		</a>
+		<TabButton category="showroom" content="Showroom" />
 	</li>
 	<li>
-		<a href="?workshop">
-			<button>Workshop</button>
-		</a>
+		<TabButton category="workshop" content="Workshop" />
 	</li>
 </ul>
 
@@ -48,29 +36,9 @@
 		padding: 0.5em;
 	}
 
-	button {
-		width: max-content;
-	}
-
-	li a {
-		text-decoration: none;
-	}
-
-	button {
-		background-color: transparent;
-		border: none;
-		color: var(--color-text-secondary);
-		padding: 1em;
-
-		&.selected {
-			color: var(--color-primary);
-			font-weight: 700;
-			border-bottom: 2px solid var(--color-primary);
-		}
-	}
-
 	@media screen and (min-width: 1200px) {
 		ul {
+			box-sizing: border-box;
 			min-height: 3em;
 			display: flex;
 			justify-content: center;
@@ -78,15 +46,7 @@
 			margin: 0;
 			border-radius: 0.75em;
 			gap: 5px;
-		}
-
-		button {
-			margin: 0 1em;
-			box-sizing: border-box;
-
-			&.selected {
-				border-bottom: 3px solid var(--color-primary);
-			}
+			overflow-y: hidden;
 		}
 	}
 </style>

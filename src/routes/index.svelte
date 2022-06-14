@@ -27,17 +27,30 @@
 
 <script lang="ts">
 	import type { Method } from '$lib/types';
+	import { selectedCategoryFilter } from '$lib/stores';
 
 	import MethodList from '$lib/MethodList.svelte';
 	import CategoryTab from '$lib/CategoryTab.svelte';
 
 	export let methodsList: Array<Method>;
+
+	let filteredMethodsList: Array<Method>;
+
+	$: {
+		if ($selectedCategoryFilter === 'all') {
+			filteredMethodsList = methodsList;
+		} else {
+			filteredMethodsList = methodsList.filter((obj) => {
+				return obj.category === $selectedCategoryFilter;
+			});
+		}
+	}
 </script>
 
 <main>
 	<h1 class="site-title">ICT Methods</h1>
 	<CategoryTab />
-	<MethodList {methodsList} />
+	<MethodList methodsList={filteredMethodsList} />
 </main>
 
 <style>
