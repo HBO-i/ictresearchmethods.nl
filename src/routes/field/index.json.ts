@@ -1,0 +1,145 @@
+import type { Method } from '$lib/types';
+import { category } from '$lib/enums';
+
+export const get = (): unknown => {
+	const fieldList: Method[] = [
+		{
+			name: 'Document analysis',
+			why: 'Find out if what you are planning to do has already been done (in full or in part) by someone else.',
+			how: 'Identify existing solutions that may solve the problem (or a part thereof) you are trying to fix with your solution. Decide if it is worth the effort to recreate their work, or whether it is better to simply buy it from them or embed their work in yours.',
+			practice:
+				'Most companies build their work on what others have already done. This happens a lot in the open source community, but also in commercial products.',
+			ingredients: [
+				'A list of available products that have some overlap with the one you intend to build.',
+				'Someone with experience in using or developing similar products (could be yourself).'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/1/11/Document_analysis.png'
+		},
+		{
+			name: 'Domain modelling',
+			why: 'Incorporating what has proven to work somewhere else forms the basis of any high-quality project.',
+			how: 'Organise activities aimed at sharing experiences. Depending on your topic, many best, good and bad practices may be available.',
+			practice:
+				'Good practices tend to be repeated internally, but few companies have processes to identify and incorporate best practices described by others.',
+			ingredients: [
+				'A willingness to investigate what others have done.',
+				'A sense of scope: which reported practices are important to you, and which are not?'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/d/db/Domain_modelling.png'
+		},
+		{
+			name: 'Explore user requirements',
+			why: 'Get a detailed view of how users will be using your solution and what their requirements are. How Talk to your clients about their expectations and describe how the different users (or stakeholders) will interact with the system under development. It is highly recommended that you directly involve end users, rather than just the client.',
+			how: '//',
+			practice:
+				'Users and stakeholders often find it difficult to describe the expected behaviour of the system from scratch. Therefore, most companies take an iterative approach to defining user requirements (e.g. by updating the scenarios after each demo with stakeholders).',
+			ingredients: [
+				'The involvement of a group of stakeholders that includes people beyond the client.',
+				'Tools to capture the scenarios described, like use cases and user stories.',
+				'A focus on expected system behaviour, not its realisation.',
+				'Use the stakeholders’ ‘language’ so they can review the described scenarios.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/8/8e/Explore_user_requirements.png/250px-Explore_user_requirements.png'
+		},
+		{
+			name: 'Focus group',
+			why: 'A focus group discussion is an efficient way to gain insight into how people think about an issue, without having to interview each person separately.',
+			how: 'Invite a group of 5–10 people for a 45–90 minutes discussion, which can focus on a question, topic or prototype. Create a positive atmosphere: make people comfortable, regularly remind them that everyone’s opinion matters, ensure and manage diversity among participants, and so on.',
+			practice:
+				'Focus groups are a popular technique for getting a broad view of a product’s requirements.',
+			ingredients: [
+				'An activity plan with a time schedule, questions and topics.',
+				'Video recording equipment to film and later analyse the results.',
+				'Drinks and snacks for your participants.',
+				'Group management skills.'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/thumb/6/6f/Focus_group.png/250px-Focus_group.png'
+		},
+		{
+			name: 'Observation',
+			why: 'Get a feeling for how your intended users will use your product by unobtrusively observing them in their natural environment, doing the things they always do.',
+			how: 'Watch people without talking to or instructing them. While observing, make notes about their activities, interactions and environments. You do not need to be physically present: you can also observe users by automatically collecting interactions with the systems they use.',
+			practice:
+				'Companies use observation because what people actually do often differs from what they say, and even believe, they do. Interviews may not suffice.',
+			ingredients: [
+				'A place where you can observe the users without distracting them.',
+				'Note taking material or video recording equipment.',
+				'A system for recording online activities.',
+				'A willingness to stick to the observed facts and delay interpretation.'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/thumb/6/64/Observation.png/250px-Observation.png'
+		},
+		{
+			name: 'Problem analysis',
+			why: 'Before solving a problem, it is important to understand it. Moreover, problem analysis ensures that you are not solving the wrong problem.',
+			how: 'An important aspect of problem analysis is asking questions, such as who, what, why, when, where and how. ‘Why’ is an especially important question for understanding the problem. It can be asked multiple times. Once the problem is clear, you can collect additional information about the problem. Is it a new problem? Are there existing solutions?',
+			practice:
+				'A lot of projects start with an initial idea about a problem and solution. Problem analysis ensures that you do not waste time solving the wrong problem.',
+			ingredients: [
+				'Domain experts and the problem owner.',
+				'Knowledge about what questions to ask.',
+				'A willingness to get to the core of the problem (i.e. the problem behind the problem) by asking lots of questions and making assumptions explicit.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/4/4f/Problem_analysis.png/250px-Problem_analysis.png'
+		},
+		{
+			name: 'Stakeholder analysis',
+			why: 'Identify the stakeholders and ensure that their needs are considered.',
+			how: 'Think about the stakeholders who are important to your project and analyse the importance and interests of each stakeholder. Define a strategy for maximising support and buy-in from your project’s most important stakeholders.',
+			practice:
+				'Companies use their stakeholder analysis to gain support from powerful stakeholders and to anticipate their communication strategy.',
+			ingredients: [
+				'Perseverance in searching for stakeholders (going beyond the obvious), including those with a negative attitude towards your project or ideas.',
+				'Instruments like an organisational chart to detect various stakeholders.',
+				'A good approach to get information for each stakeholder group.',
+				'A tool like a stakeholder map or power interest matrix.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/b/b9/Stakeholder_analysis.png/250px-Stakeholder_analysis.png'
+		},
+		{
+			name: 'Survey',
+			why: 'Collect information (mostly quantitative) from a large sample of your target group.',
+			how: 'Develop a questionnaire and give it to a representative sample of participants, using the right channels. You can use a variety of online tools to analyse the responses.',
+			practice:
+				'Surveys are widely used to get an understanding of a target group’s preferences, habits or wishes. This method is quick and inexpensive, but it can be difficult to obtain reliable results. Getting sufficient responses is often challenging for companies, who may use gifts to persuade people to fill in the survey.',
+			ingredients: [
+				'A large and representative group of users.',
+				'A survey instrument or tool.',
+				'The ability to phrase questions that are suitable for a survey.',
+				'Someone to proofread or test your questionnaire.'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/thumb/1/1c/Survey.png/250px-Survey.png'
+		},
+		{
+			name: 'Task analysis',
+			why: 'Understand the structure, flow or other aspects of a certain task. Task analysis focuses on what end users actually do to achieve their goals.',
+			how: 'You can collect information about the task using observations, interviews, formal task descriptions or manuals. These tasks can be (re)structured using decomposition, resulting in a hierarchical task analysis. Use standardised models to describe tasks. An activity diagram is a typical visual representation of the flow of an activity model.',
+			practice:
+				'Surveys are widely used to get an understanding of a target group’s preferences, habits or wishes. This method is quick and inexpensive, but it can be difficult to obtain reliable results. Getting sufficient responses is often challenging for companies, who may use gifts to persuade people to fill in the survey.',
+			ingredients: [
+				'A willingness to understand how a task is performed.',
+				'A focus on the actual, rather than the imagined, actions of users.',
+				'Knowledge of models to store and analyse the tasks.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/c/c1/Task_analysis.png/250px-Task_analysis.png'
+		}
+	];
+	return {
+		body: {
+			fieldList
+		}
+	};
+};

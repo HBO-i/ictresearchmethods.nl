@@ -3,16 +3,16 @@
 	export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('methods.json');
+		const res = await fetch('showroom.json');
 
 		if (res.ok) {
 			const result = await res.json();
 
-			const methodsList = result.methodsList;
+			const showroomList = result.showroomList;
 
 			return {
 				props: {
-					methodsList
+					showroomList
 				}
 			};
 		}
@@ -31,13 +31,13 @@
 	import MethodList from '$lib/MethodList.svelte';
 	import CategoryTab from '$lib/CategoryTab.svelte';
 
-	export let methodsList: Array<Method>;
+	export let showroomList: Array<Method>;
 </script>
 
 <main>
 	<h1 class="site-title">ICT Methods</h1>
 	<CategoryTab />
-	<MethodList {methodsList} />
+	<MethodList methodsList={showroomList} />
 </main>
 
 <style>

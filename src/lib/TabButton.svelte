@@ -1,19 +1,38 @@
 <script lang="ts">
-	import { selectedCategoryFilter, currentPaginationPage } from '$lib/stores';
+	import { page } from '$app/stores';
+	import { currentPaginationPage } from '$lib/stores';
 
-	function updateSelectedTab(selectedTab: string) {
-		selectedCategoryFilter.set(selectedTab);
-		currentPaginationPage.set(1); // Reset pagination
+	function resetPagination() {
+		currentPaginationPage.set(1);
+	}
+
+	const pathName = $page.url.pathname;
+
+	/**
+	 * Returns true if the pathname and the (selected) category are the same
+	 *
+	 * @param {string} category - category that is selected by the user
+	 * @returns {boolean}
+	 */
+	function pathNameContainsCategory(category: string) {
+		// All Methods tab
+		if (category === '/' && pathName === '/') {
+			return true;
+		}
+
+		if (category !== '/') {
+			return pathName.substring(1) === category;
+		}
 	}
 
 	export let category: string;
 	export let content: string;
 </script>
 
-<a href={'?category=' + category} tabindex="-1">
+<a href={category} tabindex="-1">
 	<button
-		class={$selectedCategoryFilter === category ? 'selected' : ''}
-		on:click={() => updateSelectedTab(category)}>{content}</button
+		class={pathNameContainsCategory(category) ? 'selected' : ''}
+		on:click={() => resetPagination()}>{content}</button
 	>
 </a>
 
