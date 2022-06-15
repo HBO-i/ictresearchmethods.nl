@@ -151,6 +151,153 @@ export const get = (): unknown => {
 			],
 			category: category.field,
 			image: 'https://ictresearchmethods.nl/images/d/db/Domain_modelling.png'
+		},
+		{
+			name: 'Explore user requirements',
+			why: 'Get a detailed view of how users will be using your solution and what their requirements are. How Talk to your clients about their expectations and describe how the different users (or stakeholders) will interact with the system under development. It is highly recommended that you directly involve end users, rather than just the client.',
+			how: '//',
+			practice:
+				'Users and stakeholders often find it difficult to describe the expected behaviour of the system from scratch. Therefore, most companies take an iterative approach to defining user requirements (e.g. by updating the scenarios after each demo with stakeholders).',
+			ingredients: [
+				'The involvement of a group of stakeholders that includes people beyond the client.',
+				'Tools to capture the scenarios described, like use cases and user stories.',
+				'A focus on expected system behaviour, not its realisation.',
+				'Use the stakeholders’ ‘language’ so they can review the described scenarios.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/8/8e/Explore_user_requirements.png/250px-Explore_user_requirements.png'
+		},
+		{
+			name: 'Focus group',
+			why: 'A focus group discussion is an efficient way to gain insight into how people think about an issue, without having to interview each person separately.',
+			how: 'Invite a group of 5–10 people for a 45–90 minutes discussion, which can focus on a question, topic or prototype. Create a positive atmosphere: make people comfortable, regularly remind them that everyone’s opinion matters, ensure and manage diversity among participants, and so on.',
+			practice:
+				'Focus groups are a popular technique for getting a broad view of a product’s requirements.',
+			ingredients: [
+				'An activity plan with a time schedule, questions and topics.',
+				'Video recording equipment to film and later analyse the results.',
+				'Drinks and snacks for your participants.',
+				'Group management skills.'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/thumb/6/6f/Focus_group.png/250px-Focus_group.png'
+		},
+		{
+			name: 'Observation',
+			why: 'Get a feeling for how your intended users will use your product by unobtrusively observing them in their natural environment, doing the things they always do.',
+			how: 'Watch people without talking to or instructing them. While observing, make notes about their activities, interactions and environments. You do not need to be physically present: you can also observe users by automatically collecting interactions with the systems they use.',
+			practice:
+				'Companies use observation because what people actually do often differs from what they say, and even believe, they do. Interviews may not suffice.',
+			ingredients: [
+				'A place where you can observe the users without distracting them.',
+				'Note taking material or video recording equipment.',
+				'A system for recording online activities.',
+				'A willingness to stick to the observed facts and delay interpretation.'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/thumb/6/64/Observation.png/250px-Observation.png'
+		},
+		{
+			name: 'Problem analysis',
+			why: 'Before solving a problem, it is important to understand it. Moreover, problem analysis ensures that you are not solving the wrong problem.',
+			how: 'An important aspect of problem analysis is asking questions, such as who, what, why, when, where and how. ‘Why’ is an especially important question for understanding the problem. It can be asked multiple times. Once the problem is clear, you can collect additional information about the problem. Is it a new problem? Are there existing solutions?',
+			practice:
+				'A lot of projects start with an initial idea about a problem and solution. Problem analysis ensures that you do not waste time solving the wrong problem.',
+			ingredients: [
+				'Domain experts and the problem owner.',
+				'Knowledge about what questions to ask.',
+				'A willingness to get to the core of the problem (i.e. the problem behind the problem) by asking lots of questions and making assumptions explicit.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/4/4f/Problem_analysis.png/250px-Problem_analysis.png'
+		},
+		{
+			name: 'Stakeholder analysis',
+			why: 'Identify the stakeholders and ensure that their needs are considered.',
+			how: 'Think about the stakeholders who are important to your project and analyse the importance and interests of each stakeholder. Define a strategy for maximising support and buy-in from your project’s most important stakeholders.',
+			practice:
+				'Companies use their stakeholder analysis to gain support from powerful stakeholders and to anticipate their communication strategy.',
+			ingredients: [
+				'Perseverance in searching for stakeholders (going beyond the obvious), including those with a negative attitude towards your project or ideas.',
+				'Instruments like an organisational chart to detect various stakeholders.',
+				'A good approach to get information for each stakeholder group.',
+				'A tool like a stakeholder map or power interest matrix.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/b/b9/Stakeholder_analysis.png/250px-Stakeholder_analysis.png'
+		},
+		{
+			name: 'Survey',
+			why: 'Collect information (mostly quantitative) from a large sample of your target group.',
+			how: 'Develop a questionnaire and give it to a representative sample of participants, using the right channels. You can use a variety of online tools to analyse the responses.',
+			practice:
+				'Surveys are widely used to get an understanding of a target group’s preferences, habits or wishes. This method is quick and inexpensive, but it can be difficult to obtain reliable results. Getting sufficient responses is often challenging for companies, who may use gifts to persuade people to fill in the survey.',
+			ingredients: [
+				'A large and representative group of users.',
+				'A survey instrument or tool.',
+				'The ability to phrase questions that are suitable for a survey.',
+				'Someone to proofread or test your questionnaire.'
+			],
+			category: category.field,
+			image: 'https://ictresearchmethods.nl/images/thumb/1/1c/Survey.png/250px-Survey.png'
+		},
+		{
+			name: 'Task analysis',
+			why: 'Understand the structure, flow or other aspects of a certain task. Task analysis focuses on what end users actually do to achieve their goals.',
+			how: 'You can collect information about the task using observations, interviews, formal task descriptions or manuals. These tasks can be (re)structured using decomposition, resulting in a hierarchical task analysis. Use standardised models to describe tasks. An activity diagram is a typical visual representation of the flow of an activity model.',
+			practice:
+				'Surveys are widely used to get an understanding of a target group’s preferences, habits or wishes. This method is quick and inexpensive, but it can be difficult to obtain reliable results. Getting sufficient responses is often challenging for companies, who may use gifts to persuade people to fill in the survey.',
+			ingredients: [
+				'A willingness to understand how a task is performed.',
+				'A focus on the actual, rather than the imagined, actions of users.',
+				'Knowledge of models to store and analyse the tasks.'
+			],
+			category: category.field,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/c/c1/Task_analysis.png/250px-Task_analysis.png'
+		},
+		{
+			name: 'A/B testing',
+			why: 'A minor change in a design may alter user behaviour in ways that are hard to detect in a usability test. An A/B test allows you to compare real-world user behaviour across different versions of a product.',
+			how: 'In an A/B test, the user is presented with one of two versions of an interactive product. Remote software records metrics for user behaviour. These metrics are compared between the two versions to see which alternative is better. Sometimes, more than two alternatives are tested: A/B/X testing.',
+			practice:
+				'Google does a lot of A/B testing on its search services. The tiniest details can matter to Google because they have so many users. Some companies also use the A/B experimental design for testing concepts, rather than finished products.',
+			ingredients: ['Specialised software.', 'Reliable metrics.', 'A large number of users.'],
+			category: category.lab,
+			image: 'https://ictresearchmethods.nl/images/thumb/5/5b/A_B_testing.png/250px-A_B_testing.png'
+		},
+		{
+			name: 'Benchmark test',
+			why: 'A standardised set allows you to compare your product to similar products.',
+			how: 'Search for standardised tests in your problem domain and run them on your solution. Compare your results to those achieved by similar products on this same test.',
+			practice:
+				'Benchmark tests are regularly used to test pattern recognition software. If a standard set of data is recognised with the software, the results can be compared to that of other software. Benchmarks are also used to compare hardware or software in which performance plays an important role (e.g. how many forms can automatically be processed per minute, in comparison to other software).',
+			ingredients: [
+				'A standardised test.',
+				'A need to compare your product to similar products.',
+				'A way to evaluate your test results.'
+			],
+			category: category.showroom,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/3/38/Benchmark_test.png/250px-Benchmark_test.png'
+		},
+		{
+			name: 'Brainstorm',
+			why: 'Generate and develop new ideas.',
+			how: 'Bring people together to spark creativity and use a creativity technique to ensure a creative flow among the participants. Accept any ideas; filtering can be done in a later step. Build upon each other’s ideas, even bad ones. Avoid idea killers like early criticism.',
+			practice:
+				'Companies use brainstorming techniques like nominal group technique or directed brainstorming.',
+			ingredients: [
+				'An activity plan.',
+				'A shared problem statement and rules.',
+				'An anything goes mindset: bad ideas also count as a contribution.'
+			],
+			category: category.workshop,
+			image:
+				'https://ictresearchmethods.nl/images/thumb/c/c1/Task_analysis.png/250px-Task_analysis.png'
 		}
 	];
 	return {

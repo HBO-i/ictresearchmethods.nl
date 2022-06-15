@@ -1,6 +1,8 @@
 <script>
 	import '../global.scss';
 	import Topbar from '$lib/Topbar.svelte';
+
+	import { onMount } from 'svelte';
 </script>
 
 <div class="root">

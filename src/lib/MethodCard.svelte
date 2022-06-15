@@ -84,7 +84,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 1200px;
+			box-sizing: border-box;
 		}
 
 		button {

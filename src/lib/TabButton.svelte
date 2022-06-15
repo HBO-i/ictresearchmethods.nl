@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { selectedCategoryFilter } from '$lib/stores';
+	import { selectedCategoryFilter, currentPaginationPage } from '$lib/stores';
 
 	function updateSelectedTab(selectedTab: string) {
 		selectedCategoryFilter.set(selectedTab);
+		currentPaginationPage.set(1); // Reset pagination
 	}
 
 	export let category: string;
