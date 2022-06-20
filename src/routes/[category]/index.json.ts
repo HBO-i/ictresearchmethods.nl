@@ -4,9 +4,9 @@ import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		// const url = getCurrentDomain();
+		const url = getCurrentDomain();
 
-		const response = await fetch(`http://localhost:3000/methods.json`);
+		const response = await fetch(`${url}/methods.json`);
 
 		const result = await response.json();
 		const methodsArray = result.methodsList;

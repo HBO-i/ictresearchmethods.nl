@@ -6,7 +6,7 @@ import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		const category = 'library';
+		const category = 'field';
 
 		const url = getCurrentDomain();
 
