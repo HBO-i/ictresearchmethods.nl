@@ -3,7 +3,7 @@
 	import { currentPaginationPage } from '$lib/stores';
 
 	import type { Method } from '$lib/types';
-	import MethodCard from './MethodCard.svelte';
+	import MethodCard from '$lib/method/MethodCard.svelte';
 
 	export let methodsList: Array<Method>;
 

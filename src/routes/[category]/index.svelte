@@ -2,17 +2,16 @@
 	import type { Load } from '@sveltejs/kit';
 	export const prerender = true;
 
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('lab.json');
+	export const load: Load = async ({ fetch, params }) => {
+		const category = params.category;
+		const res = await fetch(`${category}.json`);
 
 		if (res.ok) {
 			const result = await res.json();
 
-			const labList = result.labList;
-
 			return {
 				props: {
-					labList
+					result
 				}
 			};
 		}
@@ -28,17 +27,15 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
-	import MethodList from '$lib/MethodList.svelte';
-	import CategoryTab from '$lib/CategoryTab.svelte';
+	import MethodList from '$lib/method/MethodList.svelte';
+	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
 
-	export let labList: Array<Method>;
+	export let result: Array<Method>;
 </script>
 
-<main>
-	<h1 class="site-title">ICT Methods</h1>
-	<CategoryTab />
-	<MethodList methodsList={labList} />
-</main>
+<h1 class="site-title">ICT Methods</h1>
+<CategoryTab />
+<MethodList methodsList={result} />
 
 <style>
 	h1 {
@@ -53,10 +50,6 @@
 		h1 {
 			text-align: left;
 			margin-left: 0;
-		}
-
-		main {
-			padding: 1em 3em;
 		}
 	}
 </style>

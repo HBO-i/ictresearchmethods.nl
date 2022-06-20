@@ -28,17 +28,15 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
-	import MethodList from '$lib/MethodList.svelte';
-	import CategoryTab from '$lib/CategoryTab.svelte';
+	import MethodList from '$lib/method/MethodList.svelte';
+	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
 
 	export let methodsList: Array<Method>;
 </script>
 
-<main>
-	<h1 class="site-title">ICT Methods</h1>
-	<CategoryTab />
-	<MethodList {methodsList} />
-</main>
+<h1 class="site-title">ICT Methods</h1>
+<CategoryTab />
+<MethodList {methodsList} />
 
 <style>
 	h1 {
@@ -53,10 +51,6 @@
 		h1 {
 			text-align: left;
 			margin-left: 0;
-		}
-
-		main {
-			padding: 1em 3em;
 		}
 	}
 </style>
