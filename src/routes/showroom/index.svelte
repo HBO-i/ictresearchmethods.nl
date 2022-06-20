@@ -8,11 +8,9 @@
 		if (res.ok) {
 			const result = await res.json();
 
-			const showroomList = result.showroomList;
-
 			return {
 				props: {
-					showroomList
+					showroomList: result
 				}
 			};
 		}

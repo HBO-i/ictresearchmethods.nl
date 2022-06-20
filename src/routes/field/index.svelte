@@ -8,11 +8,9 @@
 		if (res.ok) {
 			const result = await res.json();
 
-			const fieldList = result.fieldList;
-
 			return {
 				props: {
-					fieldList
+					fieldList: result
 				}
 			};
 		}

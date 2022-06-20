@@ -8,11 +8,9 @@
 		if (res.ok) {
 			const result = await res.json();
 
-			const libraryList = result.libraryList;
-
 			return {
 				props: {
-					libraryList
+					libraryList: result
 				}
 			};
 		}
