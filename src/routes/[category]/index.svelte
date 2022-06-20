@@ -28,7 +28,7 @@
 	import type { Method } from '$lib/types';
 
 	import MethodList from '$lib/method/MethodList.svelte';
-	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
+	import CategoryTab from '$lib/CategoryTab.svelte';
 
 	export let result: Array<Method>;
 </script>

@@ -1,15 +1,17 @@
+import type { Method } from '$lib/types';
 import type { RequestHandler } from '@sveltejs/kit';
+import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		// @TODO: Fix hardcoded localhost
-		const response = await fetch('http://localhost:3000/methods.json');
+		const url = getCurrentDomain();
+		const response = await fetch(`${url}/methods.json`);
+
 		const result = await response.json();
 
-		const methodsList = result.methodsList;
 		const methodName = request.params.category;
 
-		const currentCategory = methodsList.filter((el) => el.category === methodName);
+		const currentCategory = result.filter((el: Method) => el.category === methodName);
 
 		if (response.ok) {
 			return {
@@ -27,7 +29,7 @@ export const get: RequestHandler = async (request) => {
 			};
 		}
 	} catch (error) {
-		console.error('[method.json]:', error);
+		console.error('[category.json]:', error);
 		return {
 			status: 500,
 			body: 'Internal Server Error'

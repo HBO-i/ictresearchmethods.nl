@@ -1,13 +1,16 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Method } from '$lib/types';
+
 import { unslugify } from '$lib/utils/slugify';
+import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
 		const category = request.params.category;
 
-		// @TODO: Fix hardcoded localhost
-		const response = await fetch(`http://localhost:3000/${category}.json`);
+		const url = getCurrentDomain();
+
+		const response = await fetch(`${url}/${category}.json`);
 		const result = await response.json();
 
 		const methodName = unslugify(request.params.method);

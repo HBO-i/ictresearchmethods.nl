@@ -4,7 +4,6 @@
 
 	function resetPagination() {
 		currentPaginationPage.set(1);
-		console.log('hey');
 	}
 
 	const pathName = $page.url.pathname;
@@ -22,12 +21,8 @@
 		}
 
 		if (category !== '/') {
-			console.log(category);
-
 			return pathName.substring(1) === category;
 		}
-
-		// console.log('hoi');
 	}
 
 	export let category: string;

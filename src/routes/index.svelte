@@ -8,11 +8,9 @@
 		if (res.ok) {
 			const result = await res.json();
 
-			const methodsList = result.methodsList;
-
 			return {
 				props: {
-					methodsList
+					result
 				}
 			};
 		}
@@ -29,14 +27,14 @@
 	import type { Method } from '$lib/types';
 
 	import MethodList from '$lib/method/MethodList.svelte';
-	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
+	import CategoryTab from '$lib/CategoryTab.svelte';
 
-	export let methodsList: Array<Method>;
+	export let result: Array<Method>;
 </script>
 
 <h1 class="site-title">ICT Methods</h1>
 <CategoryTab />
-<MethodList {methodsList} />
+<MethodList methodsList={result} />
 
 <style>
 	h1 {

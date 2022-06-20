@@ -25,6 +25,8 @@ npm run dev
 npm run dev -- --open
 ```
 
+Copy `.env.example`, rename it to `.env` and fill all the values
+
 ## Building
 
 To create a production version of your app:

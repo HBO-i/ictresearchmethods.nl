@@ -7,3 +7,5 @@ export interface Method {
 	category: category;
 	image: string;
 }
+
+export type AllMethodsBody = () => { body: Method[] };
