@@ -11,13 +11,14 @@ export const get: RequestHandler = async (request) => {
 
 		if (response.ok) {
 			const result = await response.json();
-			console.log('result/category: ', result);
 
 			const methodsArray = result.methodsArray;
 
 			const currentCategory = Array.isArray(methodsArray)
 				? methodsArray.filter((el: Method) => el.category === methodName)
 				: [];
+
+			console.log('currentCategory/category: ', currentCategory);
 
 			return {
 				body: currentCategory
