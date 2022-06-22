@@ -10,7 +10,7 @@
 
 			return {
 				props: {
-					fieldList: result
+					result
 				}
 			};
 		}
@@ -29,12 +29,12 @@
 	import MethodList from '$lib/method/MethodList.svelte';
 	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
 
-	export let fieldList: Array<Method>;
+	export let result: Array<Method>;
 </script>
 
 <h1 class="site-title">ICT Methods</h1>
 <CategoryTab />
-<MethodList methodsArray={fieldList} />
+<MethodList methodsArray={result} />
 
 <style>
 	h1 {

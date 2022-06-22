@@ -14,15 +14,18 @@
 	 * @param {string} category - category that is selected by the user
 	 * @returns {boolean}
 	 */
-	function pathNameContainsCategory(category: string) {
-		// All Methods tab
-		if (category === '/' && pathName === '/') {
+	function pathNameContainsCategory(category: string): boolean {
+		const isAllMethodsTab = category === '/' && pathName === '/';
+
+		if (isAllMethodsTab) {
 			return true;
 		}
 
-		if (category !== '/') {
+		if (!isAllMethodsTab) {
 			return pathName.substring(1) === category;
 		}
+
+		return false;
 	}
 
 	export let category: string;
@@ -30,9 +33,8 @@
 </script>
 
 <a href={category} tabindex="-1">
-	<button
-		class={pathNameContainsCategory(category) ? 'selected' : ''}
-		on:click={() => resetPagination()}>{content}</button
+	<button class:selected={pathNameContainsCategory(category)} on:click={() => resetPagination()}
+		>{content}</button
 	>
 </a>
 

@@ -5,16 +5,9 @@ import { API_URL } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		const category = request.params.category;
-		const slug = request.params.method;
-
-		console.log('category/method.json: ', category);
-
-		// const { category, slug } = request.params
+		const { category, method: slug } = request.params;
 
 		const response = await fetch(`${API_URL}/${category}.json`);
-
-		console.log('rresponse/method.json: ', response);
 
 		if (response.ok) {
 			const result = await response.json();
