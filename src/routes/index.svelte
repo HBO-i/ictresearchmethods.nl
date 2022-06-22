@@ -3,7 +3,7 @@
 	export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('https://methods.jchm.dev/methods.json');
+		const res = await fetch('methods.json');
 
 		if (res.ok) {
 			const result = await res.json();
