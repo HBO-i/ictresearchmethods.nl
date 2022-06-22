@@ -2,8 +2,8 @@
 	import type { Load } from '@sveltejs/kit';
 	export const prerender = true;
 
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('field.json');
+	export const load: Load = async ({ fetch, params }) => {
+		const res = await fetch(`${params.category}.json`);
 
 		if (res.ok) {
 			const result = await res.json();

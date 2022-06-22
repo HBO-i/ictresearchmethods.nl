@@ -1,10 +1,8 @@
 import type { Method } from '$lib/types';
 import type { RequestHandler } from '@sveltejs/kit';
-import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		const url = getCurrentDomain();
 		const methodName = request.params.category;
 
 		const response = await fetch(`https://methods.jchm.dev/methods.json`);
