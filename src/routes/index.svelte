@@ -4,7 +4,6 @@
 
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch('methods.json');
-		console.log(res);
 
 		if (res.ok) {
 			const result = await res.json();
@@ -21,7 +20,7 @@
 		const { message } = await res.json();
 
 		return {
-			error: new Error(message)
+			error: new Error('[index.svelte]: ', message)
 		};
 	};
 </script>
