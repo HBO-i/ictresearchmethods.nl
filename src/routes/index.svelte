@@ -3,10 +3,11 @@
 	export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('methods.json');
+		const res = await fetch('https://methods.jchm.dev/methods.json');
 
 		if (res.ok) {
 			const result = await res.json();
+			console.log('Result-index.svelte: ', result);
 
 			const methodsArray = result.methodsArray;
 
