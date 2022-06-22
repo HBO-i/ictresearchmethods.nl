@@ -6,12 +6,12 @@ export const get: RequestHandler = async (request) => {
 	try {
 		const url = getCurrentDomain();
 		const methodName = request.params.category;
-		console.log(url);
 
 		const response = await fetch(`https://methods.jchm.dev/methods.json`);
 
 		if (response.ok) {
 			const result = await response.json();
+			console.log('result/category: ', result);
 
 			const methodsArray = result.methodsArray;
 
