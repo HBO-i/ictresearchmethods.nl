@@ -4,7 +4,7 @@ import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		const url = getCurrentDomain();
+		const url = 'https://methods.jchm.dev';
 		const methodName = request.params.category;
 
 		const response = await fetch(`${url}/methods.json`);
