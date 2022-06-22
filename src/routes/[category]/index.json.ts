@@ -6,6 +6,7 @@ export const get: RequestHandler = async (request) => {
 	try {
 		const url = getCurrentDomain();
 		const methodName = request.params.category;
+		console.log(url);
 
 		const response = await fetch(`${url}/methods.json`);
 
