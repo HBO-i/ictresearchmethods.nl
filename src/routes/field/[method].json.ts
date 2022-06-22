@@ -7,7 +7,7 @@ export const get: RequestHandler = async (request) => {
 	try {
 		const category = 'field';
 		const slug = request.params.method;
-		const url = getCurrentDomain();
+		const url = 'https://methods.jchm.dev';
 
 		const response = await fetch(`${url}/${category}.json`);
 
