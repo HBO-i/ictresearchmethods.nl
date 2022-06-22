@@ -15,6 +15,12 @@
 				}
 			};
 		}
+
+		const { message } = await res.json();
+
+		return {
+			error: new Error('[workshop/method.svelte]: ', message)
+		};
 	};
 </script>
 

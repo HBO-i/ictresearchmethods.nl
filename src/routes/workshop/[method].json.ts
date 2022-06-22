@@ -31,7 +31,7 @@ export const get: RequestHandler = async (request) => {
 			};
 		}
 	} catch (error) {
-		console.error('[library/method.json]:', error);
+		console.error('[workshop/method.json]:', error);
 		return {
 			status: 500,
 			body: 'Internal Server Error'

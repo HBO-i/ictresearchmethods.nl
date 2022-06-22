@@ -18,7 +18,7 @@
 		const { message } = await res.json();
 
 		return {
-			error: new Error(message)
+			error: new Error('[library/index.svelte]: ', message)
 		};
 	};
 </script>

@@ -15,6 +15,12 @@
 				}
 			};
 		}
+
+		const { message } = await res.json();
+
+		return {
+			error: new Error('[field/method.svelte]: ', message)
+		};
 	};
 </script>
 
