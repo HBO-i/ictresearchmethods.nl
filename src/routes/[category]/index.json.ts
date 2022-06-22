@@ -5,17 +5,19 @@ import { getCurrentDomain } from '$lib/utils/url';
 export const get: RequestHandler = async (request) => {
 	try {
 		const url = getCurrentDomain();
+		const methodName = request.params.category;
 
 		const response = await fetch(`${url}/methods.json`);
 
-		const result = await response.json();
-		const methodsArray = result.methodsList;
-
-		const methodName = request.params.category;
-
-		const currentCategory = methodsArray.filter((el: Method) => el.category === methodName);
-
 		if (response.ok) {
+			const result = await response.json();
+
+			const methodsArray = result.methodsArray;
+
+			const currentCategory = Array.isArray(methodsArray)
+				? methodsArray.filter((el: Method) => el.category === methodName)
+				: [];
+
 			return {
 				body: currentCategory
 			};

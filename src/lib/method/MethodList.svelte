@@ -5,9 +5,8 @@
 	import type { Method } from '$lib/types';
 	import MethodCard from './MethodCard.svelte';
 
-	export let methodsList: Array<Method>;
+	export let methodsArray: Array<Method>;
 
-	// let currentPage = 1;
 	let pageSize = 5;
 
 	function updatePaginationPage(page: number) {
@@ -15,7 +14,7 @@
 	}
 
 	$: currentPage = $currentPaginationPage;
-	$: items = methodsList;
+	$: items = methodsArray;
 	$: paginatedItems = paginate({ items, pageSize, currentPage });
 	$: isPaginationNeeded = items.length > 5;
 </script>

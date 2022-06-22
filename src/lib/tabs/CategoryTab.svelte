@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TabButton from '$lib/TabButton.svelte';
+	import TabButton from '$lib/tabs/TabButton.svelte';
 </script>
 
 <ul>

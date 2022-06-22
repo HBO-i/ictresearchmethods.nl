@@ -1,25 +1,21 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Method } from '$lib/types';
 
-import { unslugify } from '$lib/utils/slugify';
 import { getCurrentDomain } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
 		const category = 'lab';
-
+		const slug = request.params.method;
 		const url = getCurrentDomain();
 
 		const response = await fetch(`${url}/${category}.json`);
-		const result = await response.json();
-
-		console.log(request);
-
-		const methodName = unslugify(request.params.method);
-
-		const currentMethod = result.find((el: Method) => el.name.toLowerCase() === methodName);
 
 		if (response.ok) {
+			const result = await response.json();
+
+			const currentMethod = result.find((el: Method) => el.slug === slug);
+
 			return {
 				body: currentMethod
 			};
@@ -35,7 +31,7 @@ export const get: RequestHandler = async (request) => {
 			};
 		}
 	} catch (error) {
-		console.error('[method.json]:', error);
+		console.error('[library/method.json]:', error);
 		return {
 			status: 500,
 			body: 'Internal Server Error'

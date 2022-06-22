@@ -1,13 +1,15 @@
 <script>
 	import '../global.scss';
-	import Topbar from '$lib/Topbar.svelte';
-
-	import { onMount } from 'svelte';
+	import Topbar from '$lib/layout/Topbar.svelte';
+	import Footer from '$lib/layout/Footer.svelte';
 </script>
 
 <div class="root">
 	<Topbar />
-	<slot />
+	<main>
+		<slot />
+	</main>
+	<Footer />
 </div>
 
 <style>
@@ -19,5 +21,8 @@
 	}
 
 	@media screen and (min-width: 1200px) {
+		main {
+			padding: 1em 3em;
+		}
 	}
 </style>
