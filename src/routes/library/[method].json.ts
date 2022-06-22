@@ -10,11 +10,9 @@ export const get: RequestHandler = async (request) => {
 		const url = 'https://methods.jchm.dev';
 
 		const response = await fetch(`${url}/${category}.json`);
-		console.log('response/library: ', response);
 
 		if (response.ok) {
 			const result = await response.json();
-			console.log('result/library: ', result);
 
 			const currentMethod = result.find((el: Method) => el.slug === slug);
 
