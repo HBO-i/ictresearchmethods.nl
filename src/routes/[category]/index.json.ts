@@ -8,9 +8,11 @@ export const get: RequestHandler = async (request) => {
 		const methodName = request.params.category;
 
 		const response = await fetch(`${url}/methods.json`);
+		console.log('Response: ', response);
 
 		if (response.ok) {
 			const result = await response.json();
+			console.log('Result: ', result);
 
 			const methodsArray = result.methodsArray;
 
