@@ -6,9 +6,10 @@
 		const category = 'library';
 
 		const res = await fetch(`/${category}/${params.method}.json`);
-		const result = await res.json();
 
 		if (res.ok) {
+			const result = await res.json();
+
 			return {
 				props: {
 					result
