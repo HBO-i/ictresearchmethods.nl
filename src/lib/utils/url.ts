@@ -5,3 +5,5 @@ export function getCurrentDomain() {
 
 	return isDevelopment ? DEV_URL : PROD_URL;
 }
+
+export const API_URL = 'https://methods.jchm.dev';
