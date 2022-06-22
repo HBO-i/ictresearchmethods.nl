@@ -9,6 +9,7 @@
 
 		if (res.ok) {
 			const result = await res.json();
+			console.log('result library: ', result);
 
 			return {
 				props: {

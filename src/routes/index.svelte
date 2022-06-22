@@ -4,7 +4,6 @@
 
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch('https://methods.jchm.dev/methods.json');
-		console.log('res: ', res);
 
 		if (res.ok) {
 			const result = await res.json();
