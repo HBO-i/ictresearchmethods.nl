@@ -3,16 +3,17 @@
 	// export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('methods.json');
+		const res = await fetch('https://methods.jchm.dev/methods.json');
+		console.log('res: ', res);
 
 		if (res.ok) {
 			const result = await res.json();
 
-			const methodsArray = result.methodsArray;
+			const methodsItems = result.methodsArray;
 
 			return {
 				props: {
-					methodsArray
+					methodsItems
 				}
 			};
 		}
@@ -31,12 +32,12 @@
 	import MethodList from '$lib/method/MethodList.svelte';
 	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
 
-	export let methodsArray: Array<Method>;
+	export let methodsItems: Array<Method>;
 </script>
 
 <h1 class="site-title">ICT Methods</h1>
 <CategoryTab />
-<MethodList {methodsArray} />
+<MethodList methodsArray={methodsItems} />
 
 <style>
 	h1 {

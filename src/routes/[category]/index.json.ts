@@ -8,7 +8,7 @@ export const get: RequestHandler = async (request) => {
 		const methodName = request.params.category;
 		console.log(url);
 
-		const response = await fetch(`${url}/methods.json`);
+		const response = await fetch(`https://methods.jchm.dev/methods.json`);
 
 		if (response.ok) {
 			const result = await response.json();
