@@ -9,9 +9,8 @@ export const get: RequestHandler = async (request) => {
 		const slug = request.params.method;
 		const url = getCurrentDomain();
 
-		console.log('url/library: ', url);
-
 		const response = await fetch(`${url}/${category}.json`);
+		console.log('response/library: ', response);
 
 		if (response.ok) {
 			const result = await response.json();

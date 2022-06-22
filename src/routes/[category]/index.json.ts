@@ -18,7 +18,7 @@ export const get: RequestHandler = async (request) => {
 				? methodsArray.filter((el: Method) => el.category === methodName)
 				: [];
 
-			console.log('currentCategory/category: ', currentCategory);
+			// Dit gaat goed
 
 			return {
 				body: currentCategory
