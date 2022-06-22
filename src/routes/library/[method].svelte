@@ -34,8 +34,8 @@
 <a href="/">&larr; Go back</a>
 <h1>Method</h1>
 <h2>Details</h2>
-<p>{JSON.stringify(result)}</p>
 
+<!-- <p>{JSON.stringify(result)}</p> -->
 <style>
 	/* your styles go here */
 </style>

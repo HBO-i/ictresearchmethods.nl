@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
-	// export const prerender = true;
+	export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch('https://methods.jchm.dev/methods.json');
