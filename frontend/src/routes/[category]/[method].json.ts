@@ -7,7 +7,7 @@ export const get: RequestHandler = async (request) => {
 	try {
 		const { category, method: slug } = request.params;
 
-		const response = await fetch(`${API_URL}/${category}.json`);
+		const response = await fetch(`${API_URL}/category/${category}.json`);
 
 		if (response.ok) {
 			const result = await response.json();
