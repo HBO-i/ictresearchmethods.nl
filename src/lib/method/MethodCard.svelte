@@ -20,9 +20,9 @@
 			{method.why}
 		</p>
 	</div>
-	<button class="btn btn-primary"
-		><a href={'/' + method.category + '/' + method.slug}>More info</a></button
-	>
+	<a sveltekit:prefetch href={'/' + method.category + '/' + method.slug}>
+		<button class="btn btn-primary">More info</button>
+	</a>
 </article>
 
 <style lang="scss">
@@ -48,9 +48,8 @@
 		text-transform: capitalize;
 	}
 
-	button a {
+	a {
 		text-decoration: none;
-		color: var(--color-white);
 	}
 
 	.card-heading {

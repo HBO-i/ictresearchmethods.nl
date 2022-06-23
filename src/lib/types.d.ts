@@ -8,5 +8,3 @@ export interface Method {
 	image: string;
 	slug: string;
 }
-
-export type AllMethodsBody = () => { body: { methodsArray: Method[] } };
