@@ -1,0 +1,103 @@
+[
+	{
+		"name": "Benchmark test",
+		"why": "A standardised set allows you to compare your product to similar products.",
+		"how": "Search for standardised tests in your problem domain and run them on your solution. Compare your results to those achieved by similar products on this same test.",
+		"practice": "Benchmark tests are regularly used to test pattern recognition software. If a standard set of data is recognised with the software, the results can be compared to that of other software. Benchmarks are also used to compare hardware or software in which performance plays an important role (e.g. how many forms can automatically be processed per minute, in comparison to other software).",
+		"ingredients": [
+			"A standardised test.",
+			"A need to compare your product to similar products.",
+			"A way to evaluate your test results."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/3/38/Benchmark_test.png/250px-Benchmark_test.png",
+		"slug": "benchmark-test"
+	},
+	{
+		"name": "Ethical check",
+		"why": "Norms and values differ between various people and societies. Make sure your design and development decisions do not lead to conflicts with certain norms and values.",
+		"how": "Investigate which decisions could lead to ethical dilemmas and explore the possible views of people from diverse backgrounds. This will provide information about the alternatives you can choose from and base your decision upon.",
+		"practice": "Ethics are becoming increasingly important for IT companies, especially for high-risk sectors (e.g. medicine, robotics, public information systems) and in situations where sensitive personal data is stored.",
+		"ingredients": [
+			"Someone with expertise in relevant norms and values.",
+			"Ethical codes or standards defined by the companies or professions you work for (e.g. for doctors).",
+			"An ethical dilemma solving strategy (e.g. black-and-white decision strategy or whistleblowing)."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/1/19/Ethical_check.png/250px-Ethical_check.png",
+		"slug": "ethical-check"
+	},
+	{
+		"name": "Guideline conformity analysis",
+		"why": "Conforming to guidelines and standards helps ensure the credibility of the quality of your product and prevents reliability, privacy and security issues.",
+		"how": "Select the guidelines, best practices, checklists, laws and standards that are relevant to your product and define test cases to verify its compliance. Involve experts on the given standard to ensure that all aspects of the standard are addressed. If a standard is used for external communication, certification by an external body is required.",
+		"practice": "Companies and teams decide which guidelines and standards should be applied. These may include coding guidelines, ISO standards, relevant laws and more. Fields like security, privacy, reliability and medical devices have their own standards.",
+		"ingredients": [
+			"The appropriate guidelines and standards.",
+			"An understanding that conformance to guidelines is not an ‘afterthought’ and should be addressed from the beginning of the project.",
+			"Involvement of an accredited standardisation institute, if needed."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/4/40/Guideline_conformity_analysis.png/250px-Guideline_conformity_analysis.png",
+		"slug": "guideline-conformity-analysis"
+	},
+	{
+		"name": "Peer review",
+		"why": "Colleagues and experts can help improve your work, especially if they need to reuse it.",
+		"how": "Organise a representative group of experts and have them look at your work in a structured way. Peer reviews can be done in formal and less formal ways. What makes or breaks the review is getting the right colleagues or experts and giving them the right instructions for looking at and reporting about your work.",
+		"practice": "There are many forms of peer review in practice, ranging from a quick (but structured) glance at your work by a colleague to a full session with multiple experts who watch you talk them through your work on a big screen.",
+		"ingredients": [
+			"Somewhere between 1 and 10 colleagues or other (external) experts.",
+			"A way to show your work (e.g. a big screen or printouts).",
+			"Review instructions and reporting guidelines.",
+			"A laptop to make notes of your own observations and conclusions."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/f/f4/Peer_review.png/250px-Peer_review.png",
+		"slug": "peer-review"
+	},
+	{
+		"name": "Pitch",
+		"why": "Get an idea of the unique selling points of the opportunity you have found, or of the idea you have to tackle a problem, and practice concise communication about them.",
+		"how": "Prepare a short presentation (no more than 1–3 minutes) about your product, business proposition or solution direction. Practice the pitch on a wide range of experts to collect feedback and improve it.",
+		"practice": "Most independent professionals use an ‘elevator pitch’ to practice communicating their business propositions. You can also pitch your ideas to peers, to get feedback on how good they think it is.",
+		"ingredients": [
+			"Enthusiasm.",
+			"The ability to present your idea briefly and convincingly.",
+			"Representative experts.",
+			"A willingness to improve and change."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/5/58/Pitch.png/250px-Pitch.png",
+		"slug": "pitch"
+	},
+	{
+		"name": "Product review",
+		"why": "Ensure that the product is perfect before it is released to the client or users.",
+		"how": "One or more representatives of the client and other experts do a walk-through of the final product before it is released. This ensures that the product meets pre-set quality standards, and that all agreed-upon requirements are part of the product. A product demonstration is often part of this exercise.",
+		"practice": "Agile methodologies like Scrum explicitly make reviews or demos part of the process. This ensures that after every sprint iteration, the client and development team are aware of the project’s status and of the goals or requirements that are not yet met.",
+		"ingredients": [
+			"One or more representatives of the client and/or other experts.",
+			"A well-prepared demonstration that shows all the relevant parts of the product.",
+			"Sufficient time (half an hour to several hours) to do a demonstration and walk-through.",
+			"The list of product requirements."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/0/04/Product_review.png/250px-Product_review.png",
+		"slug": "product-review"
+	},
+	{
+		"name": "Static program analysis",
+		"why": "Get an impression of how well your code is written and quickly find vulnerabilities, weak spots and bad smells.",
+		"how": "Various tools can automatically review the quality of your source code or object code. Some of them can point you to specific details that may require your attention, while others can give a general impression of your code quality. Often, they can do both.",
+		"practice": "Many companies find code analysis important enough to make it a part of a continuous integration process.",
+		"ingredients": [
+			"Tools to automatically analyse your code.",
+			"Eagerness to deliver top-quality code.",
+			"Attention to details that can make your code futureproof."
+		],
+		"category": "showroom",
+		"image": "https://ictresearchmethods.nl/images/thumb/8/8c/Static_program_analysis.png/250px-Static_program_analysis.png",
+		"slug": "static-program-analysis"
+	}
+]
