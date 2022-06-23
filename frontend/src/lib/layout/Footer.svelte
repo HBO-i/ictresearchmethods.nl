@@ -2,7 +2,7 @@
 
 <style lang="scss">
 	footer {
-		padding: 2em 0 1em 0;
+		padding: 1em 0;
 		width: 100%;
 		text-align: center;
 		letter-spacing: 0.25px;

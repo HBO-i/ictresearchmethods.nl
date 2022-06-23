@@ -22,7 +22,7 @@
 
 	@media screen and (min-width: 1200px) {
 		main {
-			padding: 1em 3em;
+			padding: 2.5em;
 			min-height: 83vh;
 		}
 	}
