@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
-	import { slugify } from '$lib/utils/slugify';
 
 	export let method: Method;
 </script>
@@ -22,7 +21,7 @@
 		</p>
 	</div>
 	<button class="btn btn-primary"
-		><a href={'/' + method.category + '/' + slugify(method.name)}>More info</a></button
+		><a href={'/' + method.category + '/' + method.slug}>More info</a></button
 	>
 </article>
 

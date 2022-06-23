@@ -18,7 +18,7 @@
 		const { message } = await res.json();
 
 		return {
-			error: new Error('[field/method.svelte]: ', message)
+			error: new Error('[method.svelte]: ', message)
 		};
 	};
 </script>
