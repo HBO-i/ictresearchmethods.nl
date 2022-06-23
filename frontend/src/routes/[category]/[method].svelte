@@ -99,7 +99,6 @@
 	}
 
 	.detail {
-
 		&__details {
 			color: var(--color-black);
 			font-size: 1.5em;
@@ -113,8 +112,13 @@
 				font-size: 1.5em;
 				color: var(--color-black);
 				font-weight: normal;
+
+				&:hover {
+					transform: scale(1.15);
+				}
 			}
 		}
+
 		&__heading {
 			display: flex;
 			flex-direction: column-reverse;

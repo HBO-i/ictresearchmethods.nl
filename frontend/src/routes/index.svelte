@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
+	import { allMethods } from '$lib/stores';
 	export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
@@ -9,6 +10,7 @@
 			const result = await res.json();
 
 			const methodsArray = result.methodsArray;
+			allMethods.set(methodsArray);
 
 			return {
 				props: {
