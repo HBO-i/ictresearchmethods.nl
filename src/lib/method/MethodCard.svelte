@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
-	import { slugify } from '$lib/utils/slugify';
 
 	export let method: Method;
 </script>
@@ -21,10 +20,9 @@
 			{method.why}
 		</p>
 	</div>
-	<button class="btn btn-primary"
-		><a sveltekit:prefetch href={'/' + method.category + '/' + slugify(method.name)}>More info</a
-		></button
-	>
+	<a sveltekit:prefetch href={'/' + method.category + '/' + method.slug}>
+		<button class="btn btn-primary">More info</button>
+	</a>
 </article>
 
 <style lang="scss">
@@ -34,14 +32,12 @@
 		padding: 2em;
 		border-radius: 1.5em;
 	}
-
 	h1 {
 		font-weight: 500;
 		margin: 0.2em 0;
 		font-size: 1em;
 		width: 10em;
 	}
-
 	h2 {
 		color: var(--color-primary);
 		font-size: 0.9em;
@@ -49,24 +45,19 @@
 		line-height: 0;
 		text-transform: capitalize;
 	}
-
-	button a {
+	a {
 		text-decoration: none;
-		color: var(--color-white);
 	}
-
 	.card-heading {
 		display: flex;
 		align-items: center;
 		gap: 1em;
 		margin-bottom: 1.5em;
-
 		&__text {
 			display: flex;
 			flex-direction: column-reverse;
 			max-width: 50%;
 		}
-
 		&__img img {
 			height: 4.375em;
 			width: 4.375em;
@@ -74,14 +65,12 @@
 			object-fit: cover;
 		}
 	}
-
 	.card-content {
 		&__heading {
 			font-weight: 700;
 			line-height: 0;
 		}
 	}
-
 	// Desktop Styling
 	@media screen and (min-width: 1200px) {
 		article {
@@ -90,25 +79,20 @@
 			align-items: center;
 			box-sizing: border-box;
 		}
-
 		button {
 			margin-left: 5em;
 		}
-
 		.card-heading {
 			margin-bottom: 0;
-
 			&__img img {
 				height: 5em;
 				width: 5em;
 				transition: 0.2s ease-in;
-
 				&:hover {
 					transform: scale(1.5);
 				}
 			}
 		}
-
 		.card-content__body {
 			width: 42.5em;
 		}

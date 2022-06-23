@@ -3,8 +3,7 @@
 	export const prerender = true;
 
 	export const load: Load = async ({ fetch, params }) => {
-		const category = params.category;
-		const res = await fetch(`${category}.json`);
+		const res = await fetch(`${params.category}.json`);
 
 		if (res.ok) {
 			const result = await res.json();
@@ -19,23 +18,22 @@
 		const { message } = await res.json();
 
 		return {
-			error: new Error(message)
+			error: new Error('[category/index.svelte]: ', message)
 		};
 	};
 </script>
 
 <script lang="ts">
 	import type { Method } from '$lib/types';
-
 	import MethodList from '$lib/method/MethodList.svelte';
-	import CategoryTab from '$lib/CategoryTab.svelte';
+	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
 
 	export let result: Array<Method>;
 </script>
 
 <h1 class="site-title">ICT Methods</h1>
 <CategoryTab />
-<MethodList methodsList={result} />
+<MethodList methodsArray={result} />
 
 <style>
 	h1 {
@@ -45,7 +43,6 @@
 		width: 100%;
 		text-align: center;
 	}
-
 	@media screen and (min-width: 1200px) {
 		h1 {
 			text-align: left;

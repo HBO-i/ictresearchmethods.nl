@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { paginate, LightPaginationNav } from 'svelte-paginate';
 	import { currentPaginationPage } from '$lib/stores';
-
 	import type { Method } from '$lib/types';
-	import MethodCard from '$lib/method/MethodCard.svelte';
 
-	export let methodsList: Array<Method>;
+	import MethodCard from './MethodCard.svelte';
+	export let methodsArray: Array<Method>;
 
-	// let currentPage = 1;
 	let pageSize = 5;
 
 	function updatePaginationPage(page: number) {
@@ -15,7 +13,7 @@
 	}
 
 	$: currentPage = $currentPaginationPage;
-	$: items = methodsList;
+	$: items = methodsArray;
 	$: paginatedItems = paginate({ items, pageSize, currentPage });
 	$: isPaginationNeeded = items.length > 5;
 </script>
@@ -43,20 +41,17 @@
 	.list-navigation {
 		display: flex;
 		justify-content: flex-end;
-
 		:global(.pagination-nav) {
 			width: max-content;
 			border-radius: 1em;
 			border: none;
 		}
-
 		:global(.option) {
 			margin: 0.2em;
 			width: 1.5em;
 			height: 1.5em;
 			color: var(--color-text-secondary);
 		}
-
 		:global(.option):hover {
 			border-radius: 0.5em;
 		}
@@ -66,7 +61,6 @@
 			border-radius: 10px;
 		}
 	}
-
 	@media screen and (min-width: 1200px) {
 		section {
 			width: 1200px;

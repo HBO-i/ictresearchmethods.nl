@@ -8,9 +8,11 @@
 		if (res.ok) {
 			const result = await res.json();
 
+			const methodsArray = result.methodsArray;
+
 			return {
 				props: {
-					result
+					methodsArray
 				}
 			};
 		}
@@ -18,23 +20,22 @@
 		const { message } = await res.json();
 
 		return {
-			error: new Error(message)
+			error: new Error('[index.svelte]: ', message)
 		};
 	};
 </script>
 
 <script lang="ts">
 	import type { Method } from '$lib/types';
-
 	import MethodList from '$lib/method/MethodList.svelte';
-	import CategoryTab from '$lib/CategoryTab.svelte';
+	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
 
-	export let result: Array<Method>;
+	export let methodsArray: Array<Method>;
 </script>
 
 <h1 class="site-title">ICT Methods</h1>
 <CategoryTab />
-<MethodList methodsList={result} />
+<MethodList {methodsArray} />
 
 <style>
 	h1 {
@@ -44,7 +45,6 @@
 		width: 100%;
 		text-align: center;
 	}
-
 	@media screen and (min-width: 1200px) {
 		h1 {
 			text-align: left;

@@ -1,19 +1,22 @@
 import type { Method } from '$lib/types';
 import type { RequestHandler } from '@sveltejs/kit';
-import { getCurrentDomain } from '$lib/utils/url';
+import { API_URL } from '$lib/utils/url';
 
 export const get: RequestHandler = async (request) => {
 	try {
-		const url = getCurrentDomain();
-		const response = await fetch(`${url}/methods.json`);
-
-		const result = await response.json();
-
 		const methodName = request.params.category;
 
-		const currentCategory = result.filter((el: Method) => el.category === methodName);
+		const response = await fetch(`${API_URL}/methods.json`);
 
 		if (response.ok) {
+			const result = await response.json();
+
+			const methodsArray = result.methodsArray;
+
+			const currentCategory = Array.isArray(methodsArray)
+				? methodsArray.filter((el: Method) => el.category === methodName)
+				: [];
+
 			return {
 				body: currentCategory
 			};
@@ -29,7 +32,7 @@ export const get: RequestHandler = async (request) => {
 			};
 		}
 	} catch (error) {
-		console.error('[category.json]:', error);
+		console.error('[category/index.json]:', error);
 		return {
 			status: 500,
 			body: 'Internal Server Error'
