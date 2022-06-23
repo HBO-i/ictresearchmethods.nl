@@ -6,6 +6,5 @@ export interface Method {
 	ingredients: string[];
 	category: category;
 	image: string;
+	slug: string;
 }
-
-export type AllMethodsBody = () => { body: Method[] };

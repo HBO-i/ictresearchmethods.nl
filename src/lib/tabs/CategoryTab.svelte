@@ -4,7 +4,7 @@
 
 <ul>
 	<li>
-		<TabButton category="/" content="All methods" />
+		<TabButton category="" content="All methods" />
 	</li>
 	<li>
 		<TabButton category="library" content="Library" />
