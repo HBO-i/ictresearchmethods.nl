@@ -30,7 +30,7 @@
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
-		previousRoute = navigation.from?.pathname ?? '/'
+		previousRoute = navigation.from?.href ?? '/'
 	})
 
 	export let result: Method;
