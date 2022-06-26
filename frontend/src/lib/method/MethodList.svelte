@@ -40,16 +40,13 @@
 <style lang="scss">
 	.list-navigation {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		:global(.pagination-nav) {
 			width: max-content;
 			border-radius: 1em;
 			border: none;
 		}
 		:global(.option) {
-			margin: 0.2em;
-			width: 1.5em;
-			height: 1.5em;
 			color: var(--color-text-secondary);
 		}
 		:global(.option):hover {
@@ -64,6 +61,16 @@
 	@media screen and (min-width: 1200px) {
 		section {
 			width: 1200px;
+		}
+
+		.list-navigation {
+			justify-content: flex-end;
+		}
+
+		:global(.option) {
+			margin: 0.2em;
+			width: 1.5em;
+			height: 1.5em;
 		}
 	}
 </style>
