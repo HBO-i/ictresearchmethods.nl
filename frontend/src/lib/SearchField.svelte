@@ -5,7 +5,7 @@
 	let searchedArrayDisplay: Method[];
 
 	/**
-	 * Updates the search query based on the input field
+	 * Updates the search query based on the input field and adds the corresponding methods in the search array
 	 *
 	 * @param {KeyBoardEvent} e - Keyup/keychange event
 	 */
@@ -31,6 +31,9 @@
 		searchedArrayDisplay = searchedArray.splice(0, 3);
 	}
 
+	/**
+	 * Clears the search and disables the search dropdown after searching
+	 */
 	const clearSearch = () => {
 		const form = document.getElementsByTagName('form');
 		form[0].reset();

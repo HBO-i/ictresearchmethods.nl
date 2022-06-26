@@ -2,11 +2,10 @@
 	import type { Method } from '$lib/types'
 
 	import { page } from '$app/stores'
-	import { allMethods, searchedMethods } from '$lib/stores'
+	import { allMethods } from '$lib/stores'
 	import MethodList from '$lib/method/MethodList.svelte';
 
 	const queryString = $page.url.search;
-
 	const searchQuery = queryString.split('=')[1] ?? '';
 	const formattedSearchQuery = searchQuery.toLowerCase().replace('+', ' ');
 
@@ -17,7 +16,6 @@
 		})
 
 	$: isValidQuery = searchedMethodsArray.length > 0 && formattedSearchQuery !== ''
-
 </script>
 
 <a href="/">&larr; Back home</a>
