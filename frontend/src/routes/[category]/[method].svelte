@@ -25,13 +25,21 @@
 
 <script lang="ts">
 	import type { Method } from '$lib/types';
+	import { afterNavigate } from '$app/navigation';
+
+	let previousRoute: string;
+
+	afterNavigate((navigation) => {
+		previousRoute = navigation.from?.href ?? '/'
+	})
+
 	export let result: Method;
 </script>
 
 <section>
 
 	<p class="detail__details">
-		<a href="/">{'<'}</a>Details
+		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
 	<img src={result.image} alt="">
@@ -99,7 +107,6 @@
 	}
 
 	.detail {
-
 		&__details {
 			color: var(--color-black);
 			font-size: 1.5em;
@@ -113,8 +120,13 @@
 				font-size: 1.5em;
 				color: var(--color-black);
 				font-weight: normal;
+
+				&:hover {
+					transform: scale(1.15);
+				}
 			}
 		}
+
 		&__heading {
 			display: flex;
 			flex-direction: column-reverse;

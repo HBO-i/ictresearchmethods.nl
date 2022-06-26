@@ -1,9 +1,9 @@
-<script>
-	// your script goes here
+<script lang="ts">
+import SearchField from "$lib/SearchField.svelte";
 </script>
 
 <header>
-	<input type="text" placeholder="Search method (CMD + K)" />
+	<SearchField />
 </header>
 
 <style lang="scss">
@@ -14,26 +14,4 @@
 		justify-content: center;
 		align-items: center;
 	}
-
-	input {
-		border: none;
-		border-radius: 0.75em;
-		background-color: var(--color-bg);
-		color: var(--color-text-secondary);
-		padding: 1em 1.5em;
-		display: none;
-		min-width: 40em;
-		transition: ease-in 0.1s;
-
-		&:hover,
-		&:focus {
-			transform: scale(1.01);
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		input {
-			display: block;
-		}
-	}
-</style>
+	</style>
