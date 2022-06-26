@@ -28,7 +28,6 @@
 		background-color: var(--color-white);
 		border-radius: 1.5em;
 		max-width: fit-content;
-		list-style: none;
 		margin: 0 1em;
 		overflow-x: auto;
 		display: flex;

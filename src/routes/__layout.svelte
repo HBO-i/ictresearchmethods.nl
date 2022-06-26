@@ -2,10 +2,11 @@
 	import '../global.scss';
 	import Topbar from '$lib/layout/Topbar.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
+	import Sidebar from '$lib/layout/Sidebar.svelte';
 
-	import { showSearchField, allMethods, isJavaScriptDisabled } from '$lib/stores'
+	import { showSearchField, allMethods, isJavaScriptDisabled } from '$lib/stores';
 
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 
 	onMount(() => {
 		isJavaScriptDisabled.set(false);
@@ -52,17 +53,19 @@
 					searchField?.blur();
 					showSearchField.set(false);
 				}
-			})
-		};
-	})
-
+			});
+		}
+	});
 </script>
 
 <div class="root">
 	<Topbar />
-	<main>
-		<slot />
-	</main>
+	<div class="content">
+		<Sidebar />
+		<main>
+			<slot />
+		</main>
+	</div>
 	<Footer />
 </div>
 
@@ -74,10 +77,15 @@
 		min-height: 100vh;
 	}
 
+	.content {
+		display: flex;
+	}
+
 	@media screen and (min-width: 1200px) {
 		main {
 			padding: 2.5em;
 			min-height: 83vh;
+			max-width: 75em;
 		}
 	}
 </style>

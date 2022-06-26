@@ -30,7 +30,6 @@
 		margin: 0.5em 0;
 		padding: 2em;
 		border-radius: 1.5em;
-		max-width: 75vw;
 	}
 	h1 {
 		font-weight: 500;
@@ -76,11 +75,11 @@
 	.tag {
 		border: 1px solid var(--color-primary);
 		width: max-content;
-		// padding: 0.5em;
 		padding: 0.33em 1em;
 		font-size: 0.8em;
 		border-radius: 1em;
 		text-transform: uppercase;
+		margin: 1em 0;
 	}
 
 	// Desktop Styling
@@ -109,6 +108,10 @@
 		}
 		.card-content__body {
 			width: 42.5em;
+		}
+
+		.tag {
+			margin: 0;
 		}
 	}
 </style>

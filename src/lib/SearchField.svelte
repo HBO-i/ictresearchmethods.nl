@@ -132,8 +132,6 @@
 	}
 
 	ul {
-		list-style: none;
-		padding-left: 0;
 		position: absolute;
 		top: 5%;
 		background-color: var(--color-bg);

@@ -89,7 +89,6 @@
 	@media screen and (min-width: 1200px) {
 		section {
 			width: 100%;
-			max-width: 75em;
 			display: block;
 		}
 
