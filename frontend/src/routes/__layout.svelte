@@ -1,14 +1,15 @@
-<script>
+<script lang="ts">
 	import '../global.scss';
 	import Topbar from '$lib/layout/Topbar.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
 
-	import { showSearchField, allMethods } from '$lib/stores'
+	import { showSearchField, allMethods, isJavaScriptDisabled } from '$lib/stores'
 
 	import { onMount } from 'svelte'
 
 	onMount(() => {
-		const methodsAreNotAlreadyInStore = $allMethods === undefined;
+		isJavaScriptDisabled.set(false);
+		const methodsAreNotAlreadyInStore = $allMethods.length < 1;
 
 		if (methodsAreNotAlreadyInStore) {
 			setAllMethodsInStore();

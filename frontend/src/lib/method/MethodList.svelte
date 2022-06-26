@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { paginate, LightPaginationNav } from 'svelte-paginate';
-	import { currentPaginationPage } from '$lib/stores';
+	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
 	import type { Method } from '$lib/types';
 
 	import MethodCard from './MethodCard.svelte';
@@ -18,24 +18,32 @@
 	$: isPaginationNeeded = items.length > 5;
 </script>
 
-<section>
-	{#each paginatedItems as method}
-		<MethodCard {method} />
-	{/each}
+{#if $isJavaScriptDisabled}
+	<section>
+		{#each items as method}
+			<MethodCard {method} />
+		{/each}
+	</section>
+{:else}
+	<section>
+		{#each paginatedItems as method}
+			<MethodCard {method} />
+		{/each}
 
-	{#if isPaginationNeeded}
-		<div class="list-navigation">
-			<LightPaginationNav
-				totalItems={items.length}
-				{pageSize}
-				{currentPage}
-				limit={1}
-				showStepOptions={true}
-				on:setPage={(e) => updatePaginationPage(e.detail.page)}
-			/>
-		</div>
-	{/if}
-</section>
+		{#if isPaginationNeeded && !$isJavaScriptDisabled}
+			<div class="list-navigation">
+				<LightPaginationNav
+					totalItems={items.length}
+					{pageSize}
+					{currentPage}
+					limit={1}
+					showStepOptions={true}
+					on:setPage={(e) => updatePaginationPage(e.detail.page)}
+				/>
+			</div>
+		{/if}
+	</section>
+{/if}
 
 <style lang="scss">
 	.list-navigation {

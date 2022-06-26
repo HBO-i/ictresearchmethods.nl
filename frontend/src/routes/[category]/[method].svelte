@@ -25,13 +25,21 @@
 
 <script lang="ts">
 	import type { Method } from '$lib/types';
+	import { afterNavigate } from '$app/navigation';
+
+	let previousRoute: string;
+
+	afterNavigate((navigation) => {
+		previousRoute = navigation.from?.pathname ?? '/'
+	})
+
 	export let result: Method;
 </script>
 
 <section>
 
 	<p class="detail__details">
-		<a href="/">{'<'}</a>Details
+		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
 	<img src={result.image} alt="">
