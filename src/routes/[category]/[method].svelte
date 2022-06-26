@@ -30,19 +30,18 @@
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
-		previousRoute = navigation.from?.href ?? '/'
-	})
+		previousRoute = navigation.from?.href ?? '/';
+	});
 
 	export let result: Method;
 </script>
 
 <section>
-
 	<p class="detail__details">
 		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
-	<img src={result.image} alt="">
+	<img src={result.image} alt="" />
 
 	<div class="detail__heading">
 		<h1>{result.name}</h1>
@@ -58,18 +57,17 @@
 	<h3>Ingredients</h3>
 	<ul>
 		{#each result.ingredients as ingredient}
-		<li>{ingredient}</li>
+			<li>{ingredient}</li>
 		{/each}
 	</ul>
 
 	<h3>In practice</h3>
 	<p>{result.practice}</p>
-
 </section>
 
 <style lang="scss">
 	section {
-		background-color: #fff;
+		background-color: var(--color-white);
 		border-radius: 1em;
 		padding: 0.5em 2em;
 	}
@@ -79,7 +77,8 @@
 		max-height: 40vh;
 	}
 
-	h1, h2 {
+	h1,
+	h2 {
 		margin: 0;
 	}
 
@@ -100,7 +99,7 @@
 	}
 
 	p {
-		max-width: 50vw;
+		max-width: 90vw;
 		line-height: 1.5em;
 		letter-spacing: 0.2px;
 		margin-top: 0.35em;
@@ -130,6 +129,12 @@
 		&__heading {
 			display: flex;
 			flex-direction: column-reverse;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		p {
+			max-width: 50vw;
 		}
 	}
 </style>

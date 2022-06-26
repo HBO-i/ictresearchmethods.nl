@@ -2,12 +2,12 @@
 
 <style lang="scss">
 	footer {
-		padding: 1em 0;
+		padding: 1.5em 0;
 		width: 100%;
 		text-align: center;
 		letter-spacing: 0.25px;
 		word-spacing: 0.5px;
-		font-size: 1.025em;
+		font-size: 1.15em;
 
 		a {
 			color: var(--color-black);

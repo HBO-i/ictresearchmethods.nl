@@ -34,6 +34,7 @@
 		display: flex;
 		gap: 2em;
 		padding: 0.5em;
+		scroll-snap-type: x mandatory;
 	}
 
 	@media screen and (min-width: 1200px) {

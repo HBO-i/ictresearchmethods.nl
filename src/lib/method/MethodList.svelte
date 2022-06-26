@@ -1,51 +1,62 @@
 <script lang="ts">
-	import { paginate, LightPaginationNav } from 'svelte-paginate';
-	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
 	import type { Method } from '$lib/types';
 
+	import { paginate, LightPaginationNav } from 'svelte-paginate';
+	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
 	import MethodCard from './MethodCard.svelte';
+	import { onMount } from 'svelte';
 	export let methodsArray: Array<Method>;
 
-	let pageSize = 5;
+	let isMobile: boolean;
+
+	onMount(() => {
+		isMobile = window.matchMedia('only screen and (max-width: 760px)').matches;
+	});
 
 	function updatePaginationPage(page: number) {
 		currentPaginationPage.set(page);
 	}
 
+	$: pageSize = isMobile ? 8 : 5;
 	$: currentPage = $currentPaginationPage;
 	$: items = methodsArray;
 	$: paginatedItems = paginate({ items, pageSize, currentPage });
-	$: isPaginationNeeded = items.length > 5;
+	$: isPaginationNeeded = items.length > pageSize;
+	$: methods = $isJavaScriptDisabled ? items : paginatedItems;
 </script>
 
-{#if $isJavaScriptDisabled}
-	<section>
-		{#each items as method}
+<section>
+	{#each methods as method}
+		<a sveltekit:prefetch href={'/' + method.category + '/' + method.slug} title={method.name}>
 			<MethodCard {method} />
-		{/each}
-	</section>
-{:else}
-	<section>
-		{#each paginatedItems as method}
-			<MethodCard {method} />
-		{/each}
+		</a>
+	{/each}
+</section>
 
-		{#if isPaginationNeeded && !$isJavaScriptDisabled}
-			<div class="list-navigation">
-				<LightPaginationNav
-					totalItems={items.length}
-					{pageSize}
-					{currentPage}
-					limit={1}
-					showStepOptions={true}
-					on:setPage={(e) => updatePaginationPage(e.detail.page)}
-				/>
-			</div>
-		{/if}
-	</section>
+{#if isPaginationNeeded && !$isJavaScriptDisabled}
+	<div class="list-navigation">
+		<LightPaginationNav
+			totalItems={items.length}
+			{pageSize}
+			{currentPage}
+			limit={1}
+			showStepOptions={true}
+			on:setPage={(e) => updatePaginationPage(e.detail.page)}
+		/>
+	</div>
 {/if}
 
 <style lang="scss">
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
 	.list-navigation {
 		display: flex;
 		justify-content: center;
@@ -56,6 +67,8 @@
 		}
 		:global(.option) {
 			color: var(--color-text-secondary);
+			width: 1em;
+			margin: 0.1em;
 		}
 		:global(.option):hover {
 			border-radius: 0.5em;
@@ -66,9 +79,18 @@
 			border-radius: 10px;
 		}
 	}
+
+	@media screen and (min-width: 767px) {
+		section {
+			display: block;
+		}
+	}
+
 	@media screen and (min-width: 1200px) {
 		section {
-			width: 1200px;
+			width: 100%;
+			max-width: 75em;
+			display: block;
 		}
 
 		.list-navigation {

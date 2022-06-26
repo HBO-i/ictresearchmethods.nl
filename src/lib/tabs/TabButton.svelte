@@ -13,8 +13,10 @@
 	export let content: string;
 </script>
 
-<a href={'/' + category}>
-	<button class:selected={isCategorySelected} on:click={() => resetPagination()}>{content}</button>
+<a href={'/' + category} title={'category ' + category}>
+	<button tabindex="-1" class:selected={isCategorySelected} on:click={() => resetPagination()}
+		>{content}</button
+	>
 </a>
 
 <style lang="scss">
@@ -24,6 +26,8 @@
 		border: none;
 		color: var(--color-text-secondary);
 		padding: 1em;
+		font-size: 1.1em;
+		scroll-snap-align: center;
 		&.selected {
 			color: var(--color-primary);
 			font-weight: 700;

@@ -1,5 +1,5 @@
 <script lang="ts">
-import SearchField from "$lib/SearchField.svelte";
+	import SearchField from '$lib/SearchField.svelte';
 </script>
 
 <header>
@@ -10,8 +10,14 @@ import SearchField from "$lib/SearchField.svelte";
 	header {
 		background-color: var(--color-white);
 		height: 4em;
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
 	}
-	</style>
+
+	@media screen and (min-width: 1200px) {
+		header {
+			display: flex;
+		}
+	}
+</style>

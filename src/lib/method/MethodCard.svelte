@@ -20,23 +20,23 @@
 			{method.why}
 		</p>
 	</div>
-	<a sveltekit:prefetch href={'/' + method.category + '/' + method.slug}>
-		<button class="btn btn-primary">More info</button>
-	</a>
+	<button class="btn btn-primary">More info</button>
 </article>
 
 <style lang="scss">
 	article {
 		background-color: var(--color-white);
-		margin: 0.75em 0;
+		margin: 0.5em 0;
 		padding: 2em;
 		border-radius: 1.5em;
+		max-width: 75vw;
 	}
 	h1 {
 		font-weight: 500;
 		margin: 0.2em 0;
 		font-size: 1em;
 		width: 10em;
+		color: var(--color-black);
 	}
 	h2 {
 		color: var(--color-primary);
@@ -78,6 +78,12 @@
 			justify-content: space-between;
 			align-items: center;
 			box-sizing: border-box;
+			margin: 0.75em 0;
+
+			&:hover {
+				transform: scale(1.01);
+				box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+			}
 		}
 		button {
 			margin-left: 5em;
@@ -87,10 +93,6 @@
 			&__img img {
 				height: 5em;
 				width: 5em;
-				transition: 0.2s ease-in;
-				&:hover {
-					transform: scale(1.5);
-				}
 			}
 		}
 		.card-content__body {

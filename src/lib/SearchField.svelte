@@ -170,12 +170,14 @@
 	}
 
 	@media screen and (min-width: 1200px) {
-		form input {
-			display: block;
-		}
+		form {
+			input {
+				display: block;
+			}
 
-		button {
-			display: flex;
+			button {
+				display: flex;
+			}
 		}
 	}
 </style>

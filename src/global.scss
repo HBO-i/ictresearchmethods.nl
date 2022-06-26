@@ -8,7 +8,7 @@
 	--color-bg: hsl(0, 0%, 96%);
 	--color-bg-dark: hsl(210, 11%, 7%);
 
-	--color-white: hsl(0, 0%, 99%);
+	--color-white: hsl(0, 0%, 100%);
 	--color-black: hsl(204, 9%, 11%);
 
 	--color-green: hsl(150, 66%, 38%);
@@ -22,6 +22,7 @@ body {
 	padding: 0;
 	margin: 0;
 	color: var(--color-text-primary);
+	overflow-x: hidden;
 }
 
 p,
@@ -48,6 +49,7 @@ button:hover {
 	&:hover {
 		cursor: pointer;
 		transform: scale(1.05);
+		box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 	}
 }
 
