@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Method } from '$lib/types'
-	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores'
+	import type { Method } from '$lib/types';
+	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores';
 
 	let searchedArrayDisplay: Method[];
 
@@ -11,7 +11,7 @@
 	 */
 
 	const updateSearchQuery = (e: KeyboardEvent) => {
-		const searchInput = (e.target as HTMLInputElement)
+		const searchInput = e.target as HTMLInputElement;
 		const searchQuery = searchInput.value.toLowerCase();
 
 		if (searchQuery.length > 1) {
@@ -22,14 +22,14 @@
 			showSearchField.set(false);
 		}
 
-		const searchedArray = $allMethods.filter(function(method: Method) {
+		const searchedArray = $allMethods.filter(function (method: Method) {
 			const lowerCasedMethodName = method.name.toLowerCase();
 
-			return lowerCasedMethodName.includes(searchQuery)
-		})
+			return lowerCasedMethodName.includes(searchQuery);
+		});
 
 		searchedArrayDisplay = searchedArray.splice(0, 3);
-	}
+	};
 
 	/**
 	 * Clears the search and disables the search dropdown after searching
@@ -39,39 +39,48 @@
 		form[0].reset();
 
 		showSearchField.set(false);
-	}
+	};
 </script>
 
 {#if $isJavaScriptDisabled}
 	<form action="/search">
-		<input type="text" name="query" placeholder="Search method">
+		<input type="text" name="query" placeholder="Search method" />
+		<label for="search">Search for method</label>
 		<button>Search</button>
 	</form>
 {:else}
 	<form action="/search" id="form">
-		<input type="text" id="search" name="query" placeholder="Search method (CMD + K)" on:keyup={(e) => {updateSearchQuery(e)}} />
+		<input
+			type="text"
+			id="search"
+			name="query"
+			placeholder="Search method (CMD + K)"
+			on:keyup={(e) => {
+				updateSearchQuery(e);
+			}}
+		/>
 		<button tabindex="-1">Search</button>
+		<label for="search">Search for method</label>
 	</form>
 
 	{#if $showSearchField}
 		<ul>
 			{#each searchedArrayDisplay as method}
-			<li>
-				<a href={'/' + method.category + '/' + method.slug} on:click={clearSearch}>
-					<span>{method.name}</span> - {method.category}
-				</a>
-			</li>
+				<li>
+					<a href={'/' + method.category + '/' + method.slug} on:click={clearSearch}>
+						<span>{method.name}</span> - {method.category}
+					</a>
+				</li>
 			{/each}
 			{#if searchedArrayDisplay.length === 0}
 				<li class="no-results">No results.. Try another query</li>
 			{/if}
 		</ul>
 	{/if}
-
 {/if}
 
 <style lang="scss">
-	form  {
+	form {
 		position: relative;
 		display: flex;
 
@@ -87,6 +96,11 @@
 			position: relative;
 		}
 
+		label {
+			visibility: hidden;
+			position: absolute;
+		}
+
 		button {
 			position: absolute;
 			right: 0;
@@ -98,7 +112,7 @@
 			outline: 2px solid rgba(0, 0, 0, 0.1);
 			border-radius: 0.5em;
 			padding: 1em;
-			display: flex;
+			display: none;
 			justify-content: center;
 			align-items: center;
 
@@ -153,13 +167,15 @@
 		li.no-results {
 			padding: 1.5em;
 		}
-
 	}
 
-@media screen and (min-width: 1200px) {
-	form input {
-		display: block;
-	}
-}
+	@media screen and (min-width: 1200px) {
+		form input {
+			display: block;
+		}
 
+		button {
+			display: flex;
+		}
+	}
 </style>

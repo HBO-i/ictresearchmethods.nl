@@ -3,7 +3,7 @@
 	--color-secondary: hsl(232, 76%, 92%);
 
 	--color-text-primary: hsl(234, 45%, 12%);
-	--color-text-secondary: hsl(236, 7%, 54%);
+	--color-text-secondary: hsl(236, 7%, 48%);
 
 	--color-bg: hsl(0, 0%, 96%);
 	--color-bg-dark: hsl(210, 11%, 7%);
@@ -11,7 +11,7 @@
 	--color-white: hsl(0, 0%, 99%);
 	--color-black: hsl(204, 9%, 11%);
 
-	--color-green: hsl(150, 66%, 51%);
+	--color-green: hsl(150, 66%, 38%);
 }
 
 * {
@@ -42,6 +42,8 @@ button:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 0.9em;
+	font-weight: 500;
 
 	&:hover {
 		cursor: pointer;
@@ -50,11 +52,11 @@ button:hover {
 }
 
 .btn-primary {
-	background-color: var(--color-green);
+	background-color: var(--color-primary);
 	color: var(--color-white);
 }
 
 .btn-secondary {
 	background-color: var(--color-white);
-	color: var(--color-green);
+	color: var(--color-primary);
 }
