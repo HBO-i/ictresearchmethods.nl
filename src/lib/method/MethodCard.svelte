@@ -19,6 +19,7 @@
 		<p class="card-content__body">
 			{method.why}
 		</p>
+		<div class="tag">Problem Definition</div>
 	</div>
 	<button class="btn btn-primary">More info</button>
 </article>
@@ -71,6 +72,17 @@
 			line-height: 0;
 		}
 	}
+
+	.tag {
+		border: 1px solid var(--color-primary);
+		width: max-content;
+		// padding: 0.5em;
+		padding: 0.33em 1em;
+		font-size: 0.8em;
+		border-radius: 1em;
+		text-transform: uppercase;
+	}
+
 	// Desktop Styling
 	@media screen and (min-width: 1200px) {
 		article {
