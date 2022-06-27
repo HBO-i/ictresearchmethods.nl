@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Method } from '$lib/types';
 
-import { API_URL } from '$lib/utils/url';
+import { API_URL } from '$lib/env';
 
 export const get: RequestHandler = async (request) => {
 	try {

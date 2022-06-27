@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SearchField from '$lib/SearchField.svelte';
+	import SearchField from '$lib/components/SearchField.svelte';
 	import Github from '$lib/icons/header/github.svelte';
 	import BmcLogo from '$lib/icons/header/bmc-logo.svelte';
 </script>

@@ -29,8 +29,8 @@
 
 <script lang="ts">
 	import type { Method } from '$lib/types';
-	import MethodList from '$lib/method/MethodList.svelte';
-	import CategoryTab from '$lib/tabs/CategoryTab.svelte';
+	import MethodList from '$lib/components/method/MethodList.svelte';
+	import CategoryTab from '$lib/components/tabs/CategoryTab.svelte';
 
 	export let methodsArray: Array<Method>;
 </script>
