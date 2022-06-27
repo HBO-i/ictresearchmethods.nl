@@ -1,9 +1,6 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
-	// @TODO: Update with real data when API is ready
-	const dummyPhaseArr = ['problem definition', 'design', 'evaluation'];
-
 	export let method: Method;
 </script>
 
@@ -23,9 +20,11 @@
 			{method.why}
 		</p>
 		<div class="tag-container">
-			{#each dummyPhaseArr as dummyMethod}
-				<div class="tag-container__tag">{dummyMethod}</div>
-			{/each}
+			{#if method.phase}
+				{#each method.phase as phase}
+					<div class="tag-container__tag">{phase}</div>
+				{/each}
+			{/if}
 		</div>
 	</div>
 	<button class="btn btn-primary more-info">More info</button>
@@ -52,9 +51,7 @@
 		line-height: 0;
 		text-transform: capitalize;
 	}
-	a {
-		text-decoration: none;
-	}
+
 	.card-heading {
 		display: flex;
 		align-items: center;

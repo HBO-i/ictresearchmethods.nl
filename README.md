@@ -1,5 +1,7 @@
 # ICTMethods.nl
 
+⛔️ **Currently work in progress, so there are still some bugs in the app**
+
 **[Live link](https://www.ictmethods.nl/)**
 
 As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the questions and tackling the problems or opportunities of your ICT project requires research and often a combination of various ICT research methods. The toolkit on this website offers you a set of possible research methods and a framework to select the appropriate (combination of) methods.
@@ -53,7 +55,7 @@ npm run test
 
 ### API
 
-All the data is retrieved from an API. [Source code of the API](#).
+All the data is retrieved from an API. [Source code of the API](https://github.com/jochemvogel/api.ictmethods.nl).
 
 ## Copyright
 

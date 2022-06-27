@@ -10,7 +10,12 @@
 	</a>
 	<SearchField />
 	<div class="icon-container">
-		<a href="https://www.github.com/" target="_blank" title="github" class="github">
+		<a
+			href="https://github.com/jochemvogel/ictmethods.nl"
+			target="_blank"
+			title="github"
+			class="github"
+		>
 			<Github />
 		</a>
 

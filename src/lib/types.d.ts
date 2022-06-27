@@ -7,4 +7,5 @@ export interface Method {
 	category: category;
 	image: string;
 	slug: string;
+	phase: string[];
 }
