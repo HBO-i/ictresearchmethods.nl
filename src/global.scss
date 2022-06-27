@@ -28,10 +28,13 @@ body {
 p,
 li {
 	color: var(--color-text-secondary);
-	font-size: 0.9em;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 0.9em;
+	}
 }
 
-ul {
+ul.non-style {
 	list-style: none;
 	padding-left: 0;
 }

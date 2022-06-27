@@ -31,7 +31,7 @@
 	export let result: Array<Method>;
 </script>
 
-<h1 class="site-title">ICT Methods</h1>
+<h1 class="site-title">Methods</h1>
 <CategoryTab />
 <MethodList methodsArray={result} />
 

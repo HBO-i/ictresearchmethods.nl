@@ -77,8 +77,8 @@
 		min-height: 100vh;
 	}
 
-	.content {
-		display: flex;
+	main {
+		padding: 0.75em;
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -86,6 +86,10 @@
 			padding: 2.5em;
 			min-height: 83vh;
 			max-width: 75em;
+		}
+
+		.content {
+			display: flex;
 		}
 	}
 </style>

@@ -5,7 +5,7 @@
 </script>
 
 <aside>
-	<ul>
+	<ul class="non-style">
 		<li>
 			<a class="active" href="/">
 				<Dashboard />

@@ -2,7 +2,7 @@
 	import TabButton from '$lib/tabs/TabButton.svelte';
 </script>
 
-<ul>
+<ul class="non-style">
 	<li>
 		<TabButton category="" content="All methods" />
 	</li>
@@ -28,11 +28,10 @@
 		background-color: var(--color-white);
 		border-radius: 1.5em;
 		max-width: fit-content;
-		margin: 0 1em;
 		overflow-x: auto;
 		display: flex;
 		gap: 2em;
-		padding: 0.5em;
+		padding: 0.5em 1.25em;
 		scroll-snap-type: x mandatory;
 	}
 
@@ -43,7 +42,6 @@
 			display: flex;
 			justify-content: center;
 			padding: 0 1em;
-			margin: 0;
 			border-radius: 0.75em;
 			gap: 5px;
 			overflow-y: hidden;

@@ -1,6 +1,9 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
+	// @TODO: Update with real data when API is ready
+	const dummyPhaseArr = ['problem definition', 'design', 'evaluation'];
+
 	export let method: Method;
 </script>
 
@@ -19,9 +22,13 @@
 		<p class="card-content__body">
 			{method.why}
 		</p>
-		<div class="tag">Problem Definition</div>
+		<div class="tag-container">
+			{#each dummyPhaseArr as dummyMethod}
+				<div class="tag-container__tag">{dummyMethod}</div>
+			{/each}
+		</div>
 	</div>
-	<button class="btn btn-primary">More info</button>
+	<button class="btn btn-primary more-info">More info</button>
 </article>
 
 <style lang="scss">
@@ -34,13 +41,13 @@
 	h1 {
 		font-weight: 500;
 		margin: 0.2em 0;
-		font-size: 1em;
+		font-size: 1.1em;
 		width: 10em;
 		color: var(--color-black);
 	}
 	h2 {
 		color: var(--color-primary);
-		font-size: 0.9em;
+		font-size: 1em;
 		font-weight: normal;
 		line-height: 0;
 		text-transform: capitalize;
@@ -59,8 +66,8 @@
 			max-width: 50%;
 		}
 		&__img img {
-			height: 4.375em;
-			width: 4.375em;
+			height: 5em;
+			width: 5em;
 			border-radius: 1em;
 			object-fit: cover;
 		}
@@ -72,14 +79,23 @@
 		}
 	}
 
-	.tag {
-		border: 1px solid var(--color-primary);
-		width: max-content;
-		padding: 0.33em 1em;
-		font-size: 0.8em;
-		border-radius: 1em;
-		text-transform: uppercase;
-		margin: 1em 0;
+	.tag-container {
+		display: flex;
+		flex-wrap: wrap;
+		&__tag {
+			color: var(--color-primary);
+			border: 1px solid var(--color-primary);
+			width: max-content;
+			padding: 0.33em 1em;
+			font-size: 0.9em;
+			border-radius: 1em;
+			text-transform: uppercase;
+			margin: 0.25em;
+		}
+	}
+
+	.more-info {
+		display: none;
 	}
 
 	// Desktop Styling
@@ -89,7 +105,7 @@
 			justify-content: space-between;
 			align-items: center;
 			box-sizing: border-box;
-			margin: 0.75em 0;
+			margin: 0.5em 0;
 
 			&:hover {
 				transform: scale(1.01);
@@ -99,19 +115,32 @@
 		button {
 			margin-left: 5em;
 		}
+
+		h1 {
+			font-size: 1em;
+		}
+
+		h2 {
+			font-size: 0.9em;
+		}
 		.card-heading {
 			margin-bottom: 0;
-			&__img img {
-				height: 5em;
-				width: 5em;
-			}
 		}
 		.card-content__body {
 			width: 42.5em;
 		}
 
-		.tag {
-			margin: 0;
+		.tag-container {
+			display: flex;
+
+			&__tag {
+				margin: 0 0.25em;
+				font-size: 0.8em;
+			}
+		}
+
+		.more-info {
+			display: flex;
 		}
 	}
 </style>
