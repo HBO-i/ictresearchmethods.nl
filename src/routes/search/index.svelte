@@ -3,7 +3,7 @@
 
 	import { page } from '$app/stores';
 	import { allMethods } from '$lib/stores';
-	import MethodList from '$lib/method/MethodList.svelte';
+	import MethodList from '$lib/components/method/MethodList.svelte';
 
 	const queryString = $page.url.search;
 	const searchQuery = queryString.split('=')[1] ?? '';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TabButton from '$lib/tabs/TabButton.svelte';
+	import TabButton from '$lib/components/tabs/TabButton.svelte';
 
 	import { categoryRoutes } from '$lib/routes';
 </script>

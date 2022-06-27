@@ -1,8 +1,8 @@
 <script lang="ts">
-	import '../global.scss';
-	import Topbar from '$lib/layout/Topbar.svelte';
-	import Footer from '$lib/layout/Footer.svelte';
-	import Sidebar from '$lib/layout/Sidebar.svelte';
+	import './_global.scss';
+	import Topbar from '$lib/components/layout/Topbar.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 
 	import { showSearchField, allMethods, isJavaScriptDisabled } from '$lib/stores';
 
