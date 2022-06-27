@@ -1,20 +1,23 @@
 # ICTMethods.nl
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+**[Live link](https://www.ictmethods.nl/)**
 
-## Creating a project
+As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the questions and tackling the problems or opportunities of your ICT project requires research and often a combination of various ICT research methods. The toolkit on this website offers you a set of possible research methods and a framework to select the appropriate (combination of) methods.
 
-If you're seeing this, you've probably already done this step. Congrats!
+> **Disclaimer:** I do not own any of this content. All the content and the physical Methods pack have been realised as, and are maintained by [HBO-i](https://www.hbo-i.nl/) projects. More info can be found in the [Copyright section](#copyright).
 
-```bash
-# create a new project in the current directory
-npm init svelte
+## Table of Contents
 
-# create a new project in my-app
-npm init svelte my-app
-```
+<table>
+<tr>
+<td align="center"><a href="#gear-installation">⚙️ Installation<a></td>
+<td align="center"><a href="#copyright">Copyright<a></td>
+</tr>
+</table>
 
-## Developing
+## :gear: Installation
+
+### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -23,11 +26,14 @@ npm run dev
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
+
+# or expose it to your local network, so it will be accessibile on other devices (like your phone)
+npm run dev-expose
 ```
 
 Copy `.env.example`, rename it to `.env` and fill all the values
 
-## Building
+### Building
 
 To create a production version of your app:
 
@@ -37,4 +43,30 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Testing
+
+[Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/) is being used for testing.
+
+```bash
+npm run test
+```
+
+### API
+
+All the data is retrieved from an API. [Source code of the API](#).
+
+## Copyright
+
+As mentioned before: all of its contents and the physical Methods pack have been realised as, and are maintained by [HBO-i](https://www.hbo-i.nl/) projects.
+
+The Method cards (except the domain specific cards) were written by:
+
+- Wilco Bonestroo
+- Marcel Meesters
+- Ralph Niels
+- Jan Dirk Schagen
+- Koen van Turnhout
+
+All Method cards were illustrated by:
+
+- Laura Henneke
