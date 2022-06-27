@@ -90,7 +90,8 @@
 			font-size: 0.9em;
 			border-radius: 1em;
 			text-transform: uppercase;
-			margin: 0.25em;
+			margin: 0.25em 0.5em;
+			margin-left: 0;
 		}
 	}
 
