@@ -61,22 +61,22 @@
 		/>
 		<button tabindex="-1">Search</button>
 		<label for="search">Search for method</label>
-	</form>
 
-	{#if $showSearchField}
-		<ul>
-			{#each searchedArrayDisplay as method}
-				<li>
-					<a href={'/' + method.category + '/' + method.slug} on:click={clearSearch}>
-						<span>{method.name}</span> - {method.category}
-					</a>
-				</li>
-			{/each}
-			{#if searchedArrayDisplay.length === 0}
-				<li class="no-results">No results.. Try another query</li>
-			{/if}
-		</ul>
-	{/if}
+		{#if $showSearchField}
+			<ul class="non-style">
+				{#each searchedArrayDisplay as method}
+					<li>
+						<a href={'/' + method.category + '/' + method.slug} on:click={clearSearch}>
+							<span>{method.name}</span> - {method.category}
+						</a>
+					</li>
+				{/each}
+				{#if searchedArrayDisplay.length === 0}
+					<li class="no-results">No results.. Try another query</li>
+				{/if}
+			</ul>
+		{/if}
+	</form>
 {/if}
 
 <style lang="scss">
@@ -133,10 +133,10 @@
 
 	ul {
 		position: absolute;
-		top: 5%;
+		top: 75%;
 		background-color: var(--color-bg);
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		width: 30%;
+		width: 100%;
 		box-sizing: border-box;
 		border-top: 1.5px solid rgba(0, 0, 0, 0.1);
 		border-bottom-left-radius: 0.5em;
