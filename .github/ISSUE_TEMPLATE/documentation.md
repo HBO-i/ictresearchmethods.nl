@@ -4,6 +4,7 @@ about: Create a task for documentation
 title: Documentation of ....
 labels: documentation
 assignees: ''
+
 ---
 
 Part of: [Story reference]
