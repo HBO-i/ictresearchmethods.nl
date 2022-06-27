@@ -35,6 +35,10 @@
 	export let methodsArray: Array<Method>;
 </script>
 
+<svelte:head>
+	<title>ICT Research Methods — Research Methods for Design-Oriented Research in ICT</title>
+</svelte:head>
+
 <h1 class="site-title">Methods</h1>
 <CategoryTab />
 <MethodList {methodsArray} />

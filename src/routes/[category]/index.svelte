@@ -8,6 +8,10 @@
 		if (res.ok) {
 			const result = await res.json();
 
+			if (result.length === 0) {
+				return { status: 404 };
+			}
+
 			return {
 				props: {
 					result
@@ -30,6 +34,10 @@
 
 	export let result: Array<Method>;
 </script>
+
+<svelte:head>
+	<title>Category {result[0].category} — ICT Research Methods</title>
+</svelte:head>
 
 <h1 class="site-title">Methods</h1>
 <CategoryTab />
