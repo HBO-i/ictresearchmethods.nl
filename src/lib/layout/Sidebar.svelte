@@ -1,29 +1,23 @@
-<script>
-	import Dashboard from '$lib/icons/dashboard.svelte';
-	import Person from '$lib/icons/person.svelte';
-	import Star from '$lib/icons/star.svelte';
+<script lang="ts">
+	import SidebarIcon from './SidebarIcon.svelte';
+	import { sidebarRoutes } from '$lib/routes';
+	import { page } from '$app/stores';
+
+	// const categories = ['library', 'field', 'lab', 'showroom', 'workshop'];
+
+	$: pathName = $page.url.pathname;
 </script>
 
 <aside>
 	<ul class="non-style">
-		<li>
-			<a class="active" href="/">
-				<Dashboard />
-				Methods
-			</a>
-		</li>
-		<li>
-			<a href="/">
-				<Person />
-				About
-			</a>
-		</li>
-		<li>
-			<a href="/">
-				<Star />
-				Saved Methods
-			</a>
-		</li>
+		{#each sidebarRoutes as route}
+			<li>
+				<a class:active={pathName === route.path} href={route.path}>
+					<SidebarIcon icon={route.icon} />
+					{route.title}
+				</a>
+			</li>
+		{/each}
 	</ul>
 </aside>
 
@@ -53,13 +47,6 @@
 					border-radius: 0.75em;
 				}
 			}
-		}
-
-		.img {
-			height: 24px;
-			width: 24px;
-			border: 1px solid palegoldenrod;
-			border-radius: 50%;
 		}
 
 		.active {

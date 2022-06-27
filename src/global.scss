@@ -70,3 +70,7 @@ button:hover {
 	background-color: var(--color-white);
 	color: var(--color-primary);
 }
+
+a.active > svg > path {
+	fill: var(--color-white);
+}

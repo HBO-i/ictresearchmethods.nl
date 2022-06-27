@@ -1,26 +1,15 @@
 <script lang="ts">
 	import TabButton from '$lib/tabs/TabButton.svelte';
+
+	import { categoryRoutes } from '$lib/routes';
 </script>
 
 <ul class="non-style">
-	<li>
-		<TabButton category="" content="All methods" />
-	</li>
-	<li>
-		<TabButton category="library" content="Library" />
-	</li>
-	<li>
-		<TabButton category="field" content="Field" />
-	</li>
-	<li>
-		<TabButton category="lab" content="Lab" />
-	</li>
-	<li>
-		<TabButton category="showroom" content="Showroom" />
-	</li>
-	<li>
-		<TabButton category="workshop" content="Workshop" />
-	</li>
+	{#each categoryRoutes as route}
+		<li>
+			<TabButton category={route.category} content={route.title} />
+		</li>
+	{/each}
 </ul>
 
 <style lang="scss">

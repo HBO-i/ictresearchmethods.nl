@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SearchField from '$lib/SearchField.svelte';
-	import Github from '$lib/icons/github.svelte';
-	import BmcLogo from '$lib/icons/bmc-logo.svelte';
+	import Github from '$lib/icons/header/github.svelte';
+	import BmcLogo from '$lib/icons/header/bmc-logo.svelte';
 </script>
 
 <header>
