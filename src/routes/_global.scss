@@ -1,0 +1,76 @@
+:root {
+	--color-primary: hsl(233, 78%, 59%);
+	--color-secondary: hsl(232, 76%, 92%);
+
+	--color-text-primary: hsl(234, 45%, 12%);
+	--color-text-secondary: hsl(236, 7%, 48%);
+
+	--color-bg: hsl(0, 0%, 96%);
+	--color-bg-dark: hsl(210, 11%, 7%);
+
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(204, 9%, 11%);
+
+	--color-green: hsl(150, 66%, 38%);
+}
+
+* {
+	font-family: 'Manrope', sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	color: var(--color-text-primary);
+	overflow-x: hidden;
+}
+
+p,
+li {
+	color: var(--color-text-secondary);
+
+	@media screen and (min-width: 1200px) {
+		font-size: 0.9em;
+	}
+}
+
+ul.non-style {
+	list-style: none;
+	padding-left: 0;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.btn {
+	padding: 1em 1.5em;
+	border-radius: 2em;
+	border: none;
+	max-height: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.9em;
+	font-weight: 500;
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.05);
+		box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+	}
+}
+
+.btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.btn-secondary {
+	background-color: var(--color-white);
+	color: var(--color-primary);
+}
+
+a.active > svg > path {
+	fill: var(--color-white);
+}
