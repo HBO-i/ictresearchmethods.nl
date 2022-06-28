@@ -32,34 +32,38 @@
 		display: none;
 		justify-content: center;
 		align-items: center;
-	}
 
-	@media screen and (min-width: 1200px) {
-		header {
+		@include desktop {
 			display: flex;
 			border-bottom: 1.5px solid var(--color-bg);
 			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 			justify-content: space-between;
 			padding: 0 2em;
+		}
+	}
 
-			img {
-				width: 10em;
-				left: 0;
-			}
+	img {
+		@include desktop {
+			width: 10em;
+			left: 0;
+		}
+	}
 
-			.icon-container {
-				display: flex;
-				flex-direction: row;
-				gap: 1.5em;
+	.icon-container {
+		@include desktop {
+			display: flex;
+			flex-direction: row;
+			gap: 1.5em;
+		}
 
-				.github,
-				.bmc {
-					width: 2em;
-					height: 2em;
+		.github,
+		.bmc {
+			@include desktop {
+				width: 2em;
+				height: 2em;
 
-					&:hover {
-						transform: scale(1.1);
-					}
+				&:hover {
+					transform: scale(1.1);
 				}
 			}
 		}

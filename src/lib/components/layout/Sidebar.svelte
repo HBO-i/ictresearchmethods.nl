@@ -29,6 +29,10 @@
 		min-height: 100%;
 		display: none;
 
+		@include desktop {
+			display: block;
+		}
+
 		ul {
 			display: flex;
 			flex-direction: column;
@@ -52,12 +56,6 @@
 		.active {
 			background-color: var(--color-primary);
 			color: var(--color-white);
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		aside {
-			display: block;
 		}
 	}
 </style>

@@ -28,19 +28,19 @@
 		padding: 0.75em;
 		font-size: 1.15em;
 		scroll-snap-align: center;
-		&.selected {
-			color: var(--color-primary);
-			font-weight: 700;
-			border-bottom: 3px solid var(--color-primary);
-		}
-	}
-	@media screen and (min-width: 1200px) {
-		button {
+
+		@include desktop {
 			padding: 1em;
 			font-size: 1.1em;
 			margin: 0 1em;
 			box-sizing: border-box;
 			transition: ease-in 0.1s;
+		}
+
+		&.selected {
+			color: var(--color-primary);
+			font-weight: 700;
+			border-bottom: 3px solid var(--color-primary);
 		}
 	}
 </style>

@@ -94,6 +94,10 @@
 			min-width: 40em;
 			transition: ease-in 0.1s;
 			position: relative;
+
+			@include desktop {
+				display: block;
+			}
 		}
 
 		label {
@@ -115,6 +119,10 @@
 			display: none;
 			justify-content: center;
 			align-items: center;
+
+			@include desktop {
+				display: flex;
+			}
 
 			&:hover {
 				background-color: #f3f3f3;
@@ -164,18 +172,6 @@
 
 		li.no-results {
 			padding: 1.5em;
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		form {
-			input {
-				display: block;
-			}
-
-			button {
-				display: flex;
-			}
 		}
 	}
 </style>

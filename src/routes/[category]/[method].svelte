@@ -120,6 +120,10 @@
 		line-height: 1.5em;
 		letter-spacing: 0.2px;
 		margin-top: 0.35em;
+
+		@include desktop {
+			max-width: 50vw;
+		}
 	}
 
 	.detail {
@@ -146,12 +150,6 @@
 		&__heading {
 			display: flex;
 			flex-direction: column-reverse;
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		p {
-			max-width: 50vw;
 		}
 	}
 </style>

@@ -22,10 +22,8 @@
 		gap: 2em;
 		padding: 0.5em 1.25em;
 		scroll-snap-type: x mandatory;
-	}
 
-	@media screen and (min-width: 1200px) {
-		ul {
+		@include desktop {
 			box-sizing: border-box;
 			min-height: 3em;
 			display: flex;

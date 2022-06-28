@@ -67,15 +67,27 @@
 	.list-navigation {
 		display: flex;
 		justify-content: center;
+
+		@include desktop {
+			justify-content: flex-end;
+		}
+
 		:global(.pagination-nav) {
 			width: max-content;
 			border-radius: 1em;
 			border: none;
 		}
+
 		:global(.option) {
 			color: var(--color-text-secondary);
 			width: 1em;
 			margin: 0.1em;
+
+			@include desktop {
+				margin: 0.2em;
+				width: 1.5em;
+				height: 1.5em;
+			}
 		}
 		:global(.option):hover {
 			border-radius: 0.5em;
@@ -84,29 +96,6 @@
 			background-color: var(--color-primary);
 			color: var(--color-white);
 			border-radius: 10px;
-		}
-	}
-
-	@media screen and (min-width: 767px) {
-		section {
-			display: block;
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		section {
-			width: 100%;
-			display: block;
-		}
-
-		.list-navigation {
-			justify-content: flex-end;
-		}
-
-		:global(.option) {
-			margin: 0.2em;
-			width: 1.5em;
-			height: 1.5em;
 		}
 	}
 </style>

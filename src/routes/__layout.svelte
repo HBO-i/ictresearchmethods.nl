@@ -79,16 +79,16 @@
 
 	main {
 		padding: 0.75em;
-	}
 
-	@media screen and (min-width: 1200px) {
-		main {
+		@include desktop {
 			padding: 2.5em;
 			min-height: 83vh;
 			max-width: 75em;
 		}
+	}
 
-		.content {
+	.content {
+		@include desktop {
 			display: flex;
 		}
 	}

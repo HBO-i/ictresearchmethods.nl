@@ -43,16 +43,15 @@
 <CategoryTab />
 <MethodList {methodsArray} />
 
-<style>
+<style lang="scss">
 	h1 {
 		font-weight: 500;
 		font-size: 1.25em;
 		margin: 1em;
 		width: 100%;
 		text-align: center;
-	}
-	@media screen and (min-width: 1200px) {
-		h1 {
+
+		@include desktop {
 			text-align: left;
 			margin-left: 0;
 		}

@@ -22,19 +22,17 @@
 		margin: 0.25em 0.5em;
 		margin-left: 0;
 		position: relative;
+
+		@include desktop {
+			margin: 0 0.25em;
+			font-size: 0.8em;
+		}
 	}
 
 	.tag-tooltip {
 		display: none;
-	}
 
-	@media screen and (min-width: 1200px) {
-		.tag {
-			margin: 0 0.25em;
-			font-size: 0.8em;
-		}
-
-		.tag-tooltip {
+		@include desktop {
 			text-transform: none;
 			visibility: hidden;
 			position: absolute;
@@ -54,8 +52,10 @@
 			font-size: 1.15em;
 			border-radius: 0.5em;
 		}
+	}
 
-		.tag:hover .tag-tooltip {
+	.tag:hover .tag-tooltip {
+		@include desktop {
 			visibility: visible;
 			cursor: not-allowed;
 

@@ -38,20 +38,50 @@
 		margin: 0.5em 0;
 		padding: 2em;
 		border-radius: 1.5em;
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-sizing: border-box;
+			margin: 0.5em 0;
+			gap: 1em;
+
+			&:hover {
+				transform: scale(1.01);
+				box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+			}
+		}
 	}
+
 	h1 {
 		font-weight: 500;
 		margin: 0.2em 0;
 		font-size: 1.1em;
 		width: 10em;
 		color: var(--color-black);
+
+		@include desktop {
+			font-size: 1em;
+		}
 	}
+
 	h2 {
 		color: var(--color-primary);
 		font-size: 1em;
 		font-weight: normal;
 		line-height: 0;
 		text-transform: capitalize;
+
+		@include desktop {
+			font-size: 0.9em;
+		}
+	}
+
+	button {
+		@include desktop {
+			margin-left: 5em;
+		}
 	}
 
 	.card-heading {
@@ -59,6 +89,11 @@
 		align-items: center;
 		gap: 1em;
 		margin-bottom: 1.5em;
+
+		@include desktop {
+			margin-bottom: 0;
+		}
+
 		&__text {
 			display: flex;
 			flex-direction: column-reverse;
@@ -76,65 +111,32 @@
 			font-weight: 700;
 			line-height: 0;
 		}
+
+		&__body {
+			@include desktop {
+				width: 32.5em;
+			}
+
+			@include desktop-large {
+				width: 42.5em;
+			}
+		}
 	}
 
 	.tag-container {
 		display: flex;
 		flex-wrap: wrap;
+
+		@include desktop {
+			display: flex;
+		}
 	}
 
 	.more-info {
 		display: none;
-	}
 
-	// Desktop Styling
-	@media screen and (min-width: 1200px) {
-		article {
+		@include desktop {
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			box-sizing: border-box;
-			margin: 0.5em 0;
-			gap: 1em;
-
-			&:hover {
-				transform: scale(1.01);
-				box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-			}
-		}
-		button {
-			margin-left: 5em;
-		}
-
-		h1 {
-			font-size: 1em;
-		}
-
-		h2 {
-			font-size: 0.9em;
-		}
-		.card-heading {
-			margin-bottom: 0;
-		}
-		.card-content__body {
-			width: 32.5em;
-			// width: max-content;
-			// width:42.5em;
-		}
-
-		.tag-container {
-			display: flex;
-		}
-
-		.more-info {
-			display: flex;
-		}
-	}
-
-	// Desktop Styling
-	@media screen and (min-width: 1600px) {
-		.card-content__body {
-			width: 42.5em;
 		}
 	}
 </style>
