@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
+	import Tag from '$lib/utils/Tag.svelte';
+
 	export let method: Method;
 </script>
 
@@ -22,7 +24,7 @@
 		<div class="tag-container">
 			{#if method.phase}
 				{#each method.phase as phase}
-					<div class="tag-container__tag">{phase}</div>
+					<Tag value={phase} tooltipText="Project phase of use" />
 				{/each}
 			{/if}
 		</div>
@@ -79,17 +81,6 @@
 	.tag-container {
 		display: flex;
 		flex-wrap: wrap;
-		&__tag {
-			color: var(--color-primary);
-			border: 1px solid var(--color-primary);
-			width: max-content;
-			padding: 0.33em 1em;
-			font-size: 0.9em;
-			border-radius: 1em;
-			text-transform: uppercase;
-			margin: 0.25em 0.5em;
-			margin-left: 0;
-		}
 	}
 
 	.more-info {
@@ -131,11 +122,6 @@
 
 		.tag-container {
 			display: flex;
-
-			&__tag {
-				margin: 0 0.25em;
-				font-size: 0.8em;
-			}
 		}
 
 		.more-info {

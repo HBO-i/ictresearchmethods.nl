@@ -71,6 +71,13 @@
 
 	<h3>In practice</h3>
 	<p>{result.practice}</p>
+
+	<h3>Phases</h3>
+	<ul>
+		{#each result.phase as phase}
+			<li>{phase}</li>
+		{/each}
+	</ul>
 </section>
 
 <style lang="scss">
