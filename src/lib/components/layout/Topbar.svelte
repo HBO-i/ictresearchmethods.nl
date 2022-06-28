@@ -28,28 +28,33 @@
 <style lang="scss">
 	header {
 		background-color: var(--color-white);
-		height: 4em;
-		display: none;
+		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 
 		@include desktop {
-			display: flex;
+			height: 4em;
 			border-bottom: 1.5px solid var(--color-bg);
 			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 			justify-content: space-between;
 			padding: 0 2em;
+			flex-direction: row;
 		}
 	}
 
 	img {
+		margin-top: 1em;
+		width: 10em;
+		left: 0;
+
 		@include desktop {
-			width: 10em;
-			left: 0;
+			margin: 0;
 		}
 	}
 
 	.icon-container {
+		display: none;
 		@include desktop {
 			display: flex;
 			flex-direction: row;

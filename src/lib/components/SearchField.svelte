@@ -83,6 +83,12 @@
 	form {
 		position: relative;
 		display: flex;
+		justify-content: center;
+		padding: 1em;
+
+		@include desktop {
+			padding: 0;
+		}
 
 		input {
 			border: none;
@@ -90,13 +96,17 @@
 			background-color: var(--color-bg);
 			color: var(--color-text-secondary);
 			padding: 1em 1.5em;
-			display: none;
-			min-width: 40em;
+			display: block;
+			width: 70vw;
 			transition: ease-in 0.1s;
 			position: relative;
+			font-size: 1em;
+			text-align: center;
 
 			@include desktop {
-				display: block;
+				width: 40em;
+				font-size: 0.8em;
+				text-align: left;
 			}
 		}
 
@@ -144,11 +154,15 @@
 		top: 75%;
 		background-color: var(--color-bg);
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		width: 100%;
+		width: 90%;
 		box-sizing: border-box;
 		border-top: 1.5px solid rgba(0, 0, 0, 0.1);
 		border-bottom-left-radius: 0.5em;
 		border-bottom-right-radius: 0.5em;
+
+		@include desktop {
+			width: 100%;
+		}
 
 		li {
 			width: 100%;
