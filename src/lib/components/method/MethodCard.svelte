@@ -104,6 +104,7 @@
 			align-items: center;
 			box-sizing: border-box;
 			margin: 0.5em 0;
+			gap: 1em;
 
 			&:hover {
 				transform: scale(1.01);

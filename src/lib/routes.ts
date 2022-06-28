@@ -22,6 +22,10 @@ export const categoryRoutes = [
 	{
 		title: 'Workshop',
 		category: 'workshop'
+	},
+	{
+		title: 'Extra',
+		category: 'extra'
 	}
 ];
 
