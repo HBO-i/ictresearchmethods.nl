@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
-	import Tag from '$lib/utils/Tag.svelte';
+	import Tag from '$lib/components/utils/Tag.svelte';
 
 	export let method: Method;
 </script>
@@ -117,7 +117,9 @@
 			margin-bottom: 0;
 		}
 		.card-content__body {
-			width: 42.5em;
+			width: 32.5em;
+			// width: max-content;
+			// width:42.5em;
 		}
 
 		.tag-container {
@@ -126,6 +128,13 @@
 
 		.more-info {
 			display: flex;
+		}
+	}
+
+	// Desktop Styling
+	@media screen and (min-width: 1600px) {
+		.card-content__body {
+			width: 42.5em;
 		}
 	}
 </style>

@@ -30,6 +30,7 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 	import { afterNavigate } from '$app/navigation';
+	import { capitalizeFirstLetter } from '$lib/utils/format';
 
 	let previousRoute: string;
 
@@ -72,10 +73,11 @@
 	<h3>In practice</h3>
 	<p>{result.practice}</p>
 
-	<h3>Phases</h3>
+	<h3>Phase(s) of use</h3>
+	<p>In the following project phase(s) {result.name.toLowerCase()} can be used:</p>
 	<ul>
 		{#each result.phase as phase}
-			<li>{phase}</li>
+			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>
 </section>

@@ -23,7 +23,7 @@
 
 <style lang="scss">
 	aside {
-		width: 250px;
+		min-width: 17.5em;
 		background-color: var(--color-white);
 		padding: 1em 0;
 		min-height: 100%;
