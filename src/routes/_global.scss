@@ -26,8 +26,11 @@ body {
 	margin: 0;
 	color: var(--color-text-primary);
 	overflow-x: hidden;
-}
 
+	&.no-scroll {
+		overflow-y: hidden;
+	}
+}
 p,
 li {
 	color: var(--color-text-secondary);
@@ -74,6 +77,6 @@ button:hover {
 	color: var(--color-primary);
 }
 
-a.active > svg > path {
+a.active > .sidebar-icon > svg > path {
 	fill: var(--color-white);
 }

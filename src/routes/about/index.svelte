@@ -76,6 +76,12 @@
 		margin-bottom: 0;
 	}
 
+	li {
+		@include desktop {
+			font-size: 1em;
+		}
+	}
+
 	p {
 		margin-top: 0.5em;
 
@@ -87,5 +93,9 @@
 	a {
 		color: var(--color-black);
 		font-weight: bold;
+
+		&:hover {
+			font-style: italic;
+		}
 	}
 </style>
