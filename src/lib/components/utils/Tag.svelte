@@ -1,10 +1,13 @@
 <script lang="ts">
+	import InfoIcon from '$lib/icons/utils/InfoIcon.svelte';
+
 	export let value: string;
 	export let tooltipText: string | null;
 </script>
 
 <span class="tag"
 	>{value}
+	<div class="info"><InfoIcon /></div>
 	{#if tooltipText}
 		<span class="tag-tooltip">{tooltipText}</span>
 	{/if}
@@ -22,6 +25,10 @@
 		margin: 0.25em 0.5em;
 		margin-left: 0;
 		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.25em;
 
 		@include desktop {
 			margin: 0 0.25em;
@@ -69,6 +76,14 @@
 				border-style: solid;
 				border-color: transparent transparent var(--color-tooltip-bg) transparent;
 			}
+		}
+	}
+
+	.info {
+		display: none;
+
+		@include desktop {
+			display: flex;
 		}
 	}
 </style>

@@ -3,18 +3,24 @@
 	import MobileHamburger from './MobileHamburger.svelte';
 
 	import { isMenuOpen } from '$lib/stores';
-	import { sidebarRoutes } from '$lib/routes';
+	import { sidebarRoutes, categoryRoutes } from '$lib/routes';
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
-	import { toggleNoScroll } from '$lib/utils/timeouts';
+
+	import type { CategoryRoute } from '$lib/types';
 
 	afterNavigate(() => {
 		isMenuOpen.set(false);
 	});
 
-	// const categories = ['library', 'field', 'lab', 'showroom', 'workshop'];
-
 	$: pathName = $page.url.pathname;
+
+	$: categoryName = $page.url.pathname.substring(1); // pathName without the '/'
+	$: checkName = (route: CategoryRoute) => route.category == categoryName; // Check if the current route matches a route in the array
+
+	$: if (categoryRoutes.some(checkName)) {
+		pathName = '/';
+	}
 </script>
 
 <nav class:visible={$isMenuOpen}>

@@ -9,3 +9,14 @@ export interface Method {
 	slug: string;
 	phase: string[];
 }
+
+export interface CategoryRoute {
+	title: string;
+	category: string;
+}
+
+export interface SidebarRoute {
+	title: string;
+	path: string;
+	icon: string;
+}
