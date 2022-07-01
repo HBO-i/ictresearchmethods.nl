@@ -6,11 +6,14 @@
 	of possible research methods and a framework to select the appropriate (combination of) methods.
 </p>
 
-<!--
 <p>
-	But to be honest: a wiki is not fun to use and who buys a pack, lol. Because of that reason this
-	app is created. It's a fun an intuitive way of getting information about the research methods.
-</p> -->
+	The ICT Research Methods Pack is a card set with research methods for design-oriented research
+	within ICT, developed by <a href="https://www.hbo-i.nl/" target="_blank">HBO-i </a>. The set is
+	suitable for use within ICT courses such as the broad ICT bachelor, business informatics or
+	technical information. With the set you can orientate yourself on research methods and plan your
+	project. The methods contained in the map set fit with the different research strategies of the
+	Methods Map Practical Research, an internationally recognized framework for design research.
+</p>
 
 <h2>Disclaimer</h2>
 

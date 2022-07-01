@@ -1,7 +1,12 @@
 <script lang="ts">
 	import TabButton from '$lib/components/tabs/TabButton.svelte';
 
+	import { prefetchRoutes } from '$app/navigation';
 	import { categoryRoutes } from '$lib/routes';
+
+	// function prefetchRoutes(): Promise<void>;
+
+	// prefetchRoutes();
 </script>
 
 <ul class="non-style">

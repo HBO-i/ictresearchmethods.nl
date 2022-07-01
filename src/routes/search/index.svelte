@@ -1,3 +1,7 @@
+<script context="module" lang="ts">
+	export const prerender = false;
+</script>
+
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
