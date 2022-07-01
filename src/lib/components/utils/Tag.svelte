@@ -31,7 +31,6 @@
 		gap: 0.25em;
 
 		@include desktop {
-			margin: 0 0.25em;
 			font-size: 0.8em;
 		}
 	}

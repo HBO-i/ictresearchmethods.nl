@@ -80,6 +80,10 @@
 	main {
 		padding: 0.75em;
 
+		@include tablet {
+			padding: 2em;
+		}
+
 		@include desktop {
 			padding: 2.5em;
 			min-height: 83vh;

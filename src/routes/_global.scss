@@ -59,6 +59,7 @@ button:hover {
 	align-items: center;
 	font-size: 0.9em;
 	font-weight: 500;
+	min-width: max-content;
 
 	&:hover {
 		cursor: pointer;
