@@ -76,7 +76,7 @@
 	<h3>Phase(s) of use</h3>
 	<p>In the following project phase(s) {result.name.toLowerCase()} can be used:</p>
 	<ul>
-		{#each result.phase as phase}
+		{#each result.phases as phase}
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>
