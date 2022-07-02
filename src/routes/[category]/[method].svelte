@@ -32,6 +32,8 @@
 	import { afterNavigate } from '$app/navigation';
 	import { capitalizeFirstLetter } from '$lib/utils/format';
 
+	import { API_URL } from '$lib/env';
+
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
@@ -50,11 +52,7 @@
 		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
-	<img
-		src="https://imagedelivery.net/KrQeyVRnA6jpP0L-GxNp_w/03f5d881-8d88-44b1-5300-7a91d6ab9100/public"
-		class="img"
-		alt=""
-	/>
+	<img src={`${API_URL}/img/${result.category}/${result.slug}.webp`} class="img" alt="" />
 
 	<div class="detail__heading">
 		<h1>{result.name}</h1>
@@ -80,7 +78,7 @@
 	<h3>Phase(s) of use</h3>
 	<p>In the following project phase(s) {result.name.toLowerCase()} can be used:</p>
 	<ul>
-		{#each result.phase as phase}
+		{#each result.phases as phase}
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>

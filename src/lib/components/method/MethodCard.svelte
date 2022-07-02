@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
+	import { API_URL } from '$lib/env';
 
 	import Tag from '$lib/components/utils/Tag.svelte';
 
@@ -10,7 +11,7 @@
 	<div class="card-heading">
 		<div class="card-heading__img">
 			<img
-				src="https://imagedelivery.net/KrQeyVRnA6jpP0L-GxNp_w/03f5d881-8d88-44b1-5300-7a91d6ab9100/desktop"
+				src={`${API_URL}/img/${method.category}/${method.slug}.webp`}
 				class="img"
 				alt=""
 				height="80"
@@ -28,8 +29,8 @@
 			{method.why}
 		</p>
 		<div class="tag-container">
-			{#if method.phase}
-				{#each method.phase as phase}
+			{#if method.phases}
+				{#each method.phases as phase}
 					<Tag value={phase} tooltipText="Project phase of use" />
 				{/each}
 			{/if}
