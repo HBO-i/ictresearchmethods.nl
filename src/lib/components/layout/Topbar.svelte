@@ -1,12 +1,12 @@
 <script lang="ts">
 	import SearchField from '$lib/components/SearchField.svelte';
-	import Github from '$lib/icons/header/github.svelte';
-	import BmcLogo from '$lib/icons/header/bmc-logo.svelte';
+	import Github from '$lib/assets/icons/header/github.svelte';
+	import BmcLogo from '$lib/assets/icons/header/bmc-logo.svelte';
 </script>
 
 <header>
 	<a href="/" title="home">
-		<img src="/ictmethods.png" alt="logo" />
+		<img src="/ictmethods.png" alt="logo" width="160" height="40" />
 	</a>
 	<SearchField />
 	<div class="icon-container">

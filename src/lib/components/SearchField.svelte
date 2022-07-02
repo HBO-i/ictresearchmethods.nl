@@ -94,7 +94,7 @@
 			border: none;
 			border-radius: 0.75em;
 			background-color: var(--color-bg);
-			color: var(--color-text-secondary);
+			color: var(--color-black);
 			padding: 1em 1.5em;
 			display: block;
 			width: 70vw;
@@ -102,6 +102,10 @@
 			position: relative;
 			font-size: 1em;
 			text-align: center;
+
+			&::placeholder {
+				color: var(--color-black);
+			}
 
 			@include desktop {
 				width: 40em;

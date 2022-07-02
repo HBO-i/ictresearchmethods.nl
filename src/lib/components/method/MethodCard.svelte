@@ -9,7 +9,13 @@
 <article>
 	<div class="card-heading">
 		<div class="card-heading__img">
-			<img src={method.image} class="img" alt="" />
+			<img
+				src={`/img/${method.category}/${method.slug}.webp`}
+				class="img"
+				alt=""
+				height="80"
+				width="80"
+			/>
 		</div>
 		<div class="card-heading__text">
 			<h1>{method.name}</h1>
