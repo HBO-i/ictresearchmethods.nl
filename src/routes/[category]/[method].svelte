@@ -50,11 +50,11 @@
 		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
-	<img src={result.image} alt="" />
+	<img src={`/img/${result.category}/${result.slug}.webp`} class="img" alt="" />
 
 	<div class="detail__heading">
 		<h1>{result.name}</h1>
-		<h2>{result.category}</h2>
+		<h2><a href={'/' + result.category} sveltekit:prefetch>{result.category}</a></h2>
 	</div>
 
 	<h3>Why?</h3>
@@ -109,6 +109,11 @@
 		font-weight: 400;
 		font-size: 1.1em;
 		margin-bottom: 0.5em;
+
+		a {
+			text-decoration: none;
+			color: var(--color-primary);
+		}
 	}
 
 	h3 {

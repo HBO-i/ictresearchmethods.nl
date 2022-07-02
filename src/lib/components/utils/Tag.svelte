@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoIcon from '$lib/icons/utils/InfoIcon.svelte';
+	import InfoIcon from '$lib/assets/icons/utils/InfoIcon.svelte';
 
 	export let value: string;
 	export let tooltipText: string | null;
