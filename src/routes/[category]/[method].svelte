@@ -50,7 +50,11 @@
 		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
-	<img src={`/img/${result.category}/${result.slug}.webp`} class="img" alt="" />
+	<img
+		src="https://imagedelivery.net/KrQeyVRnA6jpP0L-GxNp_w/03f5d881-8d88-44b1-5300-7a91d6ab9100/public"
+		class="img"
+		alt=""
+	/>
 
 	<div class="detail__heading">
 		<h1>{result.name}</h1>

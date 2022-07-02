@@ -10,7 +10,7 @@
 	<div class="card-heading">
 		<div class="card-heading__img">
 			<img
-				src={`/img/${method.category}/${method.slug}.webp`}
+				src="https://imagedelivery.net/KrQeyVRnA6jpP0L-GxNp_w/03f5d881-8d88-44b1-5300-7a91d6ab9100/desktop"
 				class="img"
 				alt=""
 				height="80"
