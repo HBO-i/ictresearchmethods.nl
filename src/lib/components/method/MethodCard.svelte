@@ -28,8 +28,8 @@
 			{method.why}
 		</p>
 		<div class="tag-container">
-			{#if method.phase}
-				{#each method.phase as phase}
+			{#if method.phases}
+				{#each method.phases as phase}
 					<Tag value={phase} tooltipText="Project phase of use" />
 				{/each}
 			{/if}

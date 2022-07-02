@@ -1,7 +1,5 @@
 # ICTMethods.nl
 
-⛔️ **Currently work in progress, so there are still some bugs in the app**
-
 **[Live link](https://www.ictmethods.nl/)**
 
 As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the questions and tackling the problems or opportunities of your ICT project requires research and often a combination of various ICT research methods. The toolkit on this website offers you a set of possible research methods and a framework to select the appropriate (combination of) methods.
@@ -13,7 +11,8 @@ As an ICT student or professional, you need to solve all kind of ICT challenges.
 <table>
 <tr>
 <td align="center"><a href="#gear-installation">⚙️ Installation<a></td>
-<td align="center"><a href="#copyright">Copyright<a></td>
+<td align="center"><a href="#zap-self-hosted-fonts-and-images">⚡️ Self-hosted fonts & images<a></td>
+<td align="center"><a href="#memo-copyright">📝 Copyright<a></td>
 </tr>
 </table>
 
@@ -55,9 +54,19 @@ npm run test
 
 ### API
 
-All the data is retrieved from an API. [Source code of the API](https://github.com/jochemvogel/api.ictmethods.nl).
+All the data is retrieved from an API. [Source code of the API](#).
 
-## Copyright
+## :zap: Self-hosted fonts and images
+
+For this app all the fonts and images are self-hosted (read: put in the /static folder instead served from an API/CDN). You can read more about [self-hosting web fonts](https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts).
+
+Fonts add an extra 39.6kb and the images an extra of 719kb (total ~750kb). This makes the website size bigger, but improves the UX.
+
+The difference in **load time is ~400ms** (in comparison with a CDN). 883ms vs 1.3s. Every image loads on average ~30% faster when self-hosted.
+
+Of course, the site is bigger right now, but it doesn’t affect the users. It even benefits them with a faster [Onload Time](https://gtmetrix.com/blog/browser-timings/#onload-time) and [Fully Loaded Time](https://gtmetrix.com/blog/browser-timings/#fully-loaded-time).
+
+## :memo: Copyright
 
 As mentioned before: all of its contents and the physical Methods pack have been realised as, and are maintained by [HBO-i](https://www.hbo-i.nl/) projects.
 

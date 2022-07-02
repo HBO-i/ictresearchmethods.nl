@@ -5,9 +5,8 @@ export interface Method {
 	practice: string;
 	ingredients: string[];
 	category: category;
-	image: string;
 	slug: string;
-	phase: string[];
+	phases: string[];
 }
 
 export interface CategoryRoute {
