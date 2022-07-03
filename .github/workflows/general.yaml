@@ -9,11 +9,11 @@ on:
 jobs:
   build:
     runs-on: ${{ matrix.os }}
-		env:
-			Greeting: Hello
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
+		env:
+			Greeting: Hello
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node 16.x
