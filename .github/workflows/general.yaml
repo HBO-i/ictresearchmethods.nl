@@ -6,6 +6,9 @@ on:
       - 'development'
       - 'master'
 
+env:
+	Greeting: Hello
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
