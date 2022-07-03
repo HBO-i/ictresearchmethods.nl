@@ -5,9 +5,6 @@ on:
     branches-ignore:
       - 'development'
       - 'master'
-    paths-ignore:
-      - '**.md'
-
 env:
   VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
@@ -29,6 +26,8 @@ jobs:
       - name: Build frontend 👷
         run: npm run build
       - name: Formatting frontend 🎨
+        run: npm run format
+      - name: Linting frontend 🎗
         run: npm run format
       - name: Testing frontend 🧪`
         run: npm test --if-present
