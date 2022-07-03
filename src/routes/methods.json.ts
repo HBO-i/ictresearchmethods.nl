@@ -21,7 +21,7 @@ export const get: RequestHandler = async () => {
 			};
 		}
 	} catch (error) {
-		console.error('[methods.json]:', error);
+		console.error('[methods.json]:', error, ', API_URL: ', API_URL);
 		return {
 			status: 500,
 			body: 'Internal Server Error'
