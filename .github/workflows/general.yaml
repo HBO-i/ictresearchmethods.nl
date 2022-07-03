@@ -9,11 +9,11 @@ on:
 jobs:
   build:
     runs-on: ${{ matrix.os }}
+		env:
+    		VITE_API_URL: ${{ secrets.VITE_API_URL }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-		env:
-    	VITE_API_URL: ${{ secrets.VITE_API_URL }}
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node 16.x
