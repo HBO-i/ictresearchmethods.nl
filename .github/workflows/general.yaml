@@ -6,6 +6,9 @@ on:
       - 'development'
       - 'master'
 
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
