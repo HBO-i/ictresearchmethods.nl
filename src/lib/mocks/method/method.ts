@@ -12,7 +12,6 @@ export const method: Method = {
 		'An anything goes mindset: bad ideas also count as a contribution.'
 	],
 	category: 'workshop',
-	image:
-		'https://ictresearchmethods.nl/images/thumb/c/c1/Task_analysis.png/250px-Task_analysis.png',
-	slug: 'brainstorm'
+	slug: 'brainstorm',
+	phases: ['evaluation']
 };
