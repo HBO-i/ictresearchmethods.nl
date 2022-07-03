@@ -1,8 +1,8 @@
-name: Production CI
+name: Development CI
 
 on:
   pull_request:
-    branches: [master]
+    branches: [development]
 env:
   VITE_API_URL: ${{ secrets.VITE_API_URL }}
 

@@ -32,7 +32,7 @@ export const get: RequestHandler = async (request) => {
 			};
 		}
 	} catch (error) {
-		console.error('[category/index.json]:', error);
+		console.error('[category/index.json]:', error, ' API_URL: ', API_URL);
 		return {
 			status: 500,
 			body: 'Internal Server Error'
