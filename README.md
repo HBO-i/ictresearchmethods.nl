@@ -53,6 +53,16 @@ You can preview the production build with `npm run preview`.
 npm run test
 ```
 
+### Husky
+
+Husky is a package that includes a pre-commit Git hook. In this project it will run `npm run format` everytime you commit something. This makes sure that the code style will be applied by every contributor.
+
+When you have never used Husky in this project before, run the following script:
+
+```bash
+npm run prepare-husky
+```
+
 ### API
 
 All the data is retrieved from an API. [Source code of the API](#).
