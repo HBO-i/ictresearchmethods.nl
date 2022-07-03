@@ -22,12 +22,13 @@ jobs:
         with:
           node-version: 16.x
           cache: npm
-			- name: Install dependencies ⚙️
+      - name: Install dependencies ⚙️
         run: npm ci
-			- name: Linting 🛠
+      - name: Linting 🛠
         run: npm run lint
-			- name: Build frontend 👷
+      - name: Build frontend 👷
         run: npm run build
-      - run: npm run format
-			- name: Testing frontend 🧪`
+      - name: Formatting frontend 🎨
+        run: npm run format
+      - name: Testing frontend 🧪`
         run: npm test --if-present
