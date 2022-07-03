@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
 		env:
-			VITE_API_URL: ${{ secrets.VITE_API_URL }}
+			Greeting: Hello
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
