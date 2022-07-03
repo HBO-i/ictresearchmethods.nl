@@ -93,7 +93,7 @@ In the workflow between development and master. For every release a new branch i
 
 The development branch will be merged into this branch and every new change will be tested to make sure there are no bugs in production. Once everything works, this branch will be merged into master and a new release (tag) will be created.
 
-Release branch is visible on https://release.ictmethods.nl/
+Release branch is visible on the deploy preview in the pull request.
 
 #### Feature branches
 
