@@ -1,3 +1,12 @@
+<svelte:head>
+	<title>About — ICT Research Methods</title>
+	<meta
+		name="description"
+		content="The ICT Research Methods Pack is a card set with research methods for
+	design-oriented research within ICT, developed by HBO-i"
+	/>
+</svelte:head>
+
 <h1>About</h1>
 <p>
 	As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the

@@ -43,6 +43,7 @@
 
 <svelte:head>
 	<title>{result.name} — ICT Research Methods</title>
+	<meta name="description" content={result.how.slice(0, 150)} />
 </svelte:head>
 
 <section>
