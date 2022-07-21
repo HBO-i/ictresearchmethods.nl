@@ -2,17 +2,16 @@
 	import type { Method } from '$lib/types';
 	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores';
 
+	import { matchSorter} from 'match-sorter';
+
 	let searchedArrayDisplay: Method[];
 
 	/**
 	 * Updates the search query based on the input field and adds the corresponding methods in the search array
-	 *
-	 * @param {KeyBoardEvent} e - Keyup/keychange event
 	 */
-
 	const updateSearchQuery = (e: KeyboardEvent) => {
 		const searchInput = e.target as HTMLInputElement;
-		const searchQuery = searchInput.value.toLowerCase();
+		const searchQuery = searchInput.value;
 
 		if (searchQuery.length > 1) {
 			showSearchField.set(true);
@@ -22,10 +21,8 @@
 			showSearchField.set(false);
 		}
 
-		const searchedArray = $allMethods.filter(function (method: Method) {
-			const lowerCasedMethodName = method.name.toLowerCase();
-
-			return lowerCasedMethodName.includes(searchQuery);
+		const searchedArray = matchSorter($allMethods, searchQuery, {
+			keys: ['name']
 		});
 
 		searchedArrayDisplay = searchedArray.splice(0, 3);
