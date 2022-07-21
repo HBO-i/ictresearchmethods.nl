@@ -2,7 +2,7 @@
 	import type { Method } from '$lib/types';
 	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores';
 
-	import { matchSorter} from 'match-sorter';
+	import { matchSorter } from 'match-sorter';
 
 	let searchedArrayDisplay: Method[];
 
