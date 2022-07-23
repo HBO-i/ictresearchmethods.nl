@@ -2,11 +2,46 @@
 	import TabButton from '$lib/components/tabs/TabButton.svelte';
 
 	import { categoryRoutes } from '$lib/routes';
+
+	let activeTab: string;
+
+	const updateSelectedTab = (category: string, event: Event) => {
+		const ul = event.path[3];
+		const li = event.path[2];
+
+		// 1). Find the active elemet
+		const activeLi = li;
+
+		// 2). Get the center of active element
+		const centerOfLi = activeLi.offsetWidth / 2;
+
+		// 3). Get left position + center position
+		const leftBorderPositionOfLi = activeLi.offsetLeft;
+		const positionOfCenterLi = leftBorderPositionOfLi + centerOfLi;
+
+		// 4). Get current scroll position
+		const currentScrollPosition = ul.scrollLeft; // 0 - 527
+
+		// 5). Get container width
+		const containerWidth = ul.offsetWidth; // 351
+		const centerOfContainer = containerWidth / 2; // 175.5
+
+		// 6). Set position
+		const position = positionOfCenterLi + currentScrollPosition - centerOfContainer;
+
+		// 7. Set scrollLeft
+		ul.scrollLeft = position / 2 + 35; // Works one way => left to right
+
+		activeTab = category;
+	};
 </script>
 
 <ul class="non-style">
 	{#each categoryRoutes as route}
-		<li>
+		<li
+			class:active={activeTab === route.category}
+			on:click={(event) => updateSelectedTab(route.category, event)}
+		>
 			<TabButton category={route.category} content={route.title} />
 		</li>
 	{/each}
