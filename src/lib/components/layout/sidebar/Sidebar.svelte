@@ -34,6 +34,10 @@
 			</li>
 		{/each}
 	</ul>
+	<p>
+		Made by&nbsp;
+		<a href="https://jochemvogel.com" target="_blank">Jochem</a>
+	</p>
 </nav>
 
 <MobileHamburger />
@@ -43,13 +47,12 @@
 		display: none;
 
 		@include desktop {
-			position: relative;
 			display: block;
 			min-width: 15em;
 			max-width: 17.5em;
 			background-color: var(--color-white);
-			padding: 1em 0;
-			min-height: 100%;
+			padding: 2em 0;
+			position: relative;
 		}
 
 		&.visible {
@@ -107,6 +110,30 @@
 			@include desktop {
 				background-color: var(--color-primary);
 				color: var(--color-white);
+			}
+		}
+	}
+
+	p {
+		display: none;
+
+		@include desktop {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			bottom: 0;
+			font-size: 1.1em;
+			width: 100%;
+
+			a {
+				color: var(--color-black);
+				font-weight: bold;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}

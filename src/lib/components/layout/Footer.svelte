@@ -1,12 +1,18 @@
-<footer>Made in 🇳🇱 with 🌧 by <a href="https://jochemvogel.com" target="_blank">Jochem</a></footer>
+<footer>
+	<p>Made in 🇳🇱 with 🌧 by <a href="https://jochemvogel.com" target="_blank">Jochem</a></p>
+</footer>
 
 <style lang="scss">
 	footer {
-		padding: 1.5em 0;
+		padding-bottom: 1em;
 		text-align: center;
 		letter-spacing: 0.25px;
 		word-spacing: 0.5px;
 		font-size: 1.15em;
+
+		@include desktop {
+			display: none;
+		}
 
 		a {
 			color: var(--color-black);
