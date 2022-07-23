@@ -40,6 +40,9 @@
 			justify-content: space-between;
 			padding: 0 2em;
 			flex-direction: row;
+			position: sticky;
+			top: 0;
+			z-index: 2;
 		}
 	}
 
