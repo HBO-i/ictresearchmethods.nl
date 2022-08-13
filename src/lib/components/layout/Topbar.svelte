@@ -1,13 +1,25 @@
 <script lang="ts">
+	import { isDarkMode } from '$lib/stores';
 	import SearchField from '$lib/components/SearchField.svelte';
 	import Github from '$lib/assets/icons/header/github.svelte';
+	import GithubDark from '$lib/assets/icons/header/github-dark.svelte';
 	import BmcLogo from '$lib/assets/icons/header/bmc-logo.svelte';
+	import BmcLogoDark from '$lib/assets/icons/header/bmc-logo-dark.svelte';
+
+	import ThemeSwitch from '../ThemeSwitch.svelte';
 </script>
 
 <header>
 	<a href="/" title="home">
-		<img src="/ictmethods.png" alt="logo" width="160" height="40" />
+		{#if $isDarkMode}
+			<img src="/ictmethods-dark.png" alt="logo" width="160" height="40" />
+		{:else}
+			<img src="/ictmethods.png" alt="logo" width="160" height="40" />
+		{/if}
 	</a>
+	<div class="theme-switch-desktop">
+		<ThemeSwitch />
+	</div>
 	<SearchField />
 	<div class="icon-container">
 		<a
@@ -16,11 +28,19 @@
 			title="github"
 			class="github"
 		>
-			<Github />
+			{#if $isDarkMode}
+				<GithubDark />
+			{:else}
+				<Github />
+			{/if}
 		</a>
 
 		<a href="https://buymeacoffee.com/jochem" target="_blank" title="buy me a coffee" class="bmc">
-			<BmcLogo />
+			{#if $isDarkMode}
+				<BmcLogoDark />
+			{:else}
+				<BmcLogo />
+			{/if}
 		</a>
 	</div>
 </header>
@@ -74,6 +94,21 @@
 					transform: scale(1.1);
 				}
 			}
+		}
+	}
+
+	.theme-switch-desktop {
+		display: none;
+
+		@include desktop {
+			display: block;
+			position: absolute;
+			right: 7.5%;
+			transform: scale(0.75);
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 </style>

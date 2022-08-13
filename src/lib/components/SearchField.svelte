@@ -91,7 +91,7 @@
 			border: none;
 			border-radius: 0.75em;
 			background-color: var(--color-bg);
-			color: var(--color-black);
+			color: var(--color-text);
 			padding: 1em 1.5em;
 			display: block;
 			width: 70vw;
@@ -101,7 +101,7 @@
 			text-align: center;
 
 			&::placeholder {
-				color: var(--color-black);
+				color: var(--color-text-secondary);
 			}
 
 			@include desktop {
@@ -122,7 +122,7 @@
 			top: 50%;
 			transform: translate(-10%, -50%);
 			height: 50%;
-			background-color: var(--color-white);
+			background-color: #fff;
 			border: none;
 			outline: 2px solid rgba(0, 0, 0, 0.1);
 			border-radius: 0.5em;
@@ -176,7 +176,7 @@
 				display: block;
 
 				&:focus {
-					background-color: var(--color-white);
+					background-color: var(--color-primary);
 				}
 
 				span {
