@@ -2,7 +2,7 @@
 	"name": "ictmethods",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "svelte-kit dev --port 1234",
 		"dev-expose": "svelte-kit dev --host",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
