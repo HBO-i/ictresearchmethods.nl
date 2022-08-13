@@ -1,18 +1,29 @@
 :root {
 	--color-primary: hsl(233, 78%, 59%);
-	--color-secondary: hsl(232, 76%, 92%);
 
 	--color-text-primary: hsl(234, 45%, 12%);
-	--color-text-secondary: hsl(236, 7%, 48%);
+	--color-text-secondary: hsl(236, 7%, 42%);
 
 	--color-bg: hsl(0, 0%, 96%);
-	--color-bg-dark: hsl(210, 11%, 7%);
 
 	--color-white: hsl(0, 0%, 100%);
 	--color-black: hsl(204, 9%, 11%);
 
-	--color-green: hsl(150, 66%, 38%);
 	--color-tooltip-bg: hsl(0, 0%, 33%);
+}
+
+html.dark {
+	--color-primary: hsl(261, 78%, 70%);
+
+	--color-text-primary: hsl(0, 0%, 98%);
+	--color-text-secondary: hsl(236, 7%, 70%);
+
+	--color-bg: hsl(210, 11%, 7%);
+
+	--color-white: #1a1d1f;
+	--color-black: hsl(0, 0%, 100%);
+
+	--color-tooltip-bg: hsl(0, 0%, 70%);
 }
 
 /* manrope-regular - latin */
