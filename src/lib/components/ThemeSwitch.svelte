@@ -9,12 +9,7 @@
 	};
 </script>
 
-<button
-	on:click={toggleDarkMode}
-	class="toggle"
-	class:dark={$isDarkMode}
-	class:light={!$isDarkMode}
->
+<div on:click={toggleDarkMode} class="toggle" class:dark={$isDarkMode} class:light={!$isDarkMode}>
 	<div class="toggle-switch" class:right={$isDarkMode} class:left={!$isDarkMode}>
 		{#if $isDarkMode}
 			<Moon />
@@ -22,7 +17,7 @@
 			<Sun />
 		{/if}
 	</div>
-</button>
+</div>
 
 <style lang="scss">
 	.toggle {
@@ -54,13 +49,10 @@
 	}
 
 	.left {
-		transform: translate(-10%);
-		@include desktop {
-			transform: translateX(0%);
-		}
+		transform: translateX(0%);
 	}
 
 	.right {
-		transform: translateX(80%);
+		transform: translateX(90%);
 	}
 </style>
