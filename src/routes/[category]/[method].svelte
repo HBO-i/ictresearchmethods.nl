@@ -33,12 +33,66 @@
 	import { capitalizeFirstLetter } from '$lib/utils/format';
 
 	let previousRoute: string;
+	export let result: Method;
+
+	let isCurrentMethodSaved = false;
 
 	afterNavigate((navigation) => {
 		previousRoute = navigation.from?.href ?? '/';
 	});
 
-	export let result: Method;
+	const currentMethodName = result.name;
+
+	const saveMethod = () => {
+		const currentMethod = result.name;
+		const savedMethodsString = localStorage.getItem('savedMethods');
+
+		const savedMethodsArray = savedMethodsString ? JSON.parse(savedMethodsString) : [];
+
+		savedMethodsArray.push(currentMethod);
+
+		localStorage.setItem('savedMethods', JSON.stringify(savedMethodsArray));
+
+		console.log('saved');
+
+		isCurrentMethodSaved = false;
+	};
+
+	const removeMethod = () => {
+		const currentMethod = result.name;
+		const savedMethodsString = localStorage.getItem('savedMethods');
+
+		const savedMethodsArray = savedMethodsString ? JSON.parse(savedMethodsString) : [];
+
+		const currentMethodIndex = savedMethodsArray.indexOf(currentMethod);
+
+		const updatedMethodsArray = savedMethodsArray.slice(currentMethodIndex, 1);
+
+		// savedMethodsArray.push(currentMethod);
+
+		localStorage.setItem('savedMethods', JSON.stringify(updatedMethodsArray));
+
+		console.log('removed');
+
+		isCurrentMethodSaved = true;
+	};
+
+	const isMethodSaved = (): boolean => {
+		const savedMethodsString = localStorage.getItem('savedMethods');
+
+		if (savedMethodsString) {
+			const savedMethodsArray = JSON.parse(savedMethodsString);
+
+			return savedMethodsArray.includes(currentMethodName);
+		}
+
+		return false;
+	};
+
+	isMethodSaved();
+	// console.log(isMethodSaved());
+
+	// $: isSaved = isMethodSaved(result.name);
 </script>
 
 <svelte:head>
@@ -81,6 +135,12 @@
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>
+
+	{#if isCurrentMethodSaved}
+		<button on:click={removeMethod}> Remove method from favorites </button>
+	{:else}
+		<button on:click={saveMethod}> Save method to favorites </button>
+	{/if}
 </section>
 
 <style lang="scss">

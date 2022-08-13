@@ -39,10 +39,10 @@ export const sidebarRoutes = [
 		title: 'About',
 		path: '/about',
 		icon: 'person'
+	},
+	{
+		title: 'Saved Methods',
+		path: '/saved-methods',
+		icon: 'star'
 	}
-	// {
-	// 	title: 'Saved Methods',
-	// 	path: '/saved-methods',
-	// 	icon: 'star'
-	// }
 ];
