@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isDarkMode } from '$lib/stores';
+	import { isDarkMode, isJavaScriptDisabled } from '$lib/stores';
 	import Moon from '$lib/assets/icons/theme/moon.svelte';
 	import Sun from '$lib/assets/icons/theme/sun.svelte';
 
@@ -9,15 +9,17 @@
 	};
 </script>
 
-<div on:click={toggleDarkMode} class="toggle" class:dark={$isDarkMode} class:light={!$isDarkMode}>
-	<div class="toggle-switch" class:right={$isDarkMode} class:left={!$isDarkMode}>
-		{#if $isDarkMode}
-			<Moon />
-		{:else}
-			<Sun />
-		{/if}
+{#if !$isJavaScriptDisabled}
+	<div on:click={toggleDarkMode} class="toggle" class:dark={$isDarkMode} class:light={!$isDarkMode}>
+		<div class="toggle-switch" class:right={$isDarkMode} class:left={!$isDarkMode}>
+			{#if $isDarkMode}
+				<Moon />
+			{:else}
+				<Sun />
+			{/if}
+		</div>
 	</div>
-</div>
+{/if}
 
 <style lang="scss">
 	.toggle {
@@ -25,6 +27,10 @@
 		width: 175px;
 		box-sizing: border-box;
 		display: flex;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.light {
