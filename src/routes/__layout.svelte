@@ -4,12 +4,16 @@
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Sidebar from '$lib/components/layout/sidebar/Sidebar.svelte';
 
-	import { showSearchField, allMethods, isJavaScriptDisabled } from '$lib/stores';
+	import { showSearchField, allMethods, isJavaScriptDisabled, isDarkMode } from '$lib/stores';
 
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		isJavaScriptDisabled.set(false);
+
+		const htmlTag = document.documentElement;
+		isDarkMode.set(htmlTag.classList.contains('dark'));
+
 		const methodsAreNotAlreadyInStore = $allMethods.length < 1;
 
 		if (methodsAreNotAlreadyInStore) {
@@ -88,6 +92,7 @@
 			padding: 2.5em;
 			min-height: 83vh;
 			max-width: 75em;
+			margin-bottom: 2.5em;
 		}
 	}
 

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
-	import { paginate, LightPaginationNav } from 'svelte-paginate';
-	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
+	import { paginate, LightPaginationNav, DarkPaginationNav } from 'svelte-paginate';
+	import { currentPaginationPage, isJavaScriptDisabled, isDarkMode } from '$lib/stores';
 	import MethodCard from './MethodCard.svelte';
 	import { onMount } from 'svelte';
 	export let methodsArray: Array<Method>;
@@ -37,14 +37,25 @@
 
 {#if isPaginationNeeded && !$isJavaScriptDisabled}
 	<div class="list-navigation">
-		<LightPaginationNav
-			totalItems={items.length}
-			{pageSize}
-			{currentPage}
-			limit={1}
-			showStepOptions={true}
-			on:setPage={(e) => updatePaginationPage(e.detail.page)}
-		/>
+		{#if $isDarkMode}
+			<DarkPaginationNav
+				totalItems={items.length}
+				{pageSize}
+				{currentPage}
+				limit={1}
+				showStepOptions={true}
+				on:setPage={(e) => updatePaginationPage(e.detail.page)}
+			/>
+		{:else}
+			<LightPaginationNav
+				totalItems={items.length}
+				{pageSize}
+				{currentPage}
+				limit={1}
+				showStepOptions={true}
+				on:setPage={(e) => updatePaginationPage(e.detail.page)}
+			/>
+		{/if}
 	</div>
 {/if}
 
@@ -53,7 +64,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 0;
 
 		li {
 			font-size: 1em;

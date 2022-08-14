@@ -2,17 +2,16 @@
 	import type { Method } from '$lib/types';
 	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores';
 
+	import { matchSorter } from 'match-sorter';
+
 	let searchedArrayDisplay: Method[];
 
 	/**
 	 * Updates the search query based on the input field and adds the corresponding methods in the search array
-	 *
-	 * @param {KeyBoardEvent} e - Keyup/keychange event
 	 */
-
 	const updateSearchQuery = (e: KeyboardEvent) => {
 		const searchInput = e.target as HTMLInputElement;
-		const searchQuery = searchInput.value.toLowerCase();
+		const searchQuery = searchInput.value;
 
 		if (searchQuery.length > 1) {
 			showSearchField.set(true);
@@ -22,10 +21,8 @@
 			showSearchField.set(false);
 		}
 
-		const searchedArray = $allMethods.filter(function (method: Method) {
-			const lowerCasedMethodName = method.name.toLowerCase();
-
-			return lowerCasedMethodName.includes(searchQuery);
+		const searchedArray = matchSorter($allMethods, searchQuery, {
+			keys: ['name']
 		});
 
 		searchedArrayDisplay = searchedArray.splice(0, 3);
@@ -94,7 +91,7 @@
 			border: none;
 			border-radius: 0.75em;
 			background-color: var(--color-bg);
-			color: var(--color-black);
+			color: var(--color-text);
 			padding: 1em 1.5em;
 			display: block;
 			width: 70vw;
@@ -104,7 +101,7 @@
 			text-align: center;
 
 			&::placeholder {
-				color: var(--color-black);
+				color: var(--color-text-secondary);
 			}
 
 			@include desktop {
@@ -125,7 +122,7 @@
 			top: 50%;
 			transform: translate(-10%, -50%);
 			height: 50%;
-			background-color: var(--color-white);
+			background-color: #fff;
 			border: none;
 			outline: 2px solid rgba(0, 0, 0, 0.1);
 			border-radius: 0.5em;
@@ -179,7 +176,7 @@
 				display: block;
 
 				&:focus {
-					background-color: var(--color-white);
+					background-color: var(--color-primary);
 				}
 
 				span {
