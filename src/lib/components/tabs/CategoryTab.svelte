@@ -14,36 +14,44 @@
 	*/
 	const updateSelectedTab = (category: string, event: Event) => {
 		if (event) {
-			const buttonElement = event.target;
-			const linkElement = buttonElement?.parentElement;
-			const li = linkElement.parentElement;
+			const buttonElement = event.target as HTMLElement;
 
-			// 1). Find the active element
-			const activeLi = li;
+			if (buttonElement) {
+				const linkElement = buttonElement.parentElement;
 
-			// 2). Get the center of active element
-			const centerOfLi = activeLi.offsetWidth / 2;
+				if (linkElement) {
+					const li = linkElement.parentElement;
 
-			// 3). Get left position + center position
-			const leftBorderPositionOfLi = activeLi.offsetLeft;
-			const positionOfCenterLi = leftBorderPositionOfLi + centerOfLi;
+					if (li) {
+						// 1). Find the active element
+						const activeLi = li;
 
-			// 4). Get current scroll position
-			const currentScrollPosition = ul.scrollLeft; // 0 - 527
+						// 2). Get the center of active element
+						const centerOfLi = activeLi.offsetWidth / 2;
 
-			// 5). Get container width
-			const containerWidth = ul.offsetWidth; // 351
-			const centerOfContainer = containerWidth / 2; // 175.5
+						// 3). Get left position + center position
+						const leftBorderPositionOfLi = activeLi.offsetLeft;
+						const positionOfCenterLi = leftBorderPositionOfLi + centerOfLi;
 
-			// 6). Set position
-			const position = positionOfCenterLi + currentScrollPosition - centerOfContainer;
+						// 4). Get current scroll position
+						const currentScrollPosition = ul.scrollLeft; // 0 - 527
 
-			// 7. Set scrollLeft
-			ul.scrollLeft = position / 2; // Doesn't work correctly, yet
-			// ul.scrollLeft = position / 2 + 10; // Works one way => left to right
-			// ul.scrollLeft = position / 2 - 10; // Works one way => right to left
+						// 5). Get container width
+						const containerWidth = ul.offsetWidth; // 351
+						const centerOfContainer = containerWidth / 2; // 175.5
 
-			activeTab = category;
+						// 6). Set position
+						const position = positionOfCenterLi + currentScrollPosition - centerOfContainer;
+
+						// 7. Set scrollLeft
+						ul.scrollLeft = position / 2; // Doesn't work correctly, yet
+						// ul.scrollLeft = position / 2 + 10; // Works one way => left to right
+						// ul.scrollLeft = position / 2 - 10; // Works one way => right to left
+
+						activeTab = category;
+					}
+				}
+			}
 		}
 	};
 </script>
