@@ -1,7 +1,7 @@
 name: Development CI
 
 on:
-  pull_request:
+  pull_request_target:
     branches: [development]
 env:
   VITE_API_URL: ${{ secrets.VITE_API_URL }}

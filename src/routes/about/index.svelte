@@ -80,7 +80,7 @@
 </p>
 <p>
 	Oh and btw, there is a <kbd>CMD</kbd>
-	+ <kbd>K</kbd> search and soon a dark mode. I mean: what else do you need.
+	+ <kbd>K</kbd> search and a dark mode. I mean: what else do you need?
 </p>
 
 <h2>Future</h2>
