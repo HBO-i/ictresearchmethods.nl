@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { Method } from '$lib/types';
 	import MethodList from '$lib/components/method/MethodList.svelte';
 	import CategoryTab from '$lib/components/tabs/CategoryTab.svelte';
 

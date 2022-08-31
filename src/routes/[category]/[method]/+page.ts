@@ -1,6 +1,7 @@
-import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
 export const prerender = true;
+
+import type { PageLoad } from './$types';
+import { error } from '@sveltejs/kit';
 
 export const load: PageLoad = async ({ fetch, params }) => {
 	const res = await fetch(`/${params.category}/${params.method}.json`);

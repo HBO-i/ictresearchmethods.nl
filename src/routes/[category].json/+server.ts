@@ -1,5 +1,3 @@
-// @TODO: Is RequestHandler the right type? Looks like a response => also check other pages
-
 import type { Method } from '$lib/types';
 import type { RequestHandler } from './$types';
 import { API_URL } from '$lib/env';

@@ -1,7 +1,8 @@
-import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
-import { allMethods } from '$lib/stores';
 export const prerender = true;
+
+import type { PageLoad } from './$types';
+import { error } from '@sveltejs/kit';
+import { allMethods } from '$lib/stores';
 
 export const load: PageLoad = async ({ fetch }) => {
 	const res = await fetch('methods.json');
