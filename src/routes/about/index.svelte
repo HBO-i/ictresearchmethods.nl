@@ -27,13 +27,11 @@
 <h2>Disclaimer</h2>
 
 <p>
-	The creator of this app does not own any of this content. All the ICT Research Methods are
-	available via the official <a href="https://ictresearchmethods.nl/Main_Page" target="_blank"
-		>wiki</a
-	>
-	or you can be found in the
+	The creator of this app does not own any of this content. All the ICT Research Methods on this
+	website are a digital copy of the research methods in the physical ICT Methodspack. That one can
+	be purchased via
 	<a href="https://www.studystore.nl/p/9990002067426/ict-methodspack" target="_blank"
-		>ICT Methodspack</a
+		>https://www.studystore.nl/p/9990002067426/ict-methodspack</a
 	>.
 </p>
 
@@ -54,21 +52,35 @@
 </ul>
 <p>All Method cards were illustrated by Laura Henneke</p>
 
+<h2>How to cite</h2>
+
+<p>If you want to refer to the physical card set, please use this citation:</p>
+
+<p>
+	Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT
+	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426. Available from: <a
+		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
+		target="_blank">https://www.studystore.nl/p/9990002067426/ict-methodspack</a
+	>.
+</p>
+
 <h2>About this app</h2>
 
 <p>
-	As mentioned before: all the content is already available, so why this app? Well.. A wiki is not
-	fun to use and who buys a pack, lol.
+	As mentioned before: all the content is already available, so why this app? Well.. personally I
+	don't bring the physical pack with me all the time. Now I can access the ICT Research Methods all
+	the time. Besides that not every bought the physical methods pack. I mean. You should, but you
+	don't have to.
 </p>
 
 <p>
 	With this app I hope I can encourage students to use the ICT Research Methods in a fun way. You
-	can easily search for methods, save your favorite methods to access them later even faster, use
-	the app as PWA on your phone and even view your saved methods offline.
+	can easily search for methods, use the app as PWA on your phone and even view your saved methods
+	offline.
 </p>
 <p>
 	Oh and btw, there is a <kbd>CMD</kbd>
-	+ <kbd>K</kbd> search and soon a dark mode. I mean: what else do you need.
+	+ <kbd>K</kbd> search and a dark mode. I mean: what else do you need?
 </p>
 
 <h2>Future</h2>
