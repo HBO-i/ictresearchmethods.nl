@@ -52,15 +52,22 @@ function isImage(fetchRequest: Request) {
 self.addEventListener('fetch', (event: Event) => {
 	const request = event.request;
 
+	// Get broken image placeholder from cache
 	if (isImage(request)) {
-		// Get broken image placeholder from cache (seems not to work, yet)
-		return caches.match(PLACEHOLDER_IMAGE_URL);
+		event.respondWith(
+			caches
+				.match(request)
+				.then((cacheRes) => cacheRes || fetch(request))
+				.catch(() => caches.match(PLACEHOLDER_IMAGE_URL))
+		);
 	}
 
-	event.respondWith(
-		caches
-			.match(request)
-			.then((cacheRes) => cacheRes || fetch(request))
-			.catch(() => returnStaticPage(OFFLINE_PAGE))
-	);
+	if (!isImage(request)) {
+		event.respondWith(
+			caches
+				.match(request)
+				.then((cacheRes) => cacheRes || fetch(request))
+				.catch(() => returnStaticPage(OFFLINE_PAGE))
+		);
+	}
 });
