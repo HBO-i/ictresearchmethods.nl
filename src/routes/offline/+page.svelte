@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <header>
 	<h1>Offline</h1>
 </header>

@@ -1,47 +1,19 @@
-<script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit';
-	export const prerender = true;
-
-	export const load: Load = async ({ fetch, params }) => {
-		const res = await fetch(`${params.category}.json`);
-
-		if (res.ok) {
-			const result = await res.json();
-
-			if (result.length === 0) {
-				return { status: 404 };
-			}
-
-			return {
-				props: {
-					result
-				}
-			};
-		}
-
-		const { message } = await res.json();
-
-		return {
-			error: new Error('[category/index.svelte]: ', message)
-		};
-	};
-</script>
-
 <script lang="ts">
+	import type { PageData } from './$types';
 	import type { Method } from '$lib/types';
 	import MethodList from '$lib/components/method/MethodList.svelte';
 	import CategoryTab from '$lib/components/tabs/CategoryTab.svelte';
 
-	export let result: Array<Method>;
+	export let data: PageData;
 </script>
 
 <svelte:head>
-	<title>Category {result[0].category} — ICT Research Methods</title>
+	<title>Category {data.result[0].category} — ICT Research Methods</title>
 </svelte:head>
 
 <h1 class="site-title">Methods</h1>
 <CategoryTab />
-<MethodList methodsArray={result} />
+<MethodList methodsArray={data.result} />
 
 <style lang="scss">
 	h1 {
