@@ -12,6 +12,7 @@ As an ICT student or professional, you need to solve all kind of ICT challenges.
 <tr>
 <td align="center"><a href="#gear-installation">⚙️ Installation<a></td>
 <td align="center"><a href="#zap-self-hosted-fonts-and-images">⚡️ Self-hosted fonts & images<a></td>
+<td align="center"><a href="#construction_worker-caching-service-worker">👷‍♂️ Caching (Service Worker)<a></td>
 <td align="center"><a href="#v-contributing">✌️ Contributing
 <td align="center"><a href="#memo-copyright">📝 Copyright<a></td>
 </tr>
@@ -76,6 +77,18 @@ Fonts add an extra 39.6kb and the images an extra of 719kb (total ~750kb). This 
 The difference in **load time is ~400ms** (in comparison with a CDN). 883ms vs 1.3s. Every image loads on average ~30% faster when self-hosted.
 
 Of course, the site is bigger right now, but it doesn’t affect the users. It even benefits them with a faster [Onload Time](https://gtmetrix.com/blog/browser-timings/#onload-time) and [Fully Loaded Time](https://gtmetrix.com/blog/browser-timings/#fully-loaded-time).
+
+## :construction_worker: Caching (Service Worker)
+
+There is a [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) included in the app which makes it possible to access the content of the web app evne when the user is offline. This will also increase the speed of the app, because the service worker acts as a proxy that between the app, the browser, and the network.
+
+We tried to minimize to amount of MBs that are being cached. Caching the whole application would've led to ~8MB cache storage and that is unneccesary. Excluding all the method images led to a total cache storage of 2.6MB which is reasonable those days.
+
+This amount can probably be decreased by making use of responsive images. It's also a possibility that we will allow the extra ~5.5MB cache storage in the future. Need some more perspectives on this, because 8MB is not a lot these days and if it drastically increases the UX, it's probably worth it. It just doesn't sound right to put an extra 5.5MB in storage without asking. Thoughts?
+
+I haven't found a source that contradicts this, yet. To quote [Google](https://web.dev/storage-for-the-web/):
+
+> How much can I store? In short, **a lot**, at least a couple of hundred megabytes, and potentially hundreds of gigabytes or more. Browser implementations vary, but the amount of storage available is usually based on the amount of storage available on the device. [....] Gone are the days of limited storage and prompting the user to store more and more data. Sites can store effectively all of the resources and data they need to run.
 
 ## :v: Contributing
 
