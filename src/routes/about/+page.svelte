@@ -30,8 +30,10 @@
 	The creator of this app does not own any of this content. All the ICT Research Methods on this
 	website are a digital copy of the research methods in the physical ICT Methodspack. That one can
 	be purchased via
-	<a href="https://www.studystore.nl/p/9990002067426/ict-methodspack" target="_blank"
-		>https://www.studystore.nl/p/9990002067426/ict-methodspack</a
+	<a
+		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
+		target="_blank"
+		class="ellipsis">https://www.studystore.nl/p/9990002067426/ict-methodspack</a
 	>.
 </p>
 
@@ -60,6 +62,7 @@
 	Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT
 	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426. Available from: <a
 		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
+		class="ellipsis"
 		target="_blank">https://www.studystore.nl/p/9990002067426/ict-methodspack</a
 	>.
 </p>

@@ -81,7 +81,6 @@
 		@include desktop {
 			box-sizing: border-box;
 			min-height: 3em;
-			display: flex;
 			justify-content: center;
 			padding: 0 1em;
 			border-radius: 0.75em;

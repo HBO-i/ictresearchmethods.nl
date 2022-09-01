@@ -20,7 +20,7 @@
 		currentPaginationPage.set(page);
 	}
 
-	$: pageSize = isMobile ? 8 : 5;
+	$: pageSize = isMobile ? 10 : 5;
 	$: currentPage = $currentPaginationPage;
 	$: items = methodsArray;
 	$: paginatedItems = paginate(items, pageSize, currentPage);
@@ -31,7 +31,11 @@
 <ul class="non-style">
 	{#each methods as method}
 		<li>
-			<a sveltekit:prefetch href={'/' + method.category + '/' + method.slug} title={method.name}>
+			<a
+				data-sveltekit-prefetch
+				href={'/' + method.category + '/' + method.slug}
+				title={method.name}
+			>
 				<MethodCard {method} />
 			</a>
 		</li>
