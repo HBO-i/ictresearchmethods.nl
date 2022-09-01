@@ -1,23 +1,12 @@
-<script context="module" lang="ts">
-	export function load({ error, status }: { error: Record<symbol, symbol>; status: number }): {
-		props: { error: Record<symbol, symbol>; status: number };
-	} {
-		return {
-			props: { error, status }
-		};
-	}
-</script>
-
 <script lang="ts">
-	export let status: number;
-	export let error: Error;
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
-	<title>{status} - Something went wrong</title>
+	<title>{$page.status} - Something went wrong</title>
 </svelte:head>
 
-{#if status === 404}
+{#if $page.status === 404}
 	<iframe
 		src="https://giphy.com/embed/m12EDnP8xGLy8"
 		width="240"
@@ -39,17 +28,17 @@
 		allowFullScreen
 		title="error giphy"
 	/>
-	<h1>{status} - Whoopsie...</h1>
+	<h1>{$page.status} - Whoopsie...</h1>
 
 	<p>
 		We're so sorry. Something went wrong. PANIC! But jokes aside, I hope the following error will
 		make it more clear for you:
 	</p>
 
-	<p>{error.message}</p>
+	<p>{$page.error.message}</p>
 
-	{#if error.stack}
-		<pre>{error.stack}</pre>
+	{#if $page.error.stack}
+		<pre>{$page.error.stack}</pre>
 	{/if}
 
 	<p>If not, please contact us via GitHub and send us the error stack</p>
