@@ -1,34 +1,5 @@
-<script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit';
-	export const prerender = true;
-
-	export const load: Load = async ({ fetch, params }) => {
-		const res = await fetch(`/${params.category}/${params.method}.json`);
-
-		if (res.ok) {
-			const result = await res.json();
-
-			if (result.length === 0) {
-				return { status: 404 };
-			}
-
-			return {
-				props: {
-					result
-				}
-			};
-		}
-
-		const { message } = await res.json();
-
-		return {
-			error: new Error('[method.svelte]: ', message)
-		};
-	};
-</script>
-
 <script lang="ts">
-	import type { Method } from '$lib/types';
+	import type { PageData } from './$types';
 	import { afterNavigate } from '$app/navigation';
 	import { capitalizeFirstLetter } from '$lib/utils/format';
 
@@ -38,12 +9,12 @@
 		previousRoute = navigation.from?.href ?? '/';
 	});
 
-	export let result: Method;
+	export let data: PageData;
 </script>
 
 <svelte:head>
-	<title>{result.name} — ICT Research Methods</title>
-	<meta name="description" content={result.how.slice(0, 150)} />
+	<title>{data.result.name} — ICT Research Methods</title>
+	<meta name="description" content={data.result.how.slice(0, 150)} />
 </svelte:head>
 
 <section>
@@ -51,33 +22,33 @@
 		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
-	<img src={`/img/${result.category}/${result.slug}.webp`} class="img" alt="" />
+	<img src={`/img/${data.result.category}/${data.result.slug}.webp`} class="img" alt="" />
 
 	<div class="detail__heading">
-		<h1>{result.name}</h1>
-		<h2><a href={'/' + result.category} sveltekit:prefetch>{result.category}</a></h2>
+		<h1>{data.result.name}</h1>
+		<h2><a href={'/' + data.result.category} data-sveltekit-prefetch>{data.result.category}</a></h2>
 	</div>
 
 	<h3>Why?</h3>
-	<p>{result.why}</p>
+	<p>{data.result.why}</p>
 
 	<h3>How?</h3>
-	<p>{result.how}</p>
+	<p>{data.result.how}</p>
 
 	<h3>Ingredients</h3>
 	<ul>
-		{#each result.ingredients as ingredient}
+		{#each data.result.ingredients as ingredient}
 			<li>{ingredient}</li>
 		{/each}
 	</ul>
 
 	<h3>In practice</h3>
-	<p>{result.practice}</p>
+	<p>{data.result.practice}</p>
 
 	<h3>Phase(s) of use</h3>
-	<p>In the following project phase(s) {result.name.toLowerCase()} can be used:</p>
+	<p>In the following project phase(s) {data.result.name.toLowerCase()} can be used:</p>
 	<ul>
-		{#each result.phases as phase}
+		{#each data.result.phases as phase}
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>

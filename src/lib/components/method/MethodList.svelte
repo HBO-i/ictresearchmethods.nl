@@ -1,7 +1,10 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
 
-	import { paginate, LightPaginationNav, DarkPaginationNav } from 'svelte-paginate';
+	import { paginate } from '$lib/utils/paginate';
+	import DarkPaginationNav from '$lib/components/pagination/DarkPaginationNav.svelte';
+	import LightPaginationNav from '$lib/components/pagination/LightPaginationNav.svelte';
+
 	import { currentPaginationPage, isJavaScriptDisabled, isDarkMode } from '$lib/stores';
 	import MethodCard from './MethodCard.svelte';
 	import { onMount } from 'svelte';
@@ -17,10 +20,10 @@
 		currentPaginationPage.set(page);
 	}
 
-	$: pageSize = isMobile ? 8 : 5;
+	$: pageSize = isMobile ? 10 : 5;
 	$: currentPage = $currentPaginationPage;
 	$: items = methodsArray;
-	$: paginatedItems = paginate({ items, pageSize, currentPage });
+	$: paginatedItems = paginate(items, pageSize, currentPage);
 	$: isPaginationNeeded = items.length > pageSize;
 	$: methods = $isJavaScriptDisabled ? items : paginatedItems;
 </script>
@@ -28,7 +31,11 @@
 <ul class="non-style">
 	{#each methods as method}
 		<li>
-			<a sveltekit:prefetch href={'/' + method.category + '/' + method.slug} title={method.name}>
+			<a
+				data-sveltekit-prefetch
+				href={'/' + method.category + '/' + method.slug}
+				title={method.name}
+			>
 				<MethodCard {method} />
 			</a>
 		</li>

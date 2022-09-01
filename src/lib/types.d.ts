@@ -19,3 +19,8 @@ export interface SidebarRoute {
 	path: string;
 	icon: string;
 }
+
+export interface Option {
+	type: string;
+	value: number;
+}
