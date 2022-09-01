@@ -19,7 +19,7 @@
 	h1 {
 		font-weight: 500;
 		font-size: 1.25em;
-		margin: 1em;
+		margin: 1em 0;
 		width: 100%;
 		text-align: center;
 

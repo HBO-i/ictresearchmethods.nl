@@ -106,6 +106,8 @@ body {
 	margin: 0;
 	color: var(--color-text-primary);
 	overflow-x: hidden;
+	width: 100vw;
+	box-sizing: border-box;
 
 	&.no-scroll {
 		overflow-y: hidden;
@@ -118,6 +120,12 @@ li {
 	@media screen and (min-width: 1200px) {
 		font-size: 0.9em;
 	}
+}
+
+a.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
 }
 
 ul.non-style {

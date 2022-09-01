@@ -20,7 +20,7 @@
 		currentPaginationPage.set(page);
 	}
 
-	$: pageSize = isMobile ? 8 : 5;
+	$: pageSize = isMobile ? 10 : 5;
 	$: currentPage = $currentPaginationPage;
 	$: items = methodsArray;
 	$: paginatedItems = paginate(items, pageSize, currentPage);
