@@ -22,7 +22,18 @@
 		<a href={previousRoute}>{'<'}</a>Details
 	</p>
 
-	<img src={`/img/${data.result.category}/${data.result.slug}.webp`} class="img" alt="" />
+	<picture>
+		<source type="image/webp" srcset={`/img/${data.result.category}/${data.result.slug}.webp`} />
+		<source type="image/jpeg" srcset={`/img/${data.result.category}/${data.result.slug}.jpg`} />
+		<img
+			src={`/img/${data.result.category}/${data.result.slug}.jpg`}
+			class="img"
+			alt=""
+			width="240"
+			height="360"
+			decoding="async"
+		/>
+	</picture>
 
 	<div class="detail__heading">
 		<h1>{data.result.name}</h1>
@@ -63,7 +74,17 @@
 
 	img {
 		border-radius: 1em;
-		max-height: 40vh;
+		background-color: #eee;
+		height: 20rem;
+		width: auto;
+
+		@include tablet {
+			height: 22.5rem;
+		}
+
+		@include desktop {
+			height: 25rem;
+		}
 	}
 
 	h1,
