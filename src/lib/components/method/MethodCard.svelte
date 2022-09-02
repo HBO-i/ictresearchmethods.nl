@@ -9,11 +9,12 @@
 <article>
 	<div class="card-heading">
 		<picture class="card-heading__img">
-			<source srcset={`/img/${method.category}/thumbnail/${method.slug}.webp`} type="image/webp" />
-			<source srcset={`/img/${method.category}/thumbnail/${method.slug}.jpg`} type="image/jpeg" />
+			<source type="image/webp" srcset={`/img/${method.category}/thumbnail/${method.slug}.webp`} />
+			<source type="image/jpeg" srcset={`/img/${method.category}/thumbnail/${method.slug}.jpg`} />
 			<img
 				src={`/img/${method.category}/thumbnail/${method.slug}.jpg`}
 				loading="lazy"
+				decoding="async"
 				class="img"
 				alt=""
 				height="80"
@@ -113,6 +114,7 @@
 			width: 5em;
 			border-radius: 1em;
 			object-fit: cover;
+			background-color: #eee;
 		}
 	}
 	.card-content {

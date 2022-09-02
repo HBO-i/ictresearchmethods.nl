@@ -13,14 +13,14 @@
 	<a href="/" title="home">
 		{#if $isDarkMode}
 			<picture>
-				<source srcset="/ictmethods-dark.webp" type="image/webp" />
-				<source srcset="/ictmethods-dark.png" type="image/png" />
+				<source type="image/webp" srcset="/ictmethods-dark.webp" />
+				<source type="image/png" srcset="/ictmethods-dark.png" />
 				<img src="/ictmethods-dark.png" alt="logo" width="160" height="40" />
 			</picture>
 		{:else}
 			<picture>
-				<source srcset="/ictmethods.webp" type="image/webp" />
-				<source srcset="/ictmethods.png" type="image/png" />
+				<source type="image/webp" srcset="/ictmethods.webp" />
+				<source type="image/png" srcset="/ictmethods.png" />
 				<img src="/ictmethods.png" alt="logo" width="160" height="40" />
 			</picture>
 		{/if}
