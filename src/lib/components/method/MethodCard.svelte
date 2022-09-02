@@ -8,15 +8,18 @@
 
 <article>
 	<div class="card-heading">
-		<div class="card-heading__img">
+		<picture class="card-heading__img">
+			<source srcset={`/img/${method.category}/thumbnail/${method.slug}.webp`} type="image/webp" />
+			<source srcset={`/img/${method.category}/thumbnail/${method.slug}.jpg`} type="image/jpeg" />
 			<img
-				src={`/img/${method.category}/${method.slug}.webp`}
+				src={`/img/${method.category}/thumbnail/${method.slug}.jpg`}
+				loading="lazy"
 				class="img"
 				alt=""
 				height="80"
 				width="80"
 			/>
-		</div>
+		</picture>
 		<div class="card-heading__text">
 			<h1>{method.name}</h1>
 			<h2>{method.category}</h2>

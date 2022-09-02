@@ -12,9 +12,17 @@
 <header>
 	<a href="/" title="home">
 		{#if $isDarkMode}
-			<img src="/ictmethods-dark.png" alt="logo" width="160" height="40" />
+			<picture>
+				<source srcset="/ictmethods-dark.webp" type="image/webp" />
+				<source srcset="/ictmethods-dark.png" type="image/png" />
+				<img src="/ictmethods-dark.png" alt="logo" width="160" height="40" />
+			</picture>
 		{:else}
-			<img src="/ictmethods.png" alt="logo" width="160" height="40" />
+			<picture>
+				<source srcset="/ictmethods.webp" type="image/webp" />
+				<source srcset="/ictmethods.png" type="image/png" />
+				<img src="/ictmethods.png" alt="logo" width="160" height="40" />
+			</picture>
 		{/if}
 	</a>
 	<div class="theme-switch-desktop">
