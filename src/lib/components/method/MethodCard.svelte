@@ -56,6 +56,8 @@
 			box-sizing: border-box;
 			margin: 0.5em 0;
 			gap: 1em;
+			height: 11.25rem;
+			width: 70rem;
 
 			&:hover {
 				transform: scale(1.01);
@@ -129,7 +131,7 @@
 			}
 
 			@include desktop-large {
-				width: 42.5em;
+				width: 40em;
 			}
 		}
 	}
