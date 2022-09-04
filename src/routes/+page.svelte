@@ -23,7 +23,7 @@
 		width: 100%;
 		text-align: center;
 
-		@include desktop {
+		@include desktop-small {
 			text-align: left;
 			margin-left: 0;
 		}

@@ -82,7 +82,7 @@
 			height: 22.5rem;
 		}
 
-		@include desktop {
+		@include desktop-small {
 			height: 25rem;
 		}
 	}
@@ -119,7 +119,7 @@
 		letter-spacing: 0.2px;
 		margin-top: 0.35em;
 
-		@include desktop {
+		@include desktop-small {
 			max-width: 50vw;
 		}
 	}

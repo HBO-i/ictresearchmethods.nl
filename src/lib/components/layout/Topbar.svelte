@@ -61,7 +61,7 @@
 		align-items: center;
 		flex-direction: column;
 
-		@include desktop {
+		@include desktop-small {
 			height: 4em;
 			border-bottom: 1.5px solid var(--color-bg);
 			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
@@ -79,14 +79,14 @@
 		width: 10em;
 		left: 0;
 
-		@include desktop {
+		@include desktop-small {
 			margin: 0;
 		}
 	}
 
 	.icon-container {
 		display: none;
-		@include desktop {
+		@include desktop-small {
 			display: flex;
 			flex-direction: row;
 			gap: 1.5em;
@@ -94,7 +94,7 @@
 
 		.github,
 		.bmc {
-			@include desktop {
+			@include desktop-small {
 				width: 2em;
 				height: 2em;
 
@@ -108,7 +108,7 @@
 	.theme-switch-desktop {
 		display: none;
 
-		@include desktop {
+		@include desktop-small {
 			display: block;
 			position: absolute;
 			right: 7.5%;

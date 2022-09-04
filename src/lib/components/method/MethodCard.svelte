@@ -126,7 +126,7 @@
 		}
 
 		&__body {
-			@include desktop {
+			@include desktop-small {
 				width: 32.5em;
 			}
 
@@ -140,7 +140,7 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		@include desktop {
+		@include desktop-small {
 			display: flex;
 		}
 	}
@@ -148,7 +148,7 @@
 	.more-info {
 		display: none;
 
-		@include desktop {
+		@include desktop-small {
 			display: flex;
 		}
 	}
