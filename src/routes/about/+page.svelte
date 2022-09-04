@@ -1,3 +1,7 @@
+<script lang="ts">
+	import EditPage from '$lib/components/EditPage.svelte';
+</script>
+
 <svelte:head>
 	<title>About — ICT Research Methods</title>
 	<meta
@@ -96,6 +100,8 @@
 	I <a href="https://github.com/jochemvogel/ictmethods.nl" target="_blank">open sourced</a> the project,
 	so other people can implement their own improvements. Enjoy! ✌️
 </p>
+
+<EditPage editRoute="about" />
 
 <style lang="scss">
 	h1,

@@ -1,9 +1,12 @@
+<script lang="ts">
+	import EditPage from '$lib/components/EditPage.svelte';
+</script>
+
 <svelte:head>
 	<title>DOT Framework — ICT Research Methods</title>
 	<meta
 		name="description"
-		content="To help you in your ICT research, we advise the use of the <i
-		>Development Oriented Triangulation"
+		content="To help you in your ICT research, we advise the use of the	Development Oriented Triangulation (DOT) Framework"
 	/>
 </svelte:head>
 
@@ -152,6 +155,8 @@
 		more common combinations of methods have been defined as design patterns.
 	</p>
 </section>
+
+<EditPage editRoute="dot-framework" />
 
 <style>
 	h2 {
