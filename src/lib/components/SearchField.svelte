@@ -83,7 +83,7 @@
 		justify-content: center;
 		padding: 1em;
 
-		@include desktop {
+		@include desktop-small {
 			padding: 0;
 		}
 
@@ -104,7 +104,7 @@
 				color: var(--color-text-secondary);
 			}
 
-			@include desktop {
+			@include desktop-small {
 				width: 40em;
 				font-size: 0.8em;
 				text-align: left;
@@ -131,7 +131,7 @@
 			justify-content: center;
 			align-items: center;
 
-			@include desktop {
+			@include desktop-small {
 				display: flex;
 			}
 
@@ -161,7 +161,7 @@
 		border-bottom-left-radius: 0.5em;
 		border-bottom-right-radius: 0.5em;
 
-		@include desktop {
+		@include desktop-small {
 			width: 100%;
 		}
 

@@ -30,7 +30,7 @@
 		z-index: 2; // @TODO: z-index.scss
 		border: none;
 
-		@include desktop {
+		@include desktop-small {
 			display: none;
 		}
 

@@ -86,7 +86,7 @@
 		display: flex;
 		justify-content: center;
 
-		@include desktop {
+		@include desktop-small {
 			justify-content: flex-end;
 		}
 
@@ -101,7 +101,7 @@
 			width: 1em;
 			margin: 0.1em;
 
-			@include desktop {
+			@include desktop-small {
 				margin: 0.2em;
 				width: 1.5em;
 				height: 1.5em;

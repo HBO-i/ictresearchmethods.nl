@@ -30,7 +30,7 @@
 		align-items: center;
 		gap: 0.25em;
 
-		@include desktop {
+		@include desktop-small {
 			font-size: 0.8em;
 		}
 	}
@@ -38,7 +38,7 @@
 	.tag-tooltip {
 		display: none;
 
-		@include desktop {
+		@include desktop-small {
 			text-transform: none;
 			visibility: hidden;
 			position: absolute;
@@ -61,7 +61,7 @@
 	}
 
 	.tag:hover .tag-tooltip {
-		@include desktop {
+		@include desktop-small {
 			visibility: visible;
 			cursor: not-allowed;
 
@@ -81,7 +81,7 @@
 	.info {
 		display: none;
 
-		@include desktop {
+		@include desktop-small {
 			display: flex;
 		}
 	}

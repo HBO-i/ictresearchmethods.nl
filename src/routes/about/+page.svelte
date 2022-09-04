@@ -104,7 +104,7 @@
 	}
 
 	li {
-		@include desktop {
+		@include desktop-small {
 			font-size: 1em;
 		}
 	}
@@ -112,7 +112,7 @@
 	p {
 		margin-top: 0.5em;
 
-		@include desktop {
+		@include desktop-small {
 			font-size: 1em;
 		}
 	}

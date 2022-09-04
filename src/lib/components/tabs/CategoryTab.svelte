@@ -78,7 +78,7 @@
 		padding: 0.5em 1.25em;
 		scroll-snap-type: x mandatory;
 
-		@include desktop {
+		@include desktop-small {
 			box-sizing: border-box;
 			min-height: 3em;
 			justify-content: center;

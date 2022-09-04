@@ -29,7 +29,7 @@
 		font-size: 1.15em;
 		scroll-snap-align: center;
 
-		@include desktop {
+		@include desktop-small {
 			padding: 1em;
 			font-size: 1.1em;
 			margin: 0 1em;
