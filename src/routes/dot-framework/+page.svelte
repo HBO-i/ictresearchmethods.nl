@@ -2,8 +2,8 @@
 	<title>DOT Framework — ICT Research Methods</title>
 	<meta
 		name="description"
-		content="The ICT Research Methods Pack is a card set with research methods for
-	design-oriented research within ICT, developed by HBO-i"
+		content="To help you in your ICT research, we advise the use of the <i
+		>Development Oriented Triangulation"
 	/>
 </svelte:head>
 
