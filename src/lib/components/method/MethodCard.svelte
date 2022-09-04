@@ -49,20 +49,26 @@
 		padding: 2em;
 		border-radius: 1.5em;
 
-		@include desktop {
+		@include desktop-small {
+			width: 60rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			box-sizing: border-box;
-			margin: 0.5em 0;
-			gap: 1em;
 			height: 11.25rem;
-			width: 70rem;
 
 			&:hover {
 				transform: scale(1.01);
 				box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 			}
+		}
+
+		@include desktop {
+			width: 67.5rem;
+		}
+
+		@include desktop-large {
+			width: 70rem;
 		}
 	}
 
@@ -73,7 +79,7 @@
 		width: 10em;
 		color: var(--color-black);
 
-		@include desktop {
+		@include desktop-small {
 			font-size: 1em;
 		}
 	}
@@ -85,14 +91,14 @@
 		line-height: 0;
 		text-transform: capitalize;
 
-		@include desktop {
+		@include desktop-small {
 			font-size: 0.9em;
 		}
 	}
 
 	button {
-		@include desktop {
-			margin-left: 5em;
+		@include desktop-small {
+			margin-left: 2em;
 		}
 	}
 
@@ -102,7 +108,7 @@
 		gap: 1em;
 		margin-bottom: 1.5em;
 
-		@include desktop {
+		@include desktop-small {
 			margin-bottom: 0;
 		}
 
