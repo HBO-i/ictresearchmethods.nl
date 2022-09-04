@@ -31,11 +31,7 @@
 <ul class="non-style">
 	{#each methods as method}
 		<li>
-			<a
-				data-sveltekit-prefetch
-				href={'/' + method.category + '/' + method.slug}
-				title={method.name}
-			>
+			<a href={'/' + method.category + '/' + method.slug} title={method.name}>
 				<MethodCard {method} />
 			</a>
 		</li>
