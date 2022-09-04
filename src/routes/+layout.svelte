@@ -88,16 +88,15 @@
 			padding: 2em;
 		}
 
-		@include desktop {
+		@include desktop-small {
 			padding: 2.5em;
 			min-height: 83vh;
 			max-width: 75em;
-			margin-bottom: 2.5em;
 		}
 	}
 
 	.content {
-		@include desktop {
+		@include desktop-small {
 			display: flex;
 		}
 	}

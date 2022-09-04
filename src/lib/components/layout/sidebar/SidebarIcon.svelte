@@ -22,7 +22,7 @@
 	.sidebar-icon {
 		display: none;
 
-		@include tablet-landscape {
+		@include desktop-small {
 			display: flex;
 		}
 	}

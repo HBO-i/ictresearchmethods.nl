@@ -37,7 +37,7 @@
 
 	<div class="detail__heading">
 		<h1>{data.result.name}</h1>
-		<h2><a href={'/' + data.result.category} data-sveltekit-prefetch>{data.result.category}</a></h2>
+		<h2><a href={'/' + data.result.category}>{data.result.category}</a></h2>
 	</div>
 
 	<h3>Why?</h3>
@@ -82,7 +82,7 @@
 			height: 22.5rem;
 		}
 
-		@include desktop {
+		@include desktop-small {
 			height: 25rem;
 		}
 	}
@@ -119,7 +119,7 @@
 		letter-spacing: 0.2px;
 		margin-top: 0.35em;
 
-		@include desktop {
+		@include desktop-small {
 			max-width: 50vw;
 		}
 	}

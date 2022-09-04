@@ -10,7 +10,7 @@
 		word-spacing: 0.5px;
 		font-size: 1.15em;
 
-		@include desktop {
+		@include desktop-small {
 			display: none;
 		}
 

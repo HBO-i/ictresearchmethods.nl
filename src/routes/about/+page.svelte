@@ -1,3 +1,7 @@
+<script lang="ts">
+	import EditPage from '$lib/components/EditPage.svelte';
+</script>
+
 <svelte:head>
 	<title>About — ICT Research Methods</title>
 	<meta
@@ -97,6 +101,8 @@
 	so other people can implement their own improvements. Enjoy! ✌️
 </p>
 
+<EditPage editRoute="about" />
+
 <style lang="scss">
 	h1,
 	h2 {
@@ -104,7 +110,7 @@
 	}
 
 	li {
-		@include desktop {
+		@include desktop-small {
 			font-size: 1em;
 		}
 	}
@@ -112,7 +118,7 @@
 	p {
 		margin-top: 0.5em;
 
-		@include desktop {
+		@include desktop-small {
 			font-size: 1em;
 		}
 	}

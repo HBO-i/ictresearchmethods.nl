@@ -31,11 +31,7 @@
 <ul class="non-style">
 	{#each methods as method}
 		<li>
-			<a
-				data-sveltekit-prefetch
-				href={'/' + method.category + '/' + method.slug}
-				title={method.name}
-			>
+			<a href={'/' + method.category + '/' + method.slug} title={method.name}>
 				<MethodCard {method} />
 			</a>
 		</li>
@@ -86,7 +82,7 @@
 		display: flex;
 		justify-content: center;
 
-		@include desktop {
+		@include desktop-small {
 			justify-content: flex-end;
 		}
 
@@ -101,7 +97,7 @@
 			width: 1em;
 			margin: 0.1em;
 
-			@include desktop {
+			@include desktop-small {
 				margin: 0.2em;
 				width: 1.5em;
 				height: 1.5em;

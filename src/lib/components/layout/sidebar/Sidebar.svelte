@@ -50,7 +50,7 @@
 	nav {
 		display: none;
 
-		@include desktop {
+		@include desktop-small {
 			display: block;
 			min-width: 15em;
 			max-width: 17.5em;
@@ -82,7 +82,7 @@
 			flex-direction: column;
 			align-items: center;
 
-			@include desktop {
+			@include desktop-small {
 				align-items: stretch;
 			}
 
@@ -100,9 +100,10 @@
 					padding: 0.25em;
 					border-radius: 0.75em;
 
-					@include desktop {
+					@include desktop-small {
 						font-size: 1em;
 						padding: 1em 2em;
+						letter-spacing: 0.5px;
 					}
 				}
 			}
@@ -111,7 +112,7 @@
 		.active {
 			color: var(--color-black);
 
-			@include desktop {
+			@include desktop-small {
 				color: var(--color-white);
 				background-color: var(--color-primary);
 			}
@@ -121,7 +122,7 @@
 	p {
 		display: none;
 
-		@include desktop {
+		@include desktop-small {
 			position: absolute;
 			display: flex;
 			justify-content: center;
@@ -146,7 +147,7 @@
 		transform: scale(0.9);
 		margin-top: 2em;
 
-		@include desktop {
+		@include desktop-small {
 			display: none;
 		}
 	}

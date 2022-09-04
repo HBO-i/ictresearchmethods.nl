@@ -1,6 +1,7 @@
 // Breakpoints
 $bp-desktop-large: 1600px;
-$bp-desktop: 1280px;
+$bp-desktop: 1400px;
+$bp-desktop-small: 1280px;
 $bp-tablet-landscape: 1024px;
 $bp-tablet: 768px;
 $bp-mobile: 480px;
@@ -20,6 +21,12 @@ $bp-mobile: 480px;
 
 @mixin tablet-landscape {
 	@media only screen and (min-width: #{$bp-tablet-landscape}) {
+		@content;
+	}
+}
+
+@mixin desktop-small {
+	@media only screen and (min-width: #{$bp-desktop-small}) {
 		@content;
 	}
 }
