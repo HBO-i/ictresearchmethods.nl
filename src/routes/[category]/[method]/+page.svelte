@@ -37,7 +37,7 @@
 
 	<div class="detail__heading">
 		<h1>{data.result.name}</h1>
-		<h2><a href={'/' + data.result.category} data-sveltekit-prefetch>{data.result.category}</a></h2>
+		<h2><a href={'/' + data.result.category}>{data.result.category}</a></h2>
 	</div>
 
 	<h3>Why?</h3>

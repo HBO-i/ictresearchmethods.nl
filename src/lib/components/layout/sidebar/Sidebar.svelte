@@ -103,6 +103,7 @@
 					@include desktop-small {
 						font-size: 1em;
 						padding: 1em 2em;
+						letter-spacing: 0.5px;
 					}
 				}
 			}
