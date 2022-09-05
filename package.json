@@ -1,6 +1,6 @@
 {
 	"name": "ictmethods",
-	"version": "0.2.0",
+	"version": "0.3.2",
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
@@ -31,16 +31,13 @@
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"sass": "^1.52.3",
-		"sharp": "^0.30.7",
 		"svelte": "^3.49.0",
 		"svelte-check": "^2.7.1",
 		"svelte-jester": "^2.3.2",
 		"svelte-preprocess": "^4.10.7",
 		"ts-jest": "^28.0.5",
 		"tslib": "^2.3.1",
-		"typescript": "^4.7.4",
-		"vanilla-lazyload": "^17.8.3",
-		"vite-imagetools": "^4.0.8"
+		"typescript": "^4.7.4"
 	},
 	"type": "module",
 	"dependencies": {
