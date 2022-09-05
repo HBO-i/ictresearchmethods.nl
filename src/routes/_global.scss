@@ -123,9 +123,11 @@ li {
 }
 
 a.ellipsis {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: block;
+	@media screen and (max-width: 480px) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+	}
 }
 
 ul.non-style {
