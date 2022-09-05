@@ -66,3 +66,15 @@
 		</span>
 	{/each}
 </div>
+
+<style lang="scss">
+	.disabled {
+		opacity: 0.33;
+		cursor: not-allowed !important;
+
+		&:hover {
+			cursor: not-allowed !important;
+			background-color: transparent !important;
+		}
+	}
+</style>

@@ -10,7 +10,13 @@
 </script>
 
 {#if !$isJavaScriptDisabled}
-	<div on:click={toggleDarkMode} class="toggle" class:dark={$isDarkMode} class:light={!$isDarkMode}>
+	<div
+		on:click={toggleDarkMode}
+		class="toggle"
+		class:dark={$isDarkMode}
+		class:light={!$isDarkMode}
+		data-testid="themeToggle"
+	>
 		<div class="toggle-switch" class:right={$isDarkMode} class:left={!$isDarkMode}>
 			{#if $isDarkMode}
 				<Moon />

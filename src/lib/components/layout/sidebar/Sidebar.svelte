@@ -54,6 +54,7 @@
 			display: block;
 			min-width: 15em;
 			max-width: 17.5em;
+			min-height: 87vh;
 			background-color: var(--color-white);
 			padding: 2em 0;
 			position: relative;
