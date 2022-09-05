@@ -18,6 +18,10 @@ export const load: PageLoad = async ({ fetch, params }) => {
 		};
 	}
 
+	if (res.status === 404) {
+		throw error(404);
+	}
+
 	const { message } = await res.json();
 
 	throw error(500, `[method.+page.ts]: ${message} `);
