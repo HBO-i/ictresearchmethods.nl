@@ -23,6 +23,12 @@ export const GET: RequestHandler = async (request) => {
 				}
 			});
 		}
+
+		if (response.status === 404) {
+			return new Response(JSON.stringify('Method cannot be found'), {
+				status: 404
+			});
+		}
 	} catch (error) {
 		console.error('[category/index.json]:', error, ' API_URL: ', API_URL);
 		return new Response(JSON.stringify('Internal Server Error'), {
