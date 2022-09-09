@@ -31,7 +31,6 @@
 			alt=""
 			width="240"
 			height="360"
-			decoding="async"
 		/>
 	</picture>
 
