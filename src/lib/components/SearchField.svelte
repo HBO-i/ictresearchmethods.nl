@@ -2,6 +2,7 @@
 	import type { Method } from '$lib/types';
 	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores';
 
+	import { goto } from '$app/navigation';
 	import { matchSorter } from 'match-sorter';
 
 	let searchedArrayDisplay: Method[];
@@ -37,6 +38,20 @@
 
 		showSearchField.set(false);
 	};
+
+	/**
+	 * Client-side version of submitting the form
+	 */
+	const submitForm = (e: SubmitEvent) => {
+		const data = new FormData(e.target);
+		const formData = [...data.entries()][0];
+
+		const searchName = formData[0];
+		const searchQuery = formData[1];
+
+		goto(`/search?${searchName}=${searchQuery}`);
+		showSearchField.set(false);
+	};
 </script>
 
 {#if $isJavaScriptDisabled}
@@ -46,7 +61,7 @@
 		<button>Search</button>
 	</form>
 {:else}
-	<form action="/search" id="form">
+	<form id="form" on:submit|preventDefault={(e) => submitForm(e)}>
 		<input
 			type="text"
 			id="search"
