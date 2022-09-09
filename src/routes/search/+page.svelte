@@ -5,9 +5,9 @@
 	import { allMethods } from '$lib/stores';
 	import MethodList from '$lib/components/method/MethodList.svelte';
 
-	const queryString = $page.url.search;
-	const searchQuery = queryString.split('=')[1] ?? '';
-	const formattedSearchQuery = searchQuery.toLowerCase().replace('+', ' ');
+	$: queryString = $page.url.search;
+	$: searchQuery = queryString.split('=')[1] ?? '';
+	$: formattedSearchQuery = searchQuery.toLowerCase().replace('+', ' ');
 
 	$: searchedMethodsArray = $allMethods.filter(function (method: Method) {
 		const lowerCasedMethodName = method.name.toLowerCase();
@@ -40,9 +40,3 @@
 	please <a href="https://www.enable-javascript.com/" target="_blank">enable JavaScript</a> in your browser
 	if you want to search.
 </noscript>
-
-<style>
-	p {
-		font-size: 1.2em;
-	}
-</style>
