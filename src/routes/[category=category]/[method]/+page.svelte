@@ -6,7 +6,7 @@
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
-		previousRoute = navigation.from?.href ?? '/';
+		previousRoute = navigation.from?.url?.href ?? '/';
 	});
 
 	export let data: PageData;
@@ -31,7 +31,6 @@
 			alt=""
 			width="240"
 			height="360"
-			decoding="async"
 		/>
 	</picture>
 

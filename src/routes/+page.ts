@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import type { PageLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import { allMethods } from '$lib/stores';
