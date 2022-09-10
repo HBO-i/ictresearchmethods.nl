@@ -5,6 +5,9 @@
 	import { generateNavigationOptions } from '$lib/utils/paginate';
 	import { PREVIOUS_PAGE, NEXT_PAGE, ELLIPSIS } from '$lib/utils/symbolTypes';
 
+	import NextIcon from '$lib/assets/icons/pagination/next.svelte';
+	import PrevIcon from '$lib/assets/icons/pagination/prev.svelte';
+
 	import type { Option } from '$lib/types';
 
 	const dispatch = createEventDispatcher();
@@ -40,28 +43,13 @@
 			on:click={() => handleOptionClick(option)}
 		>
 			{#if option.type === 'number'}
-				<slot name="number" value={option.value}>
-					<span>{option.value}</span>
-				</slot>
+				<span>{option.value}</span>
 			{:else if option.type === 'symbol' && option.symbol === ELLIPSIS}
-				<slot name="ellipsis">
-					<span>...</span>
-				</slot>
+				<span>...</span>
 			{:else if option.type === 'symbol' && option.symbol === PREVIOUS_PAGE}
-				<slot name="prev">
-					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-						<path
-							fill="#000000"
-							d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
-						/>
-					</svg>
-				</slot>
+				<PrevIcon />
 			{:else if option.type === 'symbol' && option.symbol === NEXT_PAGE}
-				<slot name="next">
-					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-						<path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-					</svg>
-				</slot>
+				<NextIcon />
 			{/if}
 		</span>
 	{/each}
@@ -75,6 +63,51 @@
 		&:hover {
 			cursor: not-allowed !important;
 			background-color: transparent !important;
+		}
+	}
+
+	.pagination-nav {
+		width: max-content;
+		border-radius: 1em;
+		border: none;
+		display: flex;
+		justify-content: center;
+		background: var(--color-white);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.option {
+		color: var(--color-text-secondary);
+		width: 1em;
+		margin: 0.1em;
+		padding: 0.75em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 0.2s all ease-out;
+		user-select: none;
+
+		@include desktop-small {
+			margin: 0.2em;
+			width: 1.5em;
+			height: 1.5em;
+		}
+
+		&:hover {
+			border-radius: 0.5em;
+			background-color: var(--color-bg);
+			cursor: pointer;
+		}
+
+		&.number,
+		&.ellipsis {
+			padding: 0.75em 0.925em;
+		}
+
+		&.active {
+			background-color: var(--color-primary);
+			color: white;
+			border-radius: 0.625em;
 		}
 	}
 </style>

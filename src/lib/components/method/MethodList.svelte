@@ -2,10 +2,10 @@
 	import type { Method } from '$lib/types';
 
 	import { paginate } from '$lib/utils/paginate';
-	import DarkPaginationNav from '$lib/components/pagination/DarkPaginationNav.svelte';
-	import LightPaginationNav from '$lib/components/pagination/LightPaginationNav.svelte';
 
-	import { currentPaginationPage, isJavaScriptDisabled, isDarkMode } from '$lib/stores';
+	import PaginationNav from '$lib/components/pagination/PaginationNav.svelte';
+
+	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
 	import MethodCard from './MethodCard.svelte';
 	import { onMount } from 'svelte';
 	export let methodsArray: Array<Method>;
@@ -40,25 +40,14 @@
 
 {#if isPaginationNeeded && !$isJavaScriptDisabled}
 	<div class="list-navigation">
-		{#if $isDarkMode}
-			<DarkPaginationNav
-				totalItems={items.length}
-				{pageSize}
-				{currentPage}
-				limit={1}
-				showStepOptions={true}
-				on:setPage={(e) => updatePaginationPage(e.detail.page)}
-			/>
-		{:else}
-			<LightPaginationNav
-				totalItems={items.length}
-				{pageSize}
-				{currentPage}
-				limit={1}
-				showStepOptions={true}
-				on:setPage={(e) => updatePaginationPage(e.detail.page)}
-			/>
-		{/if}
+		<PaginationNav
+			totalItems={items.length}
+			{pageSize}
+			{currentPage}
+			limit={1}
+			showStepOptions={true}
+			on:setPage={(e) => updatePaginationPage(e.detail.page)}
+		/>
 	</div>
 {/if}
 
@@ -84,32 +73,6 @@
 
 		@include desktop-small {
 			justify-content: flex-end;
-		}
-
-		:global(.pagination-nav) {
-			width: max-content;
-			border-radius: 1em;
-			border: none;
-		}
-
-		:global(.option) {
-			color: var(--color-text-secondary);
-			width: 1em;
-			margin: 0.1em;
-
-			@include desktop-small {
-				margin: 0.2em;
-				width: 1.5em;
-				height: 1.5em;
-			}
-		}
-		:global(.option):hover {
-			border-radius: 0.5em;
-		}
-		:global(.option.active) {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-			border-radius: 10px;
 		}
 	}
 </style>
