@@ -122,7 +122,7 @@
 			width: 5em;
 			border-radius: 1em;
 			object-fit: cover;
-			background-color: #eee;
+			background-color: white;
 		}
 	}
 	.card-content {
