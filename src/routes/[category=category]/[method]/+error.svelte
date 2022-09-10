@@ -16,8 +16,8 @@
 		title="not found giphy"
 	/>
 
-	<h1>404 - This page doesn't exist</h1>
-	<p>We're sorry, but we can't find it. Are you sure you are on the right page?</p>
+	<h1>404 - The method '{$page.params.method}' does not exist</h1>
+	<p>We're sorry, but we can't find it. Are you sure you are looking for the right method?</p>
 
 	<a href="/"> Back to home</a>
 {:else}

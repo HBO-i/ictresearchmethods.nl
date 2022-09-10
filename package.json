@@ -1,6 +1,6 @@
 {
 	"name": "ictmethods",
-	"version": "0.3.3",
+	"version": "0.3.5",
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
@@ -12,7 +12,7 @@
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"test": "jest src",
+		"test": "jest",
 		"test:watch": "npm run test -- --watch"
 	},
 	"devDependencies": {
