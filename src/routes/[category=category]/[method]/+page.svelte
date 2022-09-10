@@ -73,7 +73,7 @@
 
 	img {
 		border-radius: 1em;
-		background-color: #eee;
+		background-color: white;
 		height: 20rem;
 		width: auto;
 
