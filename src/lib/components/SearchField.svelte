@@ -50,7 +50,7 @@
 		const searchQuery = formData[1];
 
 		goto(`/search?${searchName}=${searchQuery}`);
-		showSearchField.set(false);
+		clearSearch();
 	};
 </script>
 

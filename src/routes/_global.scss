@@ -101,6 +101,16 @@ html.dark {
 	font-family: 'Manrope', sans-serif;
 }
 
+a {
+	color: var(--color-black);
+}
+
+a:hover,
+a:active,
+a:focus {
+	font-weight: bold;
+}
+
 body {
 	padding: 0;
 	margin: 0;
