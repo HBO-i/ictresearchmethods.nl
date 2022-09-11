@@ -37,8 +37,8 @@
 	<a
 		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
 		target="_blank"
-		class="ellipsis">https://www.studystore.nl/p/9990002067426/ict-methodspack</a
-	>.
+		class="ellipsis">https://www.studystore.nl/p/9990002067426/ict-methodspack.</a
+	>
 </p>
 
 <h2>Licensing</h2>
@@ -67,8 +67,8 @@
 	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426. Available from: <a
 		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
 		class="ellipsis"
-		target="_blank">https://www.studystore.nl/p/9990002067426/ict-methodspack</a
-	>.
+		target="_blank">https://www.studystore.nl/p/9990002067426/ict-methodspack.</a
+	>
 </p>
 
 <h2>About this app</h2>

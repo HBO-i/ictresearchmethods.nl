@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
@@ -17,7 +15,6 @@ export const load: PageLoad = async ({ fetch, params }) => {
 			result
 		};
 	}
-
 	const { message } = await res.json();
 
 	throw error(500, `[category/+page.ts]: ${message}`);

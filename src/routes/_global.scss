@@ -20,7 +20,7 @@ html.dark {
 
 	--color-bg: hsl(210, 11%, 7%);
 
-	--color-white: #1a1d1f;
+	--color-white: hsl(204, 9%, 11%);
 	--color-black: hsl(0, 0%, 100%);
 
 	--color-tooltip-bg: hsl(0, 0%, 70%);
@@ -101,6 +101,16 @@ html.dark {
 	font-family: 'Manrope', sans-serif;
 }
 
+a {
+	color: var(--color-black);
+}
+
+a:hover,
+a:active,
+a:focus {
+	font-weight: bold;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -123,9 +133,11 @@ li {
 }
 
 a.ellipsis {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: block;
+	@media screen and (max-width: 480px) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+	}
 }
 
 ul.non-style {

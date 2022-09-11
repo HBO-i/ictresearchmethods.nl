@@ -3,10 +3,12 @@
 	import { afterNavigate } from '$app/navigation';
 	import { capitalizeFirstLetter } from '$lib/utils/format';
 
+	import { isJavaScriptDisabled } from '$lib/stores';
+
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
-		previousRoute = navigation.from?.href ?? '/';
+		previousRoute = navigation.from?.url?.href ?? '/';
 	});
 
 	export let data: PageData;
@@ -19,7 +21,7 @@
 
 <section>
 	<p class="detail__details">
-		<a href={previousRoute}>{'<'}</a>Details
+		<a href={$isJavaScriptDisabled ? '/' : previousRoute}>{'<'}</a>Details
 	</p>
 
 	<picture>
@@ -31,7 +33,6 @@
 			alt=""
 			width="240"
 			height="360"
-			decoding="async"
 		/>
 	</picture>
 
@@ -74,7 +75,7 @@
 
 	img {
 		border-radius: 1em;
-		background-color: #eee;
+		background-color: white;
 		height: 20rem;
 		width: auto;
 
