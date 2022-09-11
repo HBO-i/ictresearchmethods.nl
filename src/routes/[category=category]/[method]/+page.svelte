@@ -3,6 +3,8 @@
 	import { afterNavigate } from '$app/navigation';
 	import { capitalizeFirstLetter } from '$lib/utils/format';
 
+	import { isJavaScriptDisabled } from '$lib/stores';
+
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
@@ -19,7 +21,7 @@
 
 <section>
 	<p class="detail__details">
-		<a href={previousRoute}>{'<'}</a>Details
+		<a href={$isJavaScriptDisabled ? '/' : previousRoute}>{'<'}</a>Details
 	</p>
 
 	<picture>
