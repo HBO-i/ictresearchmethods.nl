@@ -4,12 +4,25 @@
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Sidebar from '$lib/components/layout/sidebar/Sidebar.svelte';
 
-	import { showSearchField, allMethods, isJavaScriptDisabled, isDarkMode } from '$lib/stores';
+	import {
+		showSearchField,
+		allMethods,
+		isJavaScriptDisabled,
+		isDarkMode,
+		isMacDevice
+	} from '$lib/stores';
 
 	import { onMount } from 'svelte';
 
 	onMount(() => {
+		setup();
+	});
+
+	function setup() {
 		isJavaScriptDisabled.set(false);
+
+		const isClientMac = navigator.platform.indexOf('Mac') > -1;
+		isMacDevice.set(isClientMac);
 
 		const htmlTag = document.documentElement;
 		isDarkMode.set(htmlTag.classList.contains('dark'));
@@ -21,48 +34,52 @@
 		}
 
 		setSearchFieldKeyEvents();
+	}
 
-		/**
-		 * Fetch all the methods and put them in the 'allMethods' array in the store
-		 */
-		async function setAllMethodsInStore() {
-			const res = await fetch('/methods.json');
+	/**
+	 * Fetch all the methods and put them in the 'allMethods' array in the store
+	 */
+	async function setAllMethodsInStore() {
+		const res = await fetch('/methods.json');
 
-			if (res.ok) {
-				const result = await res.json();
-				allMethods.set(result.methodsArray);
+		if (res.ok) {
+			const result = await res.json();
+			allMethods.set(result.methodsArray);
+		}
+	}
+
+	/**
+	 * Set the CMD/CTRL + K shortcut and the ESC for leaving the search bar
+	 */
+	function setSearchFieldKeyEvents() {
+		document.addEventListener('keydown', (event) => {
+			const isCommandClicked = event.metaKey === true;
+			const isCtrlClicked = event.ctrlKey === true;
+			const isKClicked = event.key === 'k';
+			const isMClicked = event.key === 'm';
+			const isEscClicked = event.key === 'Escape';
+
+			const cmdKWindows = isCtrlClicked && isMClicked; // CTRL + K is existing shortcut in Chrome
+			const cmdKMac = isCommandClicked && isKClicked;
+
+			const searchField = document.getElementById('search');
+
+			if (cmdKWindows || cmdKMac) {
+				searchField?.focus();
 			}
-		}
 
-		/**
-		 * Set the CMD/CTRL + K shortcut and the ESC for leaving the search bar
-		 */
-		function setSearchFieldKeyEvents() {
-			document.addEventListener('keydown', (event) => {
-				const isCommandClicked = event.metaKey === true;
-				const isCtrlClicked = event.ctrlKey === true;
-				const isKClicked = event.key === 'k';
-				const isEscClicked = event.key === 'Escape';
-
-				const cmdKWindows = isCtrlClicked && isKClicked;
-				const cmdKMac = isCommandClicked && isKClicked;
-
-				const searchField = document.getElementById('search');
-
-				if (cmdKWindows || cmdKMac) {
-					searchField?.focus();
-				}
-
-				if (isEscClicked) {
-					searchField?.blur();
-					showSearchField.set(false);
-				}
-			});
-		}
-	});
+			if (isEscClicked) {
+				searchField?.blur();
+				showSearchField.set(false);
+			}
+		});
+	}
 </script>
 
 <div class="root">
+	{#if $showSearchField}
+		<div class="search-background-blur" />
+	{/if}
 	<Topbar />
 	<div class="content">
 		<Sidebar />
@@ -79,6 +96,15 @@
 		margin: 0;
 		padding: 0;
 		min-height: 100vh;
+	}
+
+	.search-background-blur {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.33);
+		backdrop-filter: blur(4px);
+		z-index: 2;
 	}
 
 	main {

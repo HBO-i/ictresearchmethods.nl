@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
-	import { allMethods, showSearchField, isJavaScriptDisabled } from '$lib/stores';
+	import { allMethods, showSearchField, isJavaScriptDisabled, isMacDevice } from '$lib/stores';
 
 	import { goto } from '$app/navigation';
 	import { matchSorter } from 'match-sorter';
+	import { focusTrap } from 'svelte-focus-trap';
 
 	let searchedArrayDisplay: Method[];
 
@@ -26,7 +27,7 @@
 			keys: ['name']
 		});
 
-		searchedArrayDisplay = searchedArray.splice(0, 3);
+		searchedArrayDisplay = searchedArray.splice(0, 5);
 	};
 
 	/**
@@ -61,12 +62,12 @@
 		<button>Search</button>
 	</form>
 {:else}
-	<form id="form" on:submit|preventDefault={(e) => submitForm(e)}>
+	<form id="form" on:submit|preventDefault={(e) => submitForm(e)} use:focusTrap>
 		<input
 			type="text"
 			id="search"
 			name="query"
-			placeholder="Search method (CMD + K)"
+			placeholder={`Search method ${$isMacDevice ? '(CMD + K)' : '(CTRL + M)'}`}
 			on:keyup={(e) => {
 				updateSearchQuery(e);
 			}}
@@ -78,7 +79,11 @@
 			<ul class="non-style">
 				{#each searchedArrayDisplay as method}
 					<li>
-						<a href={'/' + method.category + '/' + method.slug} on:click={clearSearch}>
+						<a
+							href={'/' + method.category + '/' + method.slug}
+							on:click={clearSearch}
+							class="custom-style"
+						>
 							<span>{method.name}</span> - {method.category}
 						</a>
 					</li>
@@ -97,6 +102,7 @@
 		display: flex;
 		justify-content: center;
 		padding: 1em;
+		z-index: 10;
 
 		@include desktop-small {
 			padding: 0;
@@ -192,6 +198,7 @@
 
 				&:focus {
 					background-color: var(--color-primary);
+					color: white;
 				}
 
 				span {

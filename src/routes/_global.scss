@@ -111,6 +111,12 @@ a:focus {
 	font-weight: bold;
 }
 
+a.custom-style:hover,
+a.custom-style:active,
+a.custom-style:focus {
+	font-weight: normal;
+}
+
 body {
 	padding: 0;
 	margin: 0;
