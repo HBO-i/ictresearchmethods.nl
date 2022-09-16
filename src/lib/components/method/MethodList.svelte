@@ -31,7 +31,7 @@
 <ul class="non-style">
 	{#each methods as method}
 		<li>
-			<a href={'/' + method.category + '/' + method.slug} title={method.name}>
+			<a href={'/' + method.category + '/' + method.slug} title={method.name} class="custom-style">
 				<MethodCard {method} />
 			</a>
 		</li>
