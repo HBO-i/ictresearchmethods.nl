@@ -12,6 +12,7 @@ export default {
 	testEnvironment: 'jsdom',
 	setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 	moduleNameMapper: {
-		'^\\$lib(.*)$': '<rootDir>/src/lib$1'
+		'^\\$lib(.*)$': '<rootDir>/src/lib$1',
+		'^\\$app(.*)$': '<rootDir>/.svelte-kit/runtime/app$1'
 	}
 };
