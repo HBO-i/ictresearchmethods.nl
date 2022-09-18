@@ -16,6 +16,8 @@
 	});
 
 	$: isValidQuery = searchedMethodsArray.length > 0 && formattedSearchQuery !== '';
+
+	$: isSearchEmpty = formattedSearchQuery === '';
 </script>
 
 <svelte:head>
@@ -27,6 +29,9 @@
 
 {#if isValidQuery}
 	<MethodList methodsArray={searchedMethodsArray} />
+{:else if isSearchEmpty}
+	<p>You're searching for nothing. How am I supposed to find something, lol?</p>
+	<p>Go <a href="/">home</a>, you're drunk.</p>
 {:else}
 	<p>
 		Nothing found. Are you sure this is a valid search query? Please try again or go back to <a

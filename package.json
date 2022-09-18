@@ -1,6 +1,14 @@
 {
 	"name": "ictmethods",
-	"version": "0.3.5",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jochemvogel/ictmethods.nl.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jochemvogel/ictmethods.nl/issues/new?assignees=&labels=&template=bug_report.yml"
+	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
@@ -16,8 +24,7 @@
 		"test:watch": "npm run test -- --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.76",
+		"@sveltejs/adapter-static": "^1.0.0-next.42",
 		"@sveltejs/kit": "next",
 		"@testing-library/jest-dom": "^5.16.4",
 		"@testing-library/svelte": "^3.1.3",
@@ -34,6 +41,7 @@
 		"sass": "^1.52.3",
 		"svelte": "^3.49.0",
 		"svelte-check": "^2.7.1",
+		"svelte-focus-trap": "^1.2.0",
 		"svelte-jester": "^2.3.2",
 		"svelte-preprocess": "^4.10.7",
 		"ts-jest": "^28.0.5",
