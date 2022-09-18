@@ -19,7 +19,7 @@ describe('ThemeSwitch', () => {
 	});
 
 	test("adds a 'dark' class to html if dark mode is enabled", () => {
-		isDarkMode.set(true); // unnecessary?
+		isDarkMode.set(true);
 		const html = document.documentElement;
 
 		expect(html).toHaveClass('dark');
