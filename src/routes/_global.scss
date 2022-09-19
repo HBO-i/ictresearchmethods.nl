@@ -187,3 +187,25 @@ button:hover {
 a.active > .sidebar-icon > svg > path {
 	fill: var(--color-white);
 }
+
+/* Z-INDEXES */
+
+header {
+	z-index: 2;
+}
+
+.search-background-blur {
+	z-index: 2;
+}
+
+.search {
+	z-index: 3;
+}
+
+nav.visible {
+	z-index: 4;
+}
+
+.hamburger {
+	z-index: 5;
+}

@@ -104,7 +104,6 @@
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.33);
 		backdrop-filter: blur(4px);
-		z-index: 2;
 	}
 
 	main {

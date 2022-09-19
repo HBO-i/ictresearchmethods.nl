@@ -75,7 +75,6 @@
 			align-items: center;
 			width: 100%;
 			overflow-y: scroll;
-			z-index: 2; // @TODO: z-index.scss
 		}
 
 		ul {
