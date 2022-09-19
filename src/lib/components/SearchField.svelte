@@ -6,7 +6,14 @@
 	import { matchSorter } from 'match-sorter';
 	import { focusTrap } from 'svelte-focus-trap';
 
+	import { onMount } from 'svelte';
+
 	let searchedArrayDisplay: Method[];
+	let isTouchDevice: boolean;
+
+	onMount(() => {
+		isTouchDevice = navigator.maxTouchPoints > 0;
+	});
 
 	/**
 	 * Updates the search query based on the input field and adds the corresponding methods in the search array
@@ -27,7 +34,7 @@
 			keys: ['name']
 		});
 
-		searchedArrayDisplay = searchedArray.splice(0, 5);
+		searchedArrayDisplay = searchedArray.splice(0, 3);
 	};
 
 	/**
@@ -62,16 +69,28 @@
 		<button>Search</button>
 	</form>
 {:else}
-	<form id="form" on:submit|preventDefault={(e) => submitForm(e)} use:focusTrap>
-		<input
-			type="text"
-			id="search"
-			name="query"
-			placeholder={`Search method ${$isMacDevice ? '(CMD + K)' : '(CTRL + M)'}`}
-			on:keyup={(e) => {
-				updateSearchQuery(e);
-			}}
-		/>
+	<form id="form" on:submit|preventDefault={(e) => submitForm(e)} use:focusTrap class="search">
+		{#if isTouchDevice}
+			<input
+				type="text"
+				id="search"
+				name="query"
+				placeholder="Search method"
+				on:keyup={(e) => {
+					updateSearchQuery(e);
+				}}
+			/>
+		{:else}
+			<input
+				type="text"
+				id="search"
+				name="query"
+				placeholder={`Search method ${$isMacDevice ? '(CMD + K)' : '(CTRL + M)'}`}
+				on:keyup={(e) => {
+					updateSearchQuery(e);
+				}}
+			/>
+		{/if}
 		<button tabindex="-1">Search</button>
 		<label for="search">Search for method</label>
 
@@ -102,7 +121,6 @@
 		display: flex;
 		justify-content: center;
 		padding: 1em;
-		z-index: 10;
 
 		@include desktop-small {
 			padding: 0;
