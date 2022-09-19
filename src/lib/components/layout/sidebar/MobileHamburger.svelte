@@ -27,7 +27,6 @@
 		justify-content: center;
 		align-items: center;
 		transition: all 0.2s ease-out;
-		z-index: 2; // @TODO: z-index.scss
 		border: none;
 
 		@include desktop-small {
