@@ -158,4 +158,8 @@
 			display: flex;
 		}
 	}
+
+	.card-content {
+		max-width: 27.5rem;
+	}
 </style>
