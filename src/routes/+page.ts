@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 import { allMethods } from '$lib/stores';
 
 export const load: PageLoad = async ({ fetch }) => {
-	const res = await fetch('methods.json');
+	const res = await fetch('api/methods');
 
 	if (res.ok) {
 		const result = await res.json();

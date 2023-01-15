@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, params }) => {
-	const res = await fetch(`${params.category}.json`);
+	const res = await fetch(`api/${params.category}`);
 
 	if (res.ok) {
 		const result = await res.json();
