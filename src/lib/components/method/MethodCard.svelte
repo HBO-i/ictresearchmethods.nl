@@ -126,6 +126,7 @@
 		}
 	}
 	.card-content {
+		max-width: 27.5rem;
 		&__heading {
 			font-weight: 700;
 			line-height: 0;
