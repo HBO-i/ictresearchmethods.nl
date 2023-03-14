@@ -4,6 +4,8 @@
 	import Person from '$lib/assets/icons/sidebar/person.svelte';
 	import Dashboard from '$lib/assets/icons/sidebar/dashboard.svelte';
 	import Star from '$lib/assets/icons/sidebar/star.svelte';
+	import Navigator from '$lib/assets/icons/sidebar/navigator.svelte';
+	import Search from '$lib/assets/icons/sidebar/search.svelte';
 
 	export let icon: string;
 </script>
@@ -15,6 +17,10 @@
 		<Person />
 	{:else if icon === 'star'}
 		<Star />
+	{:else if icon === 'navigator'}
+		<Navigator />
+	{:else if icon === 'search'}
+		<Search />
 	{/if}
 </div>
 

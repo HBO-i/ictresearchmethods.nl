@@ -8,6 +8,8 @@
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 
+	import Logo from '$lib/assets/img/hboi-logo.svelte';
+
 	import type { CategoryRoute } from '$lib/types';
 
 	afterNavigate(() => {
@@ -38,10 +40,6 @@
 			<ThemeSwitch />
 		</div>
 	</ul>
-	<p>
-		Made by&nbsp;
-		<a href="https://jochemvogel.com" target="_blank">Jochem</a>
-	</p>
 </nav>
 
 <MobileHamburger />
@@ -119,7 +117,7 @@
 		}
 	}
 
-	p {
+	.logo-container {
 		display: none;
 
 		@include desktop-small {
@@ -130,16 +128,6 @@
 			bottom: 0;
 			font-size: 1.1em;
 			width: 100%;
-
-			a {
-				color: var(--color-black);
-				font-weight: bold;
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-				}
-			}
 		}
 	}
 
