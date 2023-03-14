@@ -22,7 +22,11 @@ const config = {
 			assets: 'build',
 			fallback: 'error.html',
 			precompress: true
-		})
+		}),
+		alias: {
+			$content: 'src/content',
+			content: 'src/content'
+		}
 	}
 };
 

@@ -1,9 +1,43 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
+	import { onMount } from 'svelte';
+	import { resize, format } from 'vite-imagetools';
 
 	import Tag from '$lib/components/utils/Tag.svelte';
 
 	export let method: Method;
+
+	// import JPGImage from '$content/methods/img/' + method.category + '/' + method.slug + '.jpg?h=80&w=80';
+	// import WebPImage from '$content/methods/img/' + method.category + '/' + method.slug + '.jpg?h=80&w=80&webp';
+	// import JPGImage from `content/methods/img/${method.category}/${method.slug}.jpg?h=80&w=80`;
+	// import WebPImage from `content/methods/img/${method.category}/${method.slug}.jpg?h=80&w=80&webp`;
+	import JPGImage from '$content/methods/img/field/survey.jpg?h=80&w=80';
+	import WebPImage from '$content/methods/img/field/survey.jpg?h=80&w=80&webp';
+
+	onMount(() => {
+		function formatImage(img) {
+			return format({ format: 'webp' }, img);
+		}
+
+		console.log(formatImage('/img/extra/thumbnail/joker.jpg'));
+	});
+
+	// const testImage = require('$content/methods/')
+
+	// onMount(async () => {
+	// 	const testImg = await import(
+	// 		`$content/methods/img/${method.category}/${method.slug}.jpg?h=80&w=80`
+	// 	);
+
+	// 	setTimeout(() => {
+	// 		console.log(testImg);
+	// 	}, 3_000);
+	// });
+
+	// <source
+	// 			type="image/webp"
+	// 			srcset={formatImage(`/img/${method.category}/thumbnail/${method.slug}.jpg`)}
+	// 		/>
 </script>
 
 <article>
@@ -21,6 +55,19 @@
 				width="80"
 			/>
 		</picture>
+		<!-- <picture class="card-heading__img">
+			<source type="image/webp" srcset={WebPImage} />
+			<source type="image/jpeg" srcset={JPGImage} />
+			<img
+				src={JPGImage}
+				loading="lazy"
+				decoding="async"
+				class="img"
+				alt=""
+				height="80"
+				width="80"
+			/>
+		</picture> -->
 		<div class="card-heading__text">
 			<h1>{method.name}</h1>
 			<h2>{method.category}</h2>
