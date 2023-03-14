@@ -15,8 +15,8 @@
 </script>
 
 <svelte:head>
-	<title>{data.result.name} — ICT Research Methods</title>
-	<meta name="description" content={data.result.how.slice(0, 150)} />
+	<title>{data.method.name} — ICT Research Methods</title>
+	<meta name="description" content={data.method.how.slice(0, 150)} />
 </svelte:head>
 
 <section>
@@ -25,10 +25,10 @@
 	</p>
 
 	<picture>
-		<source type="image/webp" srcset={`/img/${data.result.category}/${data.result.slug}.webp`} />
-		<source type="image/jpeg" srcset={`/img/${data.result.category}/${data.result.slug}.jpg`} />
+		<source type="image/webp" srcset={`/img/${data.method.category}/${data.method.slug}.webp`} />
+		<source type="image/jpeg" srcset={`/img/${data.method.category}/${data.method.slug}.jpg`} />
 		<img
-			src={`/img/${data.result.category}/${data.result.slug}.jpg`}
+			src={`/img/${data.method.category}/${data.method.slug}.jpg`}
 			class="img"
 			alt=""
 			width="240"
@@ -37,30 +37,30 @@
 	</picture>
 
 	<div class="detail__heading">
-		<h1>{data.result.name}</h1>
-		<h2><a href={'/' + data.result.category}>{data.result.category}</a></h2>
+		<h1>{data.method.name}</h1>
+		<h2><a href={'/' + data.method.category}>{data.method.category}</a></h2>
 	</div>
 
 	<h3>Why?</h3>
-	<p>{data.result.why}</p>
+	<p>{data.method.why}</p>
 
 	<h3>How?</h3>
-	<p>{data.result.how}</p>
+	<p>{data.method.how}</p>
 
 	<h3>Ingredients</h3>
 	<ul>
-		{#each data.result.ingredients as ingredient}
+		{#each data.method.ingredients as ingredient}
 			<li>{ingredient}</li>
 		{/each}
 	</ul>
 
 	<h3>In practice</h3>
-	<p>{data.result.practice}</p>
+	<p>{data.method.practice}</p>
 
 	<h3>Phase(s) of use</h3>
-	<p>In the following project phase(s) {data.result.name.toLowerCase()} can be used:</p>
+	<p>In the following project phase(s) {data.method.name.toLowerCase()} can be used:</p>
 	<ul>
-		{#each data.result.phases as phase}
+		{#each data.method.phases as phase}
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>

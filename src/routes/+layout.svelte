@@ -40,7 +40,7 @@
 	 * Fetch all the methods and put them in the 'allMethods' array in the store
 	 */
 	async function setAllMethodsInStore() {
-		const res = await fetch('/methods.json');
+		const res = await fetch('/api/methods');
 
 		if (res.ok) {
 			const result = await res.json();
