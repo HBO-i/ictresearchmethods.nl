@@ -25,10 +25,16 @@
 	</p>
 
 	<picture>
-		<source type="image/webp" srcset={`/img/${data.method.category}/${data.method.slug}.webp`} />
-		<source type="image/jpeg" srcset={`/img/${data.method.category}/${data.method.slug}.jpg`} />
+		<source
+			type="image/webp"
+			srcset={`/uploads/img/methods/${data.method.category}/${data.method.slug}.webp`}
+		/>
+		<source
+			type="image/jpeg"
+			srcset={`/uploads/img/methods/${data.method.category}/${data.method.slug}.jpg`}
+		/>
 		<img
-			src={`/img/${data.method.category}/${data.method.slug}.jpg`}
+			src={`/uploads/img/methods/${data.method.category}/${data.method.slug}.jpg`}
 			class="img"
 			alt=""
 			width="240"
