@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
-
 	import Tag from '$lib/components/utils/Tag.svelte';
 
 	export let method: Method;
@@ -9,10 +8,16 @@
 <article>
 	<div class="card-heading">
 		<picture class="card-heading__img">
-			<source type="image/webp" srcset={`/img/${method.category}/thumbnail/${method.slug}.webp`} />
-			<source type="image/jpeg" srcset={`/img/${method.category}/thumbnail/${method.slug}.jpg`} />
+			<source
+				type="image/webp"
+				srcset={`/uploads/img/methods/${method.category}/thumbnail/${method.slug}.webp`}
+			/>
+			<source
+				type="image/jpeg"
+				srcset={`uploads/img/methods/${method.category}/thumbnail/${method.slug}.jpg`}
+			/>
 			<img
-				src={`/img/${method.category}/thumbnail/${method.slug}.jpg`}
+				src={`/uploads/img/methods/${method.category}/thumbnail/${method.slug}.jpg`}
 				loading="lazy"
 				decoding="async"
 				class="img"
@@ -21,6 +26,7 @@
 				width="80"
 			/>
 		</picture>
+
 		<div class="card-heading__text">
 			<h1>{method.name}</h1>
 			<h2>{method.category}</h2>
