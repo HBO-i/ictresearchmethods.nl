@@ -25,3 +25,6 @@ vite.config.js.timestamp-*
 .pnpm-debug.log
 
 .netlify
+
+# Do not remove
+static/uploads/**
