@@ -27,4 +27,4 @@ vite.config.js.timestamp-*
 .netlify
 
 # Do not remove
-static/uploads/**
+static/img/methods-v2
