@@ -13,7 +13,7 @@
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
 		"generate:uploads": "node ./scripts/test-build.js",
-		"build": "vite build && generate:uploads",
+		"build": "vite build && npm run generate:uploads",
 		"preview": "vite preview",
 		"preview-expose": "vite preview --host",
 		"prepare-husky": "husky install",
