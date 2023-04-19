@@ -12,9 +12,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
-		"build:uploads": "node ./scripts/build-uploads.js",
-		"read-image": "node ./scripts/readImg.js",
-		"resize-image": "node ./scripts/resize-img.js",
+		"generate:uploads": "node ./scripts/test-build.js",
 		"build": "vite build",
 		"preview": "vite preview",
 		"preview-expose": "vite preview --host",

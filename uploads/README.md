@@ -1,7 +1,7 @@
 # Uploads
 
-To ensure a future-proof solution, it's best to find an appropriate solution. However, for now, the current approach is acceptable.
+Need to find a future proof solution, but for now this is fine.
 
-This directory is only for RAW (preformatted) images that require formatting. All other images should be placed either in the /static folder or the /src/assets/img folder.
+Only put RAW images needing formatting here. Other images go in `/static` or `/src/assets/img`s.
 
-If you're not sure where to put an image, and it relates to a method, then place it here. Otherwise, it's best not to put it in this directory.
+Don't know what to do? If it's an image of a methods: put it here. Otherwise, don't.

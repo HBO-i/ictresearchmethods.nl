@@ -21,6 +21,8 @@ jobs:
           cache: npm
       - name: Install dependencies ⚙️
         run: npm ci
+      - name: Generate uploads 💫
+        run: npm run generate:uploads
       - name: Build frontend 👷
         run: npm run build
       - name: Formatting frontend 🎨
