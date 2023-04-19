@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies ⚙️
         run: npm ci
       - name: Generate uploads 💫
-        run: npm run generate:uploads
+        run: npm run generate:uploads --if-present
       - name: Build frontend 👷
         run: npm run build
       - name: Formatting frontend 🎨

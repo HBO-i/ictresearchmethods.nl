@@ -15,6 +15,12 @@ fs.readdir(input_path, async function (err, files) {
 
 	console.log('👷 Start building images');
 
+	// Ensure output directory exists, create if not
+	if (!fs.existsSync(output_path)) {
+		fs.mkdirSync(output_path, { recursive: true });
+		console.log(`Created directory: ${output_path}`);
+	}
+
 	for await (const inputFile of files) {
 		const fileExtension = path.extname(inputFile);
 		const imageFileExtensions = ['.png', '.jpg', '.jpeg', '.webp'];
