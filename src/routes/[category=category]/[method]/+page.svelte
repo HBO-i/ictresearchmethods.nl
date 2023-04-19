@@ -27,14 +27,14 @@
 	<picture>
 		<source
 			type="image/webp"
-			srcset={`/uploads/img/methods/${data.method.category}/${data.method.slug}.webp`}
+			srcset={`/img/methods/${data.method.category}/${data.method.slug}.webp`}
 		/>
 		<source
 			type="image/jpeg"
-			srcset={`/uploads/img/methods/${data.method.category}/${data.method.slug}.jpg`}
+			srcset={`/img/methods/${data.method.category}/${data.method.slug}.jpg`}
 		/>
 		<img
-			src={`/uploads/img/methods/${data.method.category}/${data.method.slug}.jpg`}
+			src={`s/img/methods/${data.method.category}/${data.method.slug}.jpg`}
 			class="img"
 			alt=""
 			width="240"
