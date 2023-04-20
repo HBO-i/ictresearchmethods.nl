@@ -108,20 +108,16 @@
 	<li>
 		<i
 			>Note: there are separate methods for testing data and model: <a
-				href="/index.php?title=Data_quality_check&amp;action=edit&amp;redlink=1"
+				href="/lab/data-quality-check"
 				class="new"
 				title="Data quality check (page does not exist)">Data quality check</a
 			>,
-			<a
-				href="/index.php?title=Model_validation&amp;action=edit&amp;redlink=1"
-				class="new"
-				title="Model validation (page does not exist)">Model validation</a
+			<a href="/lab/model-validation" class="new" title="Model validation (page does not exist)"
+				>Model validation</a
 			>
 			and
-			<a
-				href="/index.php?title=Model_evaluation&amp;action=edit&amp;redlink=1"
-				class="new"
-				title="Model evaluation (page does not exist)">Model evaluation</a
+			<a href="/lab/model-evaluation" class="new" title="Model evaluation (page does not exist)"
+				>Model evaluation</a
 			>. See also
 			<a
 				rel="nofollow"

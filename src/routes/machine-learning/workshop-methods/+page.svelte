@@ -71,7 +71,7 @@
 		the ML solution.
 	</li>
 	<li>
-		<a href="/workshop/multi-criteria-decision_making" title="Multi-criteria decision making"
+		<a href="/workshop/multi-criteria-decision-making" title="Multi-criteria decision making"
 			>Multi-criteria decision making</a
 		> An ML project may involve choice about tools, libraries, algorithms. It is a good idea to make
 		these decisions visible by comparing alternatives against criteria.
@@ -82,14 +82,14 @@
 		specific techniques like feature engineering, cross-validation, hyper parameter tuning, grid search,
 		data quality checking, data preparation
 	</li>
-	<li>
+	<!-- <li> @TODO: Fix this?
 		<a href="/workshop/requirements-prioritization" title="Requirements prioritization"
 			>Requirements prioritization</a
 		> Both data requirements and user requirements need to be prioritized. In ML projects you typically
 		work in an agile way so this prioritization is then done through sprint backlog planning. It is good
 		practice to first develop a working product with a “dumb” model and minimal dataset and then gradually
 		improve the model complexity and the quality of the input data.
-	</li>
+	</li> -->
 	<li>
 		<a href="/workshop/root-cause-analysis" title="Root cause analysis">Root cause analysis</a> If the
 		goal of your ML solution is to solve a problem in the current situation, you first need to determine

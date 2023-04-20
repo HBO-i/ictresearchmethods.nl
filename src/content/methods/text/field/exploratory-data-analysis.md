@@ -12,6 +12,6 @@ ingredients: [
 ]
 category: "field"
 phases: [
-"machine-learning"
+"machine learning"
 ]
 ---

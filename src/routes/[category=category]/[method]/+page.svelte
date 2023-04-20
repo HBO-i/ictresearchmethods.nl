@@ -34,7 +34,7 @@
 			srcset={`/img/methods/${data.method.category}/${data.method.slug}.jpg`}
 		/>
 		<img
-			src={`s/img/methods/${data.method.category}/${data.method.slug}.jpg`}
+			src={`/img/methods/${data.method.category}/${data.method.slug}.jpg`}
 			class="img"
 			alt=""
 			width="240"

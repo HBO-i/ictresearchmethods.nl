@@ -34,7 +34,8 @@
 		<a href="/showroom/benchmark-test" title="Benchmark test">Benchmark test</a> “Benchmark tests
 		are regularly used to test pattern recognition software. If a standard set of data is recognised
 		with the software, the results can be compared to that of other software.” (quote from
-		<a href="/Benchmark_test" title="Benchmark test">Benchmark test</a>) An example of this is the
+		<a href="/showroom/benchmark-test" title="Benchmark test">Benchmark test</a>) An example of this
+		is the
 		<a rel="nofollow" class="external text" target="_blank" href="http://yann.lecun.com/exdb/mnist/"
 			>MNIST dataset</a
 		> with handwritten digits that also shows test error rates for many different methods.

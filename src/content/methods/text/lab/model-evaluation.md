@@ -11,6 +11,6 @@ ingredients: [
 ]
 category: "lab"
 phases: [
-"machine-learning"
+"machine learning"
 ]
 ---

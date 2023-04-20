@@ -25,7 +25,7 @@
 </p>
 
 <p>
-	<a href="/machine-learrning" title="Domain: Machine learning">For Machine Learning projects</a>,
+	<a href="/machine-learning" title="Domain: Machine learning">For Machine Learning projects</a>,
 	the existing <a href="/library" title="Category:Library">Library</a> methods can be applied as follows:
 </p>
 
