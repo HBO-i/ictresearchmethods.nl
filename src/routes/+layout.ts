@@ -9,7 +9,6 @@ export const load: PageLoad = async ({ fetch }) => {
 
 	if (res.ok) {
 		const result = await res.json();
-		console.log('hoi');
 
 		const methodsArray = result;
 		allMethods.set(methodsArray);
