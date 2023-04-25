@@ -12,7 +12,11 @@
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
-		"build": "vite build",
+		"generate:jpg": "node ./scripts/images/generate-jpg.js",
+		"generate:thumbnail": "node ./scripts/images/generate-thumbnail.js",
+		"generate:webp": "node ./scripts/images/generate-webp.js",
+		"generate:images": "npm run generate:jpg && npm run generate:thumbnail && npm run generate:webp",
+		"build": "vite build && npm run generate:images",
 		"preview": "vite preview",
 		"preview-expose": "vite preview --host",
 		"prepare-husky": "husky install",
@@ -51,7 +55,12 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"fs": "^0.0.1-security",
+		"fs-extra": "^11.1.1",
+		"glob": "^10.2.1",
 		"match-sorter": "^6.3.1",
-		"path": "^0.12.7"
+		"path": "^0.12.7",
+		"process": "^0.11.10",
+		"sharp": "^0.32.0"
 	}
 }
