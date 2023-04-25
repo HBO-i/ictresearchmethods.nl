@@ -1,5 +1,5 @@
 ---
-name: "Requirements engineering"
+name: "Requirements prioritization"
 why: "Placeholder text. Needs to be updated"
 how: "Edit this text"
 practice: "Add the correct copy"
