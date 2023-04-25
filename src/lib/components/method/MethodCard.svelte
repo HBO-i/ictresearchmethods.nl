@@ -10,16 +10,14 @@
 		<picture class="card-heading__img">
 			<source
 				type="image/webp"
-				srcset={`/img/methods/${method.category}/thumbnail/${method.slug}.webp` ??
-					`/img/fallback.png`}
+				srcset={`/uploads/img/methods/${method.category}/thumbnail/${method.slug}.webp`}
 			/>
 			<source
 				type="image/jpeg"
-				srcset={`/img/methods/${method.category}/thumbnail/${method.slug}.jpg` ??
-					`/img/fallback.png`}
+				srcset={`uploads/img/methods/${method.category}/thumbnail/${method.slug}.jpg`}
 			/>
 			<img
-				src={`/img/methods/${method.category}/thumbnail/${method.slug}.jpg` ?? `/img/fallback.png`}
+				src={`/uploads/img/methods/${method.category}/thumbnail/${method.slug}.jpg`}
 				loading="lazy"
 				decoding="async"
 				class="img"
