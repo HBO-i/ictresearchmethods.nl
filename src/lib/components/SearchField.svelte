@@ -30,6 +30,18 @@
 			showSearchField.set(false);
 		}
 
+		if (!$allMethods) {
+			// const res = await fetch('/api/methods');
+			// if (res.ok) {
+			// 	const result = await res.json();
+			// 	const methodsArray = result;
+			// 	allMethods.set(methodsArray);
+			// }
+		}
+
+		// console.log('updateSearchQuery()');
+		// console.log($allMethods);
+
 		const searchedArray = matchSorter($allMethods, searchQuery, {
 			keys: ['name']
 		});
