@@ -56,7 +56,7 @@
 	};
 </script>
 
-<ul class="non-style" bind:this={ul}>
+<ul class="non-style category-tab" bind:this={ul}>
 	{#each categoryRoutes as route}
 		<li
 			class:active={activeTab === route.category}
@@ -68,7 +68,7 @@
 </ul>
 
 <style lang="scss">
-	ul {
+	ul.category-tab {
 		background-color: var(--color-white);
 		border-radius: 1.5em;
 		max-width: fit-content;
@@ -78,12 +78,16 @@
 		padding: 0.5em 1.25em;
 		scroll-snap-type: x mandatory;
 
+		@include tablet {
+			padding: rem;
+		}
+
 		@include desktop-small {
 			box-sizing: border-box;
-			min-height: 3em;
+			min-height: 3rem;
 			justify-content: center;
-			padding: 0 1em;
-			border-radius: 0.75em;
+			padding: 0 1rem;
+			border-radius: 0.75rem;
 			gap: 5px;
 			overflow-y: hidden;
 		}

@@ -213,3 +213,8 @@ nav.visible {
 a.external {
 	opacity: 0.7;
 }
+
+p,
+li {
+	max-width: 60em;
+}

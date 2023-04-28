@@ -114,7 +114,6 @@
 		@include desktop-small {
 			padding: 2.5em;
 			min-height: 83vh;
-			max-width: 60em;
 		}
 	}
 
