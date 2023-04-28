@@ -105,14 +105,14 @@
 
 <style lang="scss">
 	.container {
-		width: 80vw;
+		width: 75vw;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		font-size: 1.1em;
 	}
 
 	ul {
-		padding-left: 1rem;
+		padding-left: 0.75rem;
 
 		li {
 			margin: 0.33rem 0;
