@@ -50,8 +50,7 @@
 
 		@include desktop-small {
 			display: block;
-			min-width: 15em;
-			max-width: 17.5em;
+			width: 17.5rem;
 			min-height: 87vh;
 			background-color: var(--color-white);
 			padding: 2em 0;

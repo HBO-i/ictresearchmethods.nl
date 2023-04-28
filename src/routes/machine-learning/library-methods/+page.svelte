@@ -108,7 +108,7 @@
 	p {
 		margin-top: 0.5em;
 
-		@include desktop-small {
+		@include tablet-landscape {
 			font-size: 1em;
 		}
 	}

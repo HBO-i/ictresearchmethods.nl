@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './_global.scss';
 	import Topbar from '$lib/components/layout/Topbar.svelte';
-	import Footer from '$lib/components/layout/Footer.svelte';
 	import Sidebar from '$lib/components/layout/sidebar/Sidebar.svelte';
 
 	import {
@@ -87,7 +86,6 @@
 			<slot />
 		</main>
 	</div>
-	<Footer />
 </div>
 
 <style lang="scss">
@@ -116,7 +114,6 @@
 		@include desktop-small {
 			padding: 2.5em;
 			min-height: 83vh;
-			max-width: 60em;
 		}
 	}
 

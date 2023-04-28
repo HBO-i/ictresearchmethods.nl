@@ -55,7 +55,6 @@
 	ul {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 
 		li {
 			font-size: 1em;

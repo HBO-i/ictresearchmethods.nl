@@ -56,7 +56,6 @@
 		border-radius: 1.5em;
 
 		@include desktop-small {
-			width: 60rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -144,7 +143,7 @@
 			}
 
 			@include desktop-large {
-				width: 40em;
+				width: 35em;
 			}
 		}
 	}
