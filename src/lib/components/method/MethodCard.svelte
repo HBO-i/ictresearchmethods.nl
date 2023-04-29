@@ -52,15 +52,17 @@
 	article {
 		background-color: var(--color-white);
 		margin: 0.5em 0;
-		padding: 2em;
+		padding: 2rem;
 		border-radius: 1.5em;
 
 		@include desktop-small {
 			display: flex;
+			gap: 0.25rem;
 			justify-content: space-between;
 			align-items: center;
 			box-sizing: border-box;
 			height: 11.25rem;
+			padding: 0.75rem;
 
 			&:hover {
 				transform: scale(1.01);
@@ -70,6 +72,7 @@
 
 		@include desktop {
 			width: 67.5rem;
+			padding: 2rem;
 		}
 
 		@include desktop-large {
@@ -139,7 +142,7 @@
 
 		&__body {
 			@include desktop-small {
-				width: 32.5em;
+				width: 31.25em;
 			}
 
 			@include desktop-large {

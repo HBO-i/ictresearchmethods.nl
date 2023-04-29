@@ -84,6 +84,11 @@
 
 	.logo {
 		width: 7.5rem;
+		margin: 0.75rem 0;
+
+		// @include desktop-small {
+		// 	margin: 0;
+		// }
 	}
 
 	.theme-switch-desktop {

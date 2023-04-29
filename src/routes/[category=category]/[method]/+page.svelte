@@ -5,6 +5,8 @@
 
 	import { isJavaScriptDisabled } from '$lib/stores';
 
+	import GoBack from '$lib/components/layout/GoBack.svelte';
+
 	let previousRoute: string;
 
 	afterNavigate((navigation) => {
@@ -20,9 +22,7 @@
 </svelte:head>
 
 <section>
-	<p class="detail__details">
-		<a href={$isJavaScriptDisabled ? '/' : previousRoute}>{'<'}</a>Details
-	</p>
+	<GoBack link={$isJavaScriptDisabled ? '/' : previousRoute ?? '/'} text="Details" />
 
 	<picture>
 		<source
@@ -128,33 +128,6 @@
 
 		@include desktop-small {
 			max-width: 50vw;
-		}
-	}
-
-	.detail {
-		&__details {
-			color: var(--color-black);
-			font-size: 1.5em;
-			font-weight: 500;
-			display: flex;
-			gap: 0.75em;
-			align-items: center;
-
-			a {
-				text-decoration: none;
-				font-size: 1.5em;
-				color: var(--color-black);
-				font-weight: normal;
-
-				&:hover {
-					transform: scale(1.15);
-				}
-			}
-		}
-
-		&__heading {
-			display: flex;
-			flex-direction: column-reverse;
 		}
 	}
 </style>

@@ -1,6 +1,10 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 591 238">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 591 238" class="logo">
 	<title>HBOi_RGB-svg</title>
 	<style>
+		svg.logo {
+			background-color: #ffffffe6;
+			padding: 0.25rem;
+		}
 		.s0 {
 			fill: none;
 		}

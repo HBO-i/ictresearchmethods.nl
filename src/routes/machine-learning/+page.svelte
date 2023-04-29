@@ -146,4 +146,21 @@
 			font-style: italic;
 		}
 	}
+
+	img {
+		width: 85vw;
+		max-width: 40rem;
+	}
+
+	figure {
+		margin: 1rem;
+
+		@include tablet {
+			margin: 0 2rem;
+		}
+
+		@include desktop {
+			margin: 0 2.5rem;
+		}
+	}
 </style>
