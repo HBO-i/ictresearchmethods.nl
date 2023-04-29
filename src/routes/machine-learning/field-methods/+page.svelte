@@ -1,5 +1,5 @@
 <script lang="ts">
-	import EditPage from '$lib/components/EditPage.svelte';
+	import GoBack from '$lib/components/layout/GoBack.svelte';
 </script>
 
 <svelte:head>
@@ -10,9 +10,7 @@
 	/>
 </svelte:head>
 
-<p class="detail__details">
-	<a href="/machine-learning">{'<'}</a>Go back
-</p>
+<GoBack link="/machine-learning" text="Go back" />
 
 <h1>Field methods for machine learning</h1>
 
@@ -119,29 +117,6 @@
 
 		&:hover {
 			font-style: italic;
-		}
-	}
-
-	.detail {
-		&__details {
-			color: var(--color-black);
-			font-size: 1.5em;
-			font-weight: 500;
-			display: flex;
-			gap: 0.75em;
-			align-items: center;
-
-			a {
-				text-decoration: none;
-				font-size: 1.5em;
-				color: var(--color-black);
-				font-weight: normal;
-
-				&:hover {
-					transform: scale(1.15);
-					font-style: normal;
-				}
-			}
 		}
 	}
 </style>

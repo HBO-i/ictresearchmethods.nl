@@ -99,8 +99,12 @@
 
 					@include desktop-small {
 						font-size: 1em;
-						padding: 1em 2em;
+						padding: 1rem 0.8rem;
 						letter-spacing: 0.5px;
+					}
+
+					@include desktop {
+						padding: 1rem 2rem;
 					}
 				}
 			}
