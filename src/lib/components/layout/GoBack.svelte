@@ -16,6 +16,7 @@
 			display: flex;
 			gap: 0.75em;
 			align-items: center;
+			margin: 0;
 
 			a {
 				text-decoration: none;
