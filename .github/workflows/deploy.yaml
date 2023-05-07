@@ -1,0 +1,34 @@
+name: Publish build to FTP
+
+on:
+  push:
+    branches:
+      - release/2.0.0
+
+jobs:
+  web-deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v3.1.1
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: ./build/
+          server-dir: ${{ secret.FTP_SERVER_PATH }}
+          port: ${{ secrets.FTP_PORT }}
