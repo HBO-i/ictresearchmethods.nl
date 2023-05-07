@@ -1,8 +1,7 @@
 <slot />
 
-<style lang="scss">
-	h1,
-	h2 {
+<!-- <style lang="scss">
+	h1 {
 		margin-bottom: 0;
 	}
 
@@ -28,4 +27,4 @@
 			font-style: italic;
 		}
 	}
-</style>
+</style> -->

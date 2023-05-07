@@ -57,6 +57,7 @@
 			text-align: center;
 			font-size: 1.15em;
 			border-radius: 0.5em;
+			z-index: 2;
 		}
 	}
 

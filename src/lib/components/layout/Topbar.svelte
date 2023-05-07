@@ -52,16 +52,6 @@
 		}
 	}
 
-	img {
-		margin-top: 1em;
-		width: 10em;
-		left: 0;
-
-		@include desktop-small {
-			margin: 0;
-		}
-	}
-
 	.icon-container {
 		display: none;
 		@include desktop-small {

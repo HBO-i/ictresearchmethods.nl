@@ -92,8 +92,7 @@
 
 <!-- <EditPage editRoute="machine-learning" /> -->
 <style lang="scss">
-	h1,
-	h2 {
+	h1 {
 		margin-bottom: 0;
 	}
 
