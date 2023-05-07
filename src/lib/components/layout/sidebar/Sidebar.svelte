@@ -8,8 +8,6 @@
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 
-	import Logo from '$lib/assets/img/hboi-logo.svelte';
-
 	import type { CategoryRoute } from '$lib/types';
 
 	afterNavigate(() => {
@@ -117,20 +115,6 @@
 				color: var(--color-white);
 				background-color: var(--color-primary);
 			}
-		}
-	}
-
-	.logo-container {
-		display: none;
-
-		@include desktop-small {
-			position: absolute;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			bottom: 0;
-			font-size: 1.1em;
-			width: 100%;
 		}
 	}
 
