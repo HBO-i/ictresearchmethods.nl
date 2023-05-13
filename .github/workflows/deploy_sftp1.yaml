@@ -1,0 +1,22 @@
+name: Publish build to SFTP v1
+'on':
+  push:
+    branches:
+      - workflow-release/2.0.0
+jobs:
+  deploy_job: null
+  runs-on: ubuntu-latest
+  name: deploy
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Deploy file
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: '${{ secrets.FTP_USER}}'
+        server: '${{ secrets.FTP_HOST }}'
+        port: '${{ secrets.FTP_PORT }}'
+        local_path: ./build/
+        remote_path: ${{ secret.FTP_SERVER_PATH }}
+        sftp_only: true
+        password: '${{ secrets.FTP_PASSWORD }}'

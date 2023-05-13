@@ -3,7 +3,7 @@ name: Publish build to FTP
 on:
   push:
     branches:
-      - release/2.0.0
+      - workflow-release/2.0.0
 
 jobs:
   web-deploy:
