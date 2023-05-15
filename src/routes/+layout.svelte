@@ -115,6 +115,10 @@
 			padding: 2.5em;
 			min-height: 83vh;
 		}
+
+		@include desktop-large {
+			width: 70rem;
+		}
 	}
 
 	.content {
