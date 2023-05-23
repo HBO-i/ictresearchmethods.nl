@@ -5,6 +5,7 @@
 
 	import { isJavaScriptDisabled } from '$lib/stores';
 
+	import EditMethod from '$lib/components/EditMethod.svelte';
 	import GoBack from '$lib/components/layout/GoBack.svelte';
 
 	let previousRoute: string;
@@ -71,6 +72,8 @@
 		{/each}
 	</ul>
 </section>
+
+<EditMethod category={data.method.category} methodSlug={data.method.slug} />
 
 <style lang="scss">
 	section {
