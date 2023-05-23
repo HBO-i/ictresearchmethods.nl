@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://ictmethods.nl//sitemap.xml
+Sitemap: https://ictmethods.nl/sitemap.xml

@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import TabButton from '$lib/components/tabs/TabButton.svelte';
 
 	import { categoryRoutes } from '$lib/routes';
 
 	let ul: HTMLElement;
-	let activeTab: string;
+	let activeTab = $page.url.pathname.slice(1, -1);
 
 	/*
 		I've no idea how this is working, but somehow it works.
@@ -79,7 +80,7 @@
 		scroll-snap-type: x mandatory;
 
 		@include tablet {
-			padding: rem;
+			padding: 0.25rem;
 		}
 
 		@include desktop-small {

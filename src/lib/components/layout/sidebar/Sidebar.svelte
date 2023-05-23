@@ -16,7 +16,7 @@
 
 	$: pathName = $page.url.pathname;
 
-	$: categoryName = $page.url.pathname.substring(1); // pathName without the '/'
+	$: categoryName = $page.url.pathname.slice(1, -1); // pathName without the '/'
 	$: checkName = (route: CategoryRoute) => route.category == categoryName; // Check if the current route matches a route in the array
 
 	$: if (categoryRoutes.some(checkName)) {

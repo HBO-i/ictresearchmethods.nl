@@ -28,7 +28,8 @@ const config = {
 		alias: {
 			$content: 'src/content',
 			content: 'src/content'
-		}
+		},
+		trailingSlash: 'always'
 	}
 };
 
