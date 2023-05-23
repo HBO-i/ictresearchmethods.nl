@@ -1,0 +1,55 @@
+Redirect 301 /Methods /
+
+Redirect 301 /Best_good_and_bad_practices /library/best-good-and-bad-practices/
+Redirect 301 /Available_product_analysis /library/available-product-analysis/
+Redirect 301 /Community_research /library/community-research/
+Redirect 301 /Competitive_analysis /library/competitive-analysis/
+Redirect 301 /Expert_interview /library/expert-interview/
+Redirect 301 //Design_pattern_research /library/design-pattern-research/
+Redirect 301 /Literature_study /library/literature-study/
+Redirect 301 /SWOT_analysis /library/swot-analysis/
+
+Redirect 301 /Document_analysis /field/document-analysis/
+Redirect 301 /Domain_modelling /field/domain-moddeling/
+Redirect 301 /Explure_user_requirements /field/explore-user-requirements/
+Redirect 301 /Focus_group /field/focus-group/
+Redirect 301 /Interview /field/interview/
+Redirect 301 /Observation /field/observation/
+Redirect 301 /Problem_analysis /field/problem-analysis/
+Redirect 301 /Stakeholder_analysis /field/stakeholder-analysis/
+Redirect 301 /Survey /field/survey/
+Redirect 301 /Task_analysis /field/task-analysis/
+
+Redirect 301 /A/B_testing /lab/a-b-testing/
+Redirect 301 /Component_test /lab/component-test/
+Redirect 301 /Computer_simulation /lab/computer-simulation/
+Redirect 301 /Data_analytics /lab/data-analytics/
+Redirect 301 /Hardware_validation /lab/hardware-validation/
+Redirect 301 /Non-functional_test /lab/non-functional-test/
+Redirect 301 /Security_test /lab/security-test/
+Redirect 301 /System_test /lab/system-test/
+Redirect 301 /Unit_test /lab/unit-test/
+Redirect 301 /Usability_testing /lab/usability-testing/
+
+Redirect 301 /Benchmark_test /showroom/benchmark-test/
+Redirect 301 /Ethical_check /showroom/ethical_check/
+Redirect 301 /Guideline_conformity_analysis /showroom/guideline-conformity-analysis/
+Redirect 301 /Peer_review /showroom/peer-review/
+Redirect 301 /Pitch /showroom/pitch/
+Redirect 301 /Product_review /showroom/product-review/
+Redirect 301 /Static_program_analysis /showroom/static-program-analysis/
+
+Redirect 301 /Brainstorm /workshop/brainstorm/
+Redirect 301 /Business_case_exploration /workshop/business-case-exploration/
+Redirect 301 /Code_review /workshop/code-review/
+Redirect 301 /Decomposition /workshop/decomposition/
+Redirect 301 /Gap_analysis /workshop/gap-analysis/
+Redirect 301 /IT_architecture_sketching /workshop/it-architecture-sketching/
+Redirect 301 /Multi-criteria_decision_making /workshop/multi-criteria-decision-making/
+Redirect 301 /Prototyping /workshop/prototyping/
+Redirect 301 /Requirements_prioritization /workshop/prioritization/
+Redirect 301 /Root_cause_analysis /workshop/root-cause-analysis/
+
+Redirect 301 /Joker /extra/joker/
+
+ErrorDocument 404 /error.html
