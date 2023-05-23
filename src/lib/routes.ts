@@ -37,22 +37,22 @@ export const sidebarRoutes = [
 	},
 	{
 		title: 'Patterns',
-		path: '/research-pattern-navigator',
+		path: '/research-pattern-navigator/',
 		icon: 'search'
 	},
 	{
 		title: 'DOT Framework',
-		path: '/dot-framework',
+		path: '/dot-framework/',
 		icon: 'star'
 	},
 	{
 		title: 'Machine Learning',
-		path: '/machine-learning',
+		path: '/machine-learning/',
 		icon: 'navigator'
 	},
 	{
 		title: 'About',
-		path: '/about',
+		path: '/about/',
 		icon: 'person'
 	}
 ];

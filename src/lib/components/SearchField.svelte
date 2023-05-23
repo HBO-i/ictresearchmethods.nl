@@ -39,9 +39,6 @@
 			// }
 		}
 
-		// console.log('updateSearchQuery()');
-		// console.log($allMethods);
-
 		const searchedArray = matchSorter($allMethods, searchQuery, {
 			keys: ['name']
 		});
