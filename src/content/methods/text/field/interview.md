@@ -10,7 +10,7 @@ ingredients: [
 "Active listening skills",
 "The ability to improvise and ask 'why' a lot.",
 "A plan for how to capture and analyse the interview results."
-],
+]
 category: "field"
 phases: [
 "analysis"

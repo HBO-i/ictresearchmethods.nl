@@ -7,7 +7,7 @@ ingredients: [
 "A willingness to understand how a task is performed.",
 "A focus on the actual, rather than the imagined, actions of users.",
 "Knowledge of models to store and analyse the tasks."
-],
+]
 category: "field"
 phases: [
 "analysis"

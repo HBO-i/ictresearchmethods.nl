@@ -8,7 +8,7 @@ ingredients: [
 "Instruments like an organisational chart to detect various stakeholders.",
 "A good approach to get information for each stakeholder group.",
 "A tool like a stakeholder map or power interest matrix."
-],
+]
 category: "field"
 phases: [
 "problem definition", "analysis"
