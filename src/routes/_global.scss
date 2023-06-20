@@ -10,6 +10,9 @@
 	--color-black: hsl(204, 9%, 11%);
 
 	--color-tooltip-bg: hsl(0, 0%, 33%);
+
+	--color-tag-text: var(--color-primary);
+	--color-tag-bg: hsl(232, 76%, 92%);
 }
 
 html.dark {
@@ -24,6 +27,9 @@ html.dark {
 	--color-black: hsl(0, 0%, 100%);
 
 	--color-tooltip-bg: hsl(0, 0%, 70%);
+
+	--color-tag-text: var(--color-text-primary);
+	--color-tag-bg: var(--color-primary);
 }
 
 /* manrope-regular - latin */
