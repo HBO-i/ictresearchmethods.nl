@@ -28,19 +28,6 @@
 	Methods Map Practical Research, an internationally recognized framework for design research.
 </p>
 
-<h2>Disclaimer</h2>
-
-<p>
-	The creator of this app does not own any of this content. All the ICT Research Methods on this
-	website are a digital copy of the research methods in the physical ICT Methodspack. That one can
-	be purchased via
-	<a
-		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
-		target="_blank"
-		class="ellipsis">https://www.studystore.nl/p/9990002067426/ict-methodspack.</a
-	>
-</p>
-
 <h2>Licensing</h2>
 
 <p>
@@ -64,41 +51,7 @@
 
 <p>
 	Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT
-	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426. Available from: <a
-		href="https://www.studystore.nl/p/9990002067426/ict-methodspack"
-		class="ellipsis"
-		target="_blank">https://www.studystore.nl/p/9990002067426/ict-methodspack.</a
-	>
-</p>
-
-<h2>About this app</h2>
-
-<p>
-	As mentioned before: all the content is already available, so why this app? Well.. personally I
-	don't bring the physical pack with me all the time. Now I can access the ICT Research Methods all
-	the time. Besides that not every bought the physical methods pack. I mean. You should, but you
-	don't have to.
-</p>
-
-<p>
-	With this app I hope I can encourage students to use the ICT Research Methods in a fun way. You
-	can easily search for methods, use the app as PWA on your phone and even view your saved methods
-	offline.
-</p>
-<p>
-	Oh and btw, there is a <kbd>CMD</kbd>
-	+ <kbd>K</kbd> search and a dark mode. I mean: what else do you need?
-</p>
-
-<h2>Future</h2>
-
-<p>This app is still in development, so you might see some changes in the near future.</p>
-
-<h2>Contributing</h2>
-
-<p>
-	I <a href="https://github.com/jochemvogel/ictmethods.nl" target="_blank">open sourced</a> the project,
-	so other people can implement their own improvements. Enjoy! ✌️
+	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426.
 </p>
 
 <EditPage editRoute="about" />

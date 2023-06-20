@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Method } from '$lib/types';
-
 	import Tag from '$lib/components/utils/Tag.svelte';
 
 	export let method: Method;
@@ -9,10 +8,16 @@
 <article>
 	<div class="card-heading">
 		<picture class="card-heading__img">
-			<source type="image/webp" srcset={`/img/${method.category}/thumbnail/${method.slug}.webp`} />
-			<source type="image/jpeg" srcset={`/img/${method.category}/thumbnail/${method.slug}.jpg`} />
+			<source
+				type="image/webp"
+				srcset={`/img/methods/${method.category}/thumbnail/${method.slug}.webp`}
+			/>
+			<source
+				type="image/jpeg"
+				srcset={`/img/methods/${method.category}/thumbnail/${method.slug}.jpg`}
+			/>
 			<img
-				src={`/img/${method.category}/thumbnail/${method.slug}.jpg`}
+				src={`/img/methods/${method.category}/thumbnail/${method.slug}.jpg`}
 				loading="lazy"
 				decoding="async"
 				class="img"
@@ -21,6 +26,7 @@
 				width="80"
 			/>
 		</picture>
+
 		<div class="card-heading__text">
 			<h1>{method.name}</h1>
 			<h2>{method.category}</h2>
@@ -46,16 +52,17 @@
 	article {
 		background-color: var(--color-white);
 		margin: 0.5em 0;
-		padding: 2em;
+		padding: 2rem;
 		border-radius: 1.5em;
 
 		@include desktop-small {
-			width: 60rem;
 			display: flex;
+			gap: 0.25rem;
 			justify-content: space-between;
 			align-items: center;
 			box-sizing: border-box;
 			height: 11.25rem;
+			padding: 0.75rem;
 
 			&:hover {
 				transform: scale(1.01);
@@ -65,6 +72,7 @@
 
 		@include desktop {
 			width: 67.5rem;
+			padding: 2rem;
 		}
 
 		@include desktop-large {
@@ -134,11 +142,11 @@
 
 		&__body {
 			@include desktop-small {
-				width: 32.5em;
+				width: 31.25em;
 			}
 
 			@include desktop-large {
-				width: 40em;
+				width: 35em;
 			}
 		}
 	}
