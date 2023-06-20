@@ -6,13 +6,13 @@
 	import { capitalizeFirstLetter, slugify } from '$lib/utils/format';
 </script>
 
-<a href="#">
+<a href={`/patterns/${slugify(patternTitle)}`}>
 	<article>
 		<picture class="img">
 			<source type="image/webp" srcset={`/img/patterns/${slugify(patternTitle)}.webp`} />
-			<source type="image/jpeg" srcset={`/img/patterns/${slugify(patternTitle)}.jpg`} />
+			<source type="image/png" srcset={`/img/patterns/${slugify(patternTitle)}.png`} />
 			<img
-				src={`/img/patterns/${slugify(patternTitle)}.jpg`}
+				src={`/img/patterns/${slugify(patternTitle)}.png`}
 				loading="lazy"
 				decoding="async"
 				class="img"
