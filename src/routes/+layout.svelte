@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './_global.scss';
 	import Topbar from '$lib/components/layout/Topbar.svelte';
-	import Footer from '$lib/components/layout/Footer.svelte';
 	import Sidebar from '$lib/components/layout/sidebar/Sidebar.svelte';
 
 	import {
@@ -40,7 +39,7 @@
 	 * Fetch all the methods and put them in the 'allMethods' array in the store
 	 */
 	async function setAllMethodsInStore() {
-		const res = await fetch('/methods.json');
+		const res = await fetch('/api/methods');
 
 		if (res.ok) {
 			const result = await res.json();
@@ -87,7 +86,6 @@
 			<slot />
 		</main>
 	</div>
-	<Footer />
 </div>
 
 <style lang="scss">
@@ -116,7 +114,10 @@
 		@include desktop-small {
 			padding: 2.5em;
 			min-height: 83vh;
-			max-width: 75em;
+		}
+
+		@include desktop-large {
+			width: 70rem;
 		}
 	}
 

@@ -16,7 +16,7 @@
 
 	$: pathName = $page.url.pathname;
 
-	$: categoryName = $page.url.pathname.substring(1); // pathName without the '/'
+	$: categoryName = $page.url.pathname.slice(1, -1); // pathName without the '/'
 	$: checkName = (route: CategoryRoute) => route.category == categoryName; // Check if the current route matches a route in the array
 
 	$: if (categoryRoutes.some(checkName)) {
@@ -38,10 +38,6 @@
 			<ThemeSwitch />
 		</div>
 	</ul>
-	<p>
-		Made by&nbsp;
-		<a href="https://jochemvogel.com" target="_blank">Jochem</a>
-	</p>
 </nav>
 
 <MobileHamburger />
@@ -52,8 +48,7 @@
 
 		@include desktop-small {
 			display: block;
-			min-width: 15em;
-			max-width: 17.5em;
+			width: 17.5rem;
 			min-height: 87vh;
 			background-color: var(--color-white);
 			padding: 2em 0;
@@ -102,8 +97,12 @@
 
 					@include desktop-small {
 						font-size: 1em;
-						padding: 1em 2em;
+						padding: 1rem 0.8rem;
 						letter-spacing: 0.5px;
+					}
+
+					@include desktop {
+						padding: 1rem 2rem;
 					}
 				}
 			}
@@ -115,30 +114,6 @@
 			@include desktop-small {
 				color: var(--color-white);
 				background-color: var(--color-primary);
-			}
-		}
-	}
-
-	p {
-		display: none;
-
-		@include desktop-small {
-			position: absolute;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			bottom: 0;
-			font-size: 1.1em;
-			width: 100%;
-
-			a {
-				color: var(--color-black);
-				font-weight: bold;
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-				}
 			}
 		}
 	}

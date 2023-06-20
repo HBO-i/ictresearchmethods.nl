@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import TabButton from '$lib/components/tabs/TabButton.svelte';
 
 	import { categoryRoutes } from '$lib/routes';
 
 	let ul: HTMLElement;
-	let activeTab: string;
+	let activeTab = $page.url.pathname.slice(1, -1);
 
 	/*
 		I've no idea how this is working, but somehow it works.
@@ -56,7 +57,7 @@
 	};
 </script>
 
-<ul class="non-style" bind:this={ul}>
+<ul class="non-style category-tab" bind:this={ul}>
 	{#each categoryRoutes as route}
 		<li
 			class:active={activeTab === route.category}
@@ -68,7 +69,7 @@
 </ul>
 
 <style lang="scss">
-	ul {
+	ul.category-tab {
 		background-color: var(--color-white);
 		border-radius: 1.5em;
 		max-width: fit-content;
@@ -78,12 +79,16 @@
 		padding: 0.5em 1.25em;
 		scroll-snap-type: x mandatory;
 
+		@include tablet {
+			padding: 0.25rem;
+		}
+
 		@include desktop-small {
 			box-sizing: border-box;
-			min-height: 3em;
+			min-height: 3rem;
 			justify-content: center;
-			padding: 0 1em;
-			border-radius: 0.75em;
+			padding: 0 1rem;
+			border-radius: 0.75rem;
 			gap: 5px;
 			overflow-y: hidden;
 		}

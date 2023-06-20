@@ -11,6 +11,7 @@
 </svelte:head>
 
 <h1 class="site-title">Methods</h1>
+<a href="/methods-overview">Show quick overview</a>
 <CategoryTab />
 <MethodList methodsArray={data.result} />
 

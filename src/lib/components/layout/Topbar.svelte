@@ -3,27 +3,14 @@
 	import SearchField from '$lib/components/SearchField.svelte';
 	import Github from '$lib/assets/icons/header/github.svelte';
 	import GithubDark from '$lib/assets/icons/header/github-dark.svelte';
-	import BmcLogo from '$lib/assets/icons/header/bmc-logo.svelte';
-	import BmcLogoDark from '$lib/assets/icons/header/bmc-logo-dark.svelte';
-
 	import ThemeSwitch from '../ThemeSwitch.svelte';
+
+	import HboiLogo from '$lib/assets/img/hboi-logo.svelte';
 </script>
 
 <header>
-	<a href="/" title="home">
-		{#if $isDarkMode}
-			<picture>
-				<source type="image/webp" srcset="/ictmethods-dark.webp" />
-				<source type="image/png" srcset="/ictmethods-dark.png" />
-				<img src="/ictmethods-dark.png" alt="logo" width="160" height="40" />
-			</picture>
-		{:else}
-			<picture>
-				<source type="image/webp" srcset="/ictmethods.webp" />
-				<source type="image/png" srcset="/ictmethods.png" />
-				<img src="/ictmethods.png" alt="logo" width="160" height="40" />
-			</picture>
-		{/if}
+	<a href="/" title="home" class="logo">
+		<HboiLogo />
 	</a>
 	<div class="theme-switch-desktop">
 		<ThemeSwitch />
@@ -40,14 +27,6 @@
 				<GithubDark />
 			{:else}
 				<Github />
-			{/if}
-		</a>
-
-		<a href="https://buymeacoffee.com/jochem" target="_blank" title="buy me a coffee" class="bmc">
-			{#if $isDarkMode}
-				<BmcLogoDark />
-			{:else}
-				<BmcLogo />
 			{/if}
 		</a>
 	</div>
@@ -73,16 +52,6 @@
 		}
 	}
 
-	img {
-		margin-top: 1em;
-		width: 10em;
-		left: 0;
-
-		@include desktop-small {
-			margin: 0;
-		}
-	}
-
 	.icon-container {
 		display: none;
 		@include desktop-small {
@@ -91,8 +60,7 @@
 			gap: 1.5em;
 		}
 
-		.github,
-		.bmc {
+		.github {
 			@include desktop-small {
 				width: 2em;
 				height: 2em;
@@ -102,6 +70,15 @@
 				}
 			}
 		}
+	}
+
+	.logo {
+		width: 7.5rem;
+		margin: 0.75rem 0;
+
+		// @include desktop-small {
+		// 	margin: 0;
+		// }
 	}
 
 	.theme-switch-desktop {

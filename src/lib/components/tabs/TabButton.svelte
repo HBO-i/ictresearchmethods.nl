@@ -7,7 +7,7 @@
 	}
 
 	$: pathName = $page.url.pathname;
-	$: isCategorySelected = pathName.substring(1) === category;
+	$: isCategorySelected = pathName.slice(1, -1) === category;
 
 	export let category: string;
 	export let content: string;
