@@ -1,6 +1,8 @@
-# ICTMethods.nl
+# ictresearchmethods.nl
 
-**[Live link](https://v2.ictmethods.nl/)**
+> 🚨 This repository is currently being transfered and tested, so expect some incorrect content! 🚨
+
+**[Live link](https://v2.ictresearchmethods.nl/)**
 
 As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the questions and tackling the problems or opportunities of your ICT project requires research and often a combination of various ICT research methods. The toolkit on this website offers you a set of possible research methods and a framework to select the appropriate (combination of) methods.
 
@@ -108,21 +110,13 @@ It's comparable with [Atlassian's Gitflow](https://www.atlassian.com/git/tutoria
 
 #### Master
 
-The main/production branch that is being deployed and visible on https://ictmethods.nl/.
+The main/production branch that is being deployed and visible on https://ictresearchmethods.nl/.
+
+The development branch will be merged into this branch and every new change will be tested to make sure there are no bugs in production.
 
 #### Development (default)
 
-Default branch where all the pull requests are merged to.
-
-Development branch is visible on https://dev.ictmethods.nl/
-
-#### Release
-
-In the workflow between development and master. For every release a new branch is created (i.e. `release/0.1.0` or `release/1.0.5` ([semantic versioning](https://semver.org/))).
-
-The development branch will be merged into this branch and every new change will be tested to make sure there are no bugs in production. Once everything works, this branch will be merged into master and a new release (tag) will be created.
-
-Release branch is visible on the deploy preview in the pull request.
+Default branch where all the pull requests from feature branches are merged to.
 
 #### Feature branches
 
@@ -142,11 +136,12 @@ Please use the following notation for your branches:
 #### Summary
 
 1. **`master`**
-2. **`release`** branch is created from `master`
-3. **`development`** branch is created from `release`
-4. **`feature`** branch is created from `development`
-5. When a `feature` is complete it is merged into `development`
-6. When the release branch is done it is merged into `development` and `main`
+2. **`development`** branch is created from `master`
+3. **`feature`** branch is created from `development`
+4. When a `feature` is complete it is merged into `development`
+5. When `development` is tested it is merged into `master`
+
+This workflow was preferred by the creator and first maintainer. If someone has any suggestions, or it turns out this workflow isn't the best way of doing this. Please create a ticket and we can start a discussion.
 
 ## :memo: Copyright
 
