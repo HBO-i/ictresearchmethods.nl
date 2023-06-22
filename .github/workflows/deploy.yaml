@@ -2,7 +2,7 @@ name: Publish build to SFTP server
 'on':
   push:
     branches:
-      - release/2.0.0
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
