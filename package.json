@@ -1,14 +1,14 @@
 {
-	"name": "ictmethods",
-	"version": "1.0.1",
+	"name": "ictresearchmethods",
+	"version": "2.0.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jochemvogel/ictmethods.nl.git"
+		"url": "https://github.com/HBO-i/ictresearchmethods.nl.git"
 	},
 	"bugs": {
-		"url": "https://github.com/jochemvogel/ictmethods.nl/issues/new?assignees=&labels=&template=bug_report.yml"
+		"url": "https://github.com/HBO-i/ictresearchmethods.nl/issues/new?assignees=&labels=&template=bug_report.yml"
 	},
-	"license": "MIT",
+	"license": "CCO",
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
