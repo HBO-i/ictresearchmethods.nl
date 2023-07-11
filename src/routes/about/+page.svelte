@@ -12,6 +12,7 @@
 </svelte:head>
 
 <h1>About</h1>
+
 <p>
 	As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the
 	questions and tackling the problems or opportunities of your ICT project requires research and
@@ -26,6 +27,21 @@
 	technical information. With the set you can orientate yourself on research methods and plan your
 	project. The methods contained in the map set fit with the different research strategies of the
 	Methods Map Practical Research, an internationally recognized framework for design research.
+</p>
+
+<h2>Contributing</h2>
+
+<p>
+	If you want to adjust the content on the website, you are more than welcome to edit it by
+	yourself. The repository is open source, so you are able to make changes by yourself. There is a
+	team of maintainers that has to approve your changes.
+</p>
+
+<p>
+	More information about how to contribute can be found in the <a
+		href="https://github.com/HBO-i/ictresearchmethods.nl#v-contributing"
+		target="_blank">README of the project</a
+	>.
 </p>
 
 <h2>Licensing</h2>
