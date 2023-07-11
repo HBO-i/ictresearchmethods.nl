@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import Edit from '$lib/assets/icons/edit.svelte';
 
 	export let editRoute: string;
@@ -21,4 +21,4 @@
 		display: flex;
 		gap: 0.2em;
 	}
-</style>
+</style> -->
