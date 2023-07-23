@@ -52,4 +52,12 @@ Redirect 301 /Root_cause_analysis /workshop/root-cause-analysis/
 
 Redirect 301 /Joker /extra/joker/
 
+Redirect 301 /Research_Pattern_Navigator /research-pattern-navigator/
+Redirect 301 /Clarify_focus_and_scope /patterns/clarify-focus-and-scope/
+Redirect 301 /Solidify /patterns/solidify/
+Redirect 301 /Validate /patterns/validate/
+Redirect 301 /Choose_fitting_technology /patterns/choose-fitting-technology/
+Redirect 301 /Realise_as_required /patterns/realise-as-required/
+Redirect 301 /Realise_as_an_expert /patterns/realise-as-an-expert/
+
 ErrorDocument 404 /error.html

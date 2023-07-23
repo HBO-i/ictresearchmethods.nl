@@ -18,7 +18,7 @@
 	<SearchField />
 	<div class="icon-container">
 		<a
-			href="https://github.com/jochemvogel/ictmethods.nl"
+			href="https://github.com/HBO-i/ictresearchmethods.nl"
 			target="_blank"
 			title="github"
 			class="github"

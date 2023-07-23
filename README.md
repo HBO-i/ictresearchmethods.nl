@@ -108,19 +108,15 @@ Follow these steps for each of the four image types:
 
 It's comparable with [Atlassian's Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), but it's not exactly the same and `git flow init` is not being used.
 
-#### Master
+#### Master (default)
 
 The main/production branch that is being deployed and visible on https://ictresearchmethods.nl/.
 
-The development branch will be merged into this branch and every new change will be tested to make sure there are no bugs in production.
-
-#### Development (default)
-
-Default branch where all the pull requests from feature branches are merged to.
-
 #### Feature branches
 
-Eventually there are feature branches where all the tasks/features are created in. These branches are based on the default branch: development.
+Eventually there are feature branches where all the tasks/features are created in. These branches are based on the default branch: master.
+
+When you create a pull request, Netlify will trigger and will create [Deploy Preview](https://docs.netlify.com/site-deploys/deploy-previews/) that will help the reviewer to review the changes.
 
 There are four types op feature branches:
 
@@ -136,10 +132,8 @@ Please use the following notation for your branches:
 #### Summary
 
 1. **`master`**
-2. **`development`** branch is created from `master`
-3. **`feature`** branch is created from `development`
-4. When a `feature` is complete it is merged into `development`
-5. When `development` is tested it is merged into `master`
+2. **`feature`** branch is created from `master`
+3. When a `feature` is complete it is merged into `master`
 
 This workflow was preferred by the creator and first maintainer. If someone has any suggestions, or it turns out this workflow isn't the best way of doing this. Please create a ticket and we can start a discussion.
 
