@@ -4,30 +4,10 @@
 	"display": "standalone",
 	"scope": "/",
 	"start_url": "/",
-	"name": "ICT Methods",
+	"name": "ICT Research Methods",
 	"description": "The ICT Research Methods is set with research methods for design-oriented research within ICT, developed by HBO-i",
 	"short_name": "ICT Methods",
 	"icons": [
-		{
-			"src": "/img/icons/icon-72x72.png",
-			"sizes": "72x72",
-			"type": "image/png"
-		},
-		{
-			"src": "/img/icons/icon-128x128.png",
-			"sizes": "128x128",
-			"type": "image/png"
-		},
-		{
-			"src": "/img/icons/icon-144x144.png",
-			"sizes": "144x144",
-			"type": "image/png"
-		},
-		{
-			"src": "/img/icons/icon-152x152.png",
-			"sizes": "152x152",
-			"type": "image/png"
-		},
 		{
 			"src": "/img/icons/icon-192x192.png",
 			"sizes": "192x192",
