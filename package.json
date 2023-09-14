@@ -8,7 +8,6 @@
 	"bugs": {
 		"url": "https://github.com/HBO-i/ictresearchmethods.nl/issues/new?assignees=&labels=&template=bug_report.yml"
 	},
-	"license": "CCO",
 	"scripts": {
 		"dev": "vite dev",
 		"dev-expose": "vite dev --host",
@@ -53,5 +52,10 @@
 	"dependencies": {
 		"match-sorter": "^6.3.1",
 		"path": "^0.12.7"
+	},
+	"author": {
+		"name": "Jochem Vogel",
+		"email": "hello@jochemvogel.com",
+		"url": "https://jochemvogel.com"
 	}
 }
