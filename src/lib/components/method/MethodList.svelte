@@ -7,20 +7,13 @@
 
 	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
 	import MethodCard from './MethodCard.svelte';
-	import { onMount } from 'svelte';
 	export let methodsArray: Array<Method>;
-
-	let isMobile: boolean;
-
-	onMount(() => {
-		isMobile = window.matchMedia('only screen and (max-width: 760px)').matches;
-	});
 
 	function updatePaginationPage(page: number) {
 		currentPaginationPage.set(page);
 	}
 
-	$: pageSize = isMobile ? 10 : 5;
+	$: pageSize = 15;
 	$: currentPage = $currentPaginationPage;
 	$: items = methodsArray;
 	$: paginatedItems = paginate(items, pageSize, currentPage);

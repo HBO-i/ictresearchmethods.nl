@@ -116,7 +116,7 @@
 	<li><a href="/machine-learning/showroom-methods">Showroom methods for machine learning</a></li>
 </ul>
 
-<EditPage editRoute="machine-learning" />
+<!-- <EditPage editRoute="machine-learning" /> -->
 
 <style lang="scss">
 	h1 {
