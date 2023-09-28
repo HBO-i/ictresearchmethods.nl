@@ -23,7 +23,7 @@
 </svelte:head>
 
 <section>
-	<GoBack link={$isJavaScriptDisabled ? '/' : previousRoute ?? '/'} text="Details" />
+	<GoBack link={$isJavaScriptDisabled ? '/' : previousRoute ?? '/'} text="Methods" isClickable />
 
 	<picture>
 		<source

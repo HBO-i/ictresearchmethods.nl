@@ -1,11 +1,18 @@
 <script lang="ts">
 	export let link: string;
 	export let text: string;
+	export let isClickable = false;
 </script>
 
-<p class="detail__details">
-	<a href={link}>{'<'}</a>{text}
-</p>
+{#if !isClickable}
+	<p class="detail__details">
+		<a href={link}>{'<'}</a>{text}
+	</p>
+{:else}
+	<p class="detail__details clickable">
+		<a href={link}>{'< '}<span>{text}</span></a>
+	</p>
+{/if}
 
 <style lang="scss">
 	.detail {
@@ -27,6 +34,22 @@
 				&:hover {
 					transform: scale(1.15);
 				}
+			}
+		}
+	}
+
+	.clickable {
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			span {
+				font-size: 0.6em;
+			}
+			&:hover {
+				transform: scale(1);
+				color: var(--color-primary);
 			}
 		}
 	}

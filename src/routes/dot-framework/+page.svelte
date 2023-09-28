@@ -1,5 +1,13 @@
 <script lang="ts">
 	import EditPage from '$lib/components/EditPage.svelte';
+
+	import designPatternExampleImg from '$lib/assets/img/Three_Domains.jpg';
+	import triangulationImg from '$lib/assets/img/400px-DesignPatternExampleForMixedMethods.jpg';
+	import dotFrameworkImg from '$lib/assets/img/800px-DOT-Framework.jpg';
+
+	let triangulationImgSrc = triangulationImg;
+	let designPatternExampleImgSrc = designPatternExampleImg;
+	let dotFrameworkImgSrc = dotFrameworkImg;
 </script>
 
 <svelte:head>
@@ -26,6 +34,7 @@
 		<li>investigating the usefulness of a certain technology or framework</li>
 		<li>testing the quality of an ICT product</li>
 	</ul>
+	<img class="dot-image" src={dotFrameworkImgSrc} width="250" alt="" />
 </section>
 
 <section>
@@ -62,6 +71,7 @@
 		domain. Thirdly is the "innovation domain", where your actual innovation takes place and all of
 		the research is done.
 	</p>
+	<img class="dot-image" src={designPatternExampleImgSrc} width="250" alt="" />
 </section>
 
 <section>
@@ -154,11 +164,11 @@
 		Combining methods with opposing goals is sometimes called "method triangulation". Some of the
 		more common combinations of methods have been defined as design patterns.
 	</p>
+	<img class="dot-image" src={triangulationImgSrc} width="250" alt="" />
 </section>
 
-<EditPage editRoute="dot-framework" />
-
-<style>
+<!-- <EditPage editRoute="dot-framework" /> -->
+<style lang="scss">
 	h2 {
 		line-height: 0;
 		font-size: 1.2em;
@@ -185,5 +195,16 @@
 
 	.strategies-methods > p {
 		margin-bottom: 2rem;
+	}
+
+	img.dot-image {
+		border-radius: 6px;
+		width: 90%;
+		max-width: 250px;
+
+		@include desktop-small {
+			border-radius: 8px;
+			max-width: 300px;
+		}
 	}
 </style>
