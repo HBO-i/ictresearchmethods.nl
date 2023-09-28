@@ -7,7 +7,6 @@
 
 	import { currentPaginationPage, isJavaScriptDisabled } from '$lib/stores';
 	import MethodCard from './MethodCard.svelte';
-	import { onMount } from 'svelte';
 	export let methodsArray: Array<Method>;
 
 	function updatePaginationPage(page: number) {
