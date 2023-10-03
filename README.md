@@ -1,6 +1,7 @@
+
 # ictresearchmethods.nl
 
-**[Live link](https://v2.ictresearchmethods.nl/)**
+**[Live link](https://ictresearchmethods.nl/)**
 
 As an ICT student or professional, you need to solve all kind of ICT challenges. Answering the questions and tackling the problems or opportunities of your ICT project requires research and often a combination of various ICT research methods. The toolkit on this website offers you a set of possible research methods and a framework to select the appropriate (combination of) methods.
 
@@ -61,6 +62,8 @@ npm run prepare-husky
 ```
 
 ## :v: Contributing
+
+> 🚨 This part of the README will be supplemented later
 
 You're more than welcome to contribute! If you don't want to contribute, but you have still some suggestions: let us know by creating a ticket. Just follow the steps in the template and submit your ticket.
 
