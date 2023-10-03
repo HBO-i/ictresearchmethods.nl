@@ -1,4 +1,6 @@
 Redirect 301 /Methods /
+Redirect 301 /Main_Page /
+Redirect 301 /The_DOT_Framework /dot-framework/
 
 Redirect 301 /Best_good_and_bad_practices /library/best-good-and-bad-practices/
 Redirect 301 /Available_product_analysis /library/available-product-analysis/
