@@ -13,3 +13,9 @@
 		target="_blank">url</a
 	>.
 </p>
+
+<style lang="scss">
+	p {
+		max-width: 100%;
+	}
+</style>
