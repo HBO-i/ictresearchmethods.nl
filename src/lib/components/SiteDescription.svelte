@@ -16,6 +16,6 @@
 
 <style lang="scss">
 	p {
-		white-space: nowrap;
+		max-width: 100%;
 	}
 </style>
