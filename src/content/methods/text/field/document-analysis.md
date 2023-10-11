@@ -1,13 +1,13 @@
 ---
 name: "Document analysis"
-why: "Find out if what you are planning to do has already been done (in full or in part) by someone else."
-how: "Identify existing solutions that may solve the problem (or a part thereof) you are trying to fix with your solution. Decide if it is worth the effort to recreate their work, or whether it is better to simply buy it from them or embed their work in yours."
-practice: "Most companies build their work on what others have already done. This happens a lot in the open source community, but also in commercial products."
+why: "Documentation produced by the company can be a great first resource for understanding the organisation you are working for and their work processes."
+how: "Ask for the company’s most important internal documents. Typical sources are company or product websites, internal documentation, annual plans and product information. Study those documents to understand the company’s culture and way of working."
+practice: "Document analysis is typically performed in the early stages of a project."
 ingredients: [
-"A list of available products that have some overlap with the one you intend to build.",
-"Someone with experience in using or developing similar products (could be yourself).",
-"Eagerness to find partial solutions developed by others.",
-"An open view: a near-fit might be sufficient to consider."
+"Access to company materials.",
+"Time to read and comprehend the materials.",
+"A keen eye for the difference between the paper and the actual reality.",
+"A clear set of questions about the organisation."
 ]
 category: "field"
 phases: [
