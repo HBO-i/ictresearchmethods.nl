@@ -13,6 +13,19 @@
 
 	--color-tag-text: var(--color-primary);
 	--color-tag-bg: hsl(232, 76%, 92%);
+
+	/* Method categories */
+	--color-library: hsl(78, 55%, 52%);
+
+	--color-field: hsl(174,41%,55%);
+
+	--color-lab: hsl(261, 78%, 70%);
+
+	--color-showroom:  hsl(44, 93%, 66%);
+
+	--color-workshop: hsl(190, 82%, 45%);
+
+	--color-extra: hsl(198,100%,33%);
 }
 
 html.dark {
@@ -188,6 +201,15 @@ button:hover {
 .btn-secondary {
 	background-color: var(--color-white);
 	color: var(--color-primary);
+}
+
+$categories: library, field, lab, showroom, workshop, extra;
+
+@each $category in $categories {
+  .btn-#{$category} {
+    background-color: var(--color-#{$category});
+	color: #fff;
+  }
 }
 
 a.active > .sidebar-icon > svg > path {

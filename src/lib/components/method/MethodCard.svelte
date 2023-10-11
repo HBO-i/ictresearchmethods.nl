@@ -5,7 +5,7 @@
 	export let method: Method;
 </script>
 
-<article>
+<article class={method.category}>
 	<div class="card-heading">
 		<picture class="card-heading__img">
 			<source
@@ -45,7 +45,7 @@
 			{/if}
 		</div>
 	</div>
-	<button class="btn btn-primary more-info">More info</button>
+	<button class="btn btn-{method.category} more-info">More info</button>
 </article>
 
 <style lang="scss">
@@ -95,7 +95,7 @@
 	h2 {
 		color: var(--color-primary);
 		font-size: 1em;
-		font-weight: normal;
+		font-weight: bold;
 		line-height: 0;
 		text-transform: capitalize;
 
@@ -165,6 +165,14 @@
 
 		@include desktop-small {
 			display: flex;
+		}
+	}
+
+	$categories: library, field, lab, showroom, workshop, extra;
+
+	@each $category in $categories {
+		.#{$category} h2 {
+			color: var(--color-#{$category});
 		}
 	}
 </style>
