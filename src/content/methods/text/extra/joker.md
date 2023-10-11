@@ -1,13 +1,12 @@
 ---
 name: "Joker"
-why: "With many eyeballs on the code, all bugs are shallow. Colleagues can help you find bugs and improve the quality of your source code."
-how: "Code reviews can be done in many ways. The code can be presented on a big screen, so the entire team can do the review together. You can also ask one or two peers to simply sit behind your desk while you talk them through your code. Code analysis can also be a part of the workflow (e.g. every commit must be reviewed by someone else)."
+why: "This set of cards gives you an overview of methods you can use, but there are many others that might fit your goals better."
+how: "Read books, talk to people, use card sets like this one and see if you can find the best method for achieving your research goal."
 practice: "Code review sessions are often incorporated into software development projects. In Scrum, code reviews can be part of the ‘definition of done’. Pair programming can also be an effective way to let your work be continuously reviewed by a peer."
 ingredients: [
-"Peers with a critical view.",
-"A willingness to improve weak points in your code.",
-"Code standards, a code style guide, checklists, etc.",
-"Use a tool or template like Business Model Canvas."
+"A clear idea of what research goal you are pursuing, or which (type of) question you want to answer.",
+"Sources of research methods, like books or people.",
+"The willingness to aim for ‘yes, this is it’ instead of ‘yes, this will do’."
 ]
 category: "extra"
 phases: [
