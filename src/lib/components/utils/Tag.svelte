@@ -3,11 +3,13 @@
 
 	export let value: string;
 	export let tooltipText: string | null;
+	export let theme: string = 'primary'
+
+	$: tagColor = `var(--color-${theme})`;
 </script>
 
-<span class="tag"
-	>{value}
-	<div class="info"><InfoIcon /></div>
+<span class="tag" style="background: {tagColor}">{value}
+	<div class="info"><InfoIcon/></div>
 	{#if tooltipText}
 		<span class="tag-tooltip">{tooltipText}</span>
 	{/if}
@@ -15,15 +17,14 @@
 
 <style lang="scss">
 	.tag {
-		color: var(--color-primary);
-		border: 1px solid var(--color-primary);
+		color: white;
+		border: 1px solid;
 		width: max-content;
 		padding: 0.33em 1em;
 		font-size: 0.9em;
 		border-radius: 1em;
 		text-transform: uppercase;
-		margin: 0.25em 0.5em;
-		margin-left: 0;
+		margin: 0.25em 0.5em 0.25em 0;
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -85,5 +86,7 @@
 		@include desktop-small {
 			display: flex;
 		}
+
+		fill: white;
 	}
 </style>
