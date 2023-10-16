@@ -25,7 +25,7 @@
 			<h1>{patternTitle}</h1>
 			<div class="tag-container">
 				{#each patternCategories as category}
-					<div class="tag">{capitalizeFirstLetter(category)}</div>
+					<div class="tag {category}">{capitalizeFirstLetter(category)}</div>
 				{/each}
 			</div>
 		</div>
@@ -152,6 +152,15 @@
 
 		@include desktop {
 			font-size: 1em;
+		}
+	}
+
+	$categories: library, field, lab, showroom, workshop, extra;
+
+	@each $category in $categories {
+		.tag.#{$category}{
+			background: var(--color-#{$category});
+			color: white;
 		}
 	}
 </style>
