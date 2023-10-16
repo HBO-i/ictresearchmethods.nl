@@ -4,6 +4,7 @@
 	export let patternQuestions: string[];
 
 	import { capitalizeFirstLetter, slugify } from '$lib/utils/format';
+	import Tag from './utils/Tag.svelte';
 </script>
 
 <a href={`/patterns/${slugify(patternTitle)}`}>
@@ -25,7 +26,7 @@
 			<h1>{patternTitle}</h1>
 			<div class="tag-container">
 				{#each patternCategories as category}
-					<div class="tag {category}">{capitalizeFirstLetter(category)}</div>
+					<Tag theme={category} value={capitalizeFirstLetter(category)} />
 				{/each}
 			</div>
 		</div>
@@ -141,26 +142,5 @@
 		display: flex;
 		gap: 0.5rem;
 		margin-top: 0.5rem;
-	}
-
-	.tag {
-		background-color: var(--color-tag-bg);
-		color: var(--color-tag-text);
-		font-size: 0.9em;
-		padding: 0.5rem 0.75rem;
-		border-radius: 0.5rem;
-
-		@include desktop {
-			font-size: 1em;
-		}
-	}
-
-	$categories: library, field, lab, showroom, workshop, extra;
-
-	@each $category in $categories {
-		.tag.#{$category}{
-			background: var(--color-#{$category});
-			color: white;
-		}
 	}
 </style>

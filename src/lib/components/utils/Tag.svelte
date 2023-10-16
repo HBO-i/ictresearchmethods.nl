@@ -2,27 +2,29 @@
 	import InfoIcon from '$lib/assets/icons/utils/InfoIcon.svelte';
 
 	export let value: string;
-	export let tooltipText: string | null;
+	export let tooltipText: string | null = null;
 	export let theme: string = 'primary'
 
 	$: tagColor = `var(--color-${theme})`;
 </script>
 
 <span class="tag" style="background: {tagColor}">{value}
-	<div class="info"><InfoIcon/></div>
+	<div class="info">{#if tooltipText}<InfoIcon/>{/if}</div>
 	{#if tooltipText}
+	
 		<span class="tag-tooltip">{tooltipText}</span>
 	{/if}
 </span>
 
 <style lang="scss">
+
+	
 	.tag {
 		color: white;
-		border: 1px solid;
 		width: max-content;
-		padding: 0.33em 1em;
 		font-size: 0.9em;
-		border-radius: 1em;
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.5rem;
 		text-transform: uppercase;
 		margin: 0.25em 0.5em 0.25em 0;
 		position: relative;
