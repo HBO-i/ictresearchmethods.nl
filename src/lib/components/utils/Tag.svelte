@@ -11,14 +11,11 @@
 <span class="tag" style="background: {tagColor}">{value}
 	<div class="info">{#if tooltipText}<InfoIcon/>{/if}</div>
 	{#if tooltipText}
-	
 		<span class="tag-tooltip">{tooltipText}</span>
 	{/if}
 </span>
 
 <style lang="scss">
-
-	
 	.tag {
 		color: white;
 		width: max-content;
@@ -84,11 +81,10 @@
 
 	.info {
 		display: none;
+		fill: white;
 
 		@include desktop-small {
 			display: flex;
 		}
-
-		fill: white;
 	}
 </style>
