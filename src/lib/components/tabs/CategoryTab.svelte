@@ -72,12 +72,13 @@
 	ul.category-tab {
 		background-color: var(--color-white);
 		border-radius: 1.5em;
-		max-width: fit-content;
+		max-width: 100%;
 		overflow-x: auto;
 		display: flex;
 		gap: 2em;
 		padding: 0.5em 1.25em;
 		scroll-snap-type: x mandatory;
+		margin-right: 1rem;
 
 		@include tablet {
 			padding: 0.25rem;
