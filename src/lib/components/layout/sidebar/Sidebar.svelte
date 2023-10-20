@@ -28,7 +28,11 @@
 	<ul class="non-style">
 		{#each sidebarRoutes as route}
 			<li>
-				<a class:active={pathName === route.path} href={route.path}>
+				<a
+					class:active={pathName === route.path}
+					href={route.path}
+					target={route.icon === 'external' ? '_blank' : ''}
+				>
 					<SidebarIcon icon={route.icon} />
 					{route.title}
 				</a>
