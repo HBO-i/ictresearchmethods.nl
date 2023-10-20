@@ -7,13 +7,6 @@
 	>.
 </p>
 
-<p>
-	You can still access the old website, by visiting this <a
-		href="https://oud.ictresearchmethods.nl/"
-		target="_blank">url</a
-	>.
-</p>
-
 <style lang="scss">
 	p {
 		max-width: 100%;
