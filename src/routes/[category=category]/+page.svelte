@@ -4,12 +4,19 @@
 	import CategoryTab from '$lib/components/tabs/CategoryTab.svelte';
 	import SiteDescription from '$lib/components/SiteDescription.svelte';
 
+	import Alert from '$lib/components/utils/Alert.svelte';
+
 	export let data: PageData;
 </script>
 
 <svelte:head>
 	<title>Category {data.result[0].category} — ICT Research Methods</title>
 </svelte:head>
+
+<Alert type="primary" title="Switch to old website">
+	You can still access the old design, by visiting
+	<a href="https://oud.ictresearchmethods.nl/Methods" target="_blank">this url</a>.
+</Alert>
 
 <h1 class="site-title">Methods</h1>
 <SiteDescription />

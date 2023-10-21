@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PatternCard from '$lib/components/PatternCard.svelte';
+	import Alert from '$lib/components/utils/Alert.svelte';
 
 	// @TODO: Find cleaner way of storing this (+page.ts?)
 	const patternsArray = [
@@ -46,6 +47,12 @@
 		}
 	];
 </script>
+
+<Alert type="primary" title="Switch to old website">
+	You can still access the old design, by visiting
+	<a href="https://oud.ictresearchmethods.nl/Research_Pattern_Navigator" target="_blank">this url</a
+	>.
+</Alert>
 
 <h1>Research pattern navigator</h1>
 <p>
