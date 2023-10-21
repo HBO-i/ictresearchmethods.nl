@@ -6,8 +6,10 @@
 
     export let type: 'error' | 'warn' | 'info' | 'success' | 'primary' = 'info';
     export let title: string = type[0].toUpperCase() + type.slice(1).toLocaleLowerCase();
+		// Optional: overwrite icon by passing Icon component, or disable icon all together by passing null
+		export let icon: Function | null = getIcon();
 
-		function getIcon() {
+		function getIcon(): Function {
 			switch (type) {
 				case "error":
 					return AlertIcon
@@ -26,7 +28,9 @@
 <div class="alert-wrapper">
     <div class="alert alert-{type}">
         <div class="alert-icon">
-					<svelte:component this="{getIcon()}"/>
+					{#if icon != null}
+						<svelte:component this="{icon}"/>
+					{/if}
         </div>
         <div class="alert-content">
             <div class="alert-title">{title}</div>
