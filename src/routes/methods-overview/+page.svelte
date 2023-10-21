@@ -1,127 +1,125 @@
 <script lang="ts">
 	import { allMethods } from '$lib/stores';
-
+	import type { Method } from '$lib/types';
 	import GoBack from '$lib/components/layout/GoBack.svelte';
-	import Alert from '$lib/components/utils/Alert.svelte';
 
-	// Can probably be shortened, but didn't feel like a prio right now
-	const libraryArr = $allMethods.filter((item) => {
-		return item.category === 'library';
-	});
+	const categoryOrder = ['library', 'field', 'lab', 'showroom', 'workshop', 'extra'];
 
-	const fieldArr = $allMethods.filter((item) => {
-		return item.category === 'field';
-	});
+	const methodsByCategory: { [key: string]: Method[] } = $allMethods.reduce((acc, item: Method) => {
+		if (!acc[item.category]) {
+			acc[item.category] = [];
+		}
+		acc[item.category].push(item);
+		return acc;
+	}, {});
 
-	const labArr = $allMethods.filter((item) => {
-		return item.category === 'lab';
-	});
-
-	const showroomArr = $allMethods.filter((item) => {
-		return item.category === 'showroom';
-	});
-
-	const workshopArr = $allMethods.filter((item) => {
-		return item.category === 'workshop';
-	});
-
-	const extraArr = $allMethods.filter((item) => {
-		return item.category === 'extra';
-	});
+	const categories = categoryOrder.filter((category) => methodsByCategory[category]);
 </script>
 
 <svelte:head>
 	<title>ICT Research Methods — Research Methods for Design-Oriented Research in ICT</title>
 </svelte:head>
 
-<Alert type="primary" title="Switch to old website">
-	You can still access the old design, by visiting
-	<a href="https://oud.ictresearchmethods.nl/Methods" target="_blank">this url</a>.
-</Alert>
-
-<GoBack link="/" text="Go back" />
+<GoBack link="/" text="Go back" isClickable />
 
 <div class="container">
-	{#if $allMethods}
-		<section>
-			<h1>Library</h1>
-			<ul>
-				{#each libraryArr as item}
-					<li>
-						<a href={'/' + item.category + '/' + item.slug}>{item.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-
-		<section>
-			<h1>Field</h1>
-			<ul>
-				{#each fieldArr as item}
-					<li>
-						<a href={'/' + item.category + '/' + item.slug}>{item.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-		<section>
-			<h1>Lab</h1>
-			<ul>
-				{#each labArr as item}
-					<li>
-						<a href={'/' + item.category + '/' + item.slug}>{item.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-		<section>
-			<h1>Showroom</h1>
-			<ul>
-				{#each showroomArr as item}
-					<li>
-						<a href={'/' + item.category + '/' + item.slug}>{item.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-
-		<section>
-			<h1>Workshop</h1>
-			<ul>
-				{#each workshopArr as item}
-					<li>
-						<a href={'/' + item.category + '/' + item.slug}>{item.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-
-		<section>
-			<h1>Extra</h1>
-			<ul>
-				{#each extraArr as item}
-					<li>
-						<a href={'/' + item.category + '/' + item.slug}>{item.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
+	<div class="inner-container">
+		{#each categories as category}
+			<div class="table">
+				<a href="/{category}" class="table-img">
+					<img
+						src={`/img/methods/${category}/100px-Logo-${category}.png`}
+						alt={category}
+						width="50"
+					/>
+				</a>
+				<ul
+					class="table-header"
+					style={`background: var(--color-${category})`}
+					aria-label={category}
+				>
+					{#each methodsByCategory[category] as item}
+						<li class="item" style={`background: var(--color-${category}-light)`}>
+							<a href={`/${item.category}/${item.slug}`} title={item.name}>{item.name}</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
+		{/each}
+	</div>
 </div>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.container {
-		width: 75vw;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-		font-size: 1.1em;
+		overflow-x: auto;
+	}
+
+	.inner-container {
+		display: flex;
+	}
+
+	.table {
+		font-size: 1em;
+		display: flex;
+		flex-direction: column;
+
+		@include desktop-small {
+			font-size: 1.1em;
+		}
+	}
+
+	.table-img {
+		width: 100%;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 24px;
+		box-sizing: border-box;
+		transition: all 0.1s ease-in;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	.table-header {
+		color: white;
+		padding: 5px;
+		padding: 0;
+	}
+
+	.item {
+		padding: 5px;
+		border: 1px solid white;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+
+	a:hover {
+		font-weight: normal;
+		text-decoration: underline;
 	}
 
 	ul {
-		padding-left: 0.75rem;
+		margin: 0;
+	}
 
-		li {
-			margin: 0.33rem 0;
-		}
+	ul:before {
+		content: attr(aria-label);
+		font-weight: bold;
+		padding: 5px;
+		text-transform: capitalize;
+	}
+
+	li {
+		list-style: none;
+		height: 40px;
+		width: 150px;
+		display: flex;
+		align-items: center;
 	}
 </style>

@@ -50,6 +50,7 @@
 
 <style lang="scss">
 	article {
+		min-width: min-content;
 		background-color: var(--color-white);
 		margin: 0.5em 0;
 		padding: 2rem;
