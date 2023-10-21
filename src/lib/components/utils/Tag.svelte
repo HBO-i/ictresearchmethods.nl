@@ -3,13 +3,16 @@
 
 	export let value: string;
 	export let tooltipText: string | null = null;
-	export let theme: string = 'primary'
+	export let theme: string = 'primary';
 
 	$: tagColor = `var(--color-${theme})`;
 </script>
 
-<span class="tag" style="background: {tagColor}">{value}
-	<div class="info">{#if tooltipText}<InfoIcon/>{/if}</div>
+<span class="tag" style="background: {tagColor}"
+	>{value}
+	<div class="info">
+		{#if tooltipText}<InfoIcon />{/if}
+	</div>
 	{#if tooltipText}
 		<span class="tag-tooltip">{tooltipText}</span>
 	{/if}

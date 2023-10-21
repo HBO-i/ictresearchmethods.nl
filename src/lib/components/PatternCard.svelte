@@ -7,7 +7,7 @@
 	import Tag from './utils/Tag.svelte';
 </script>
 
-<a href={`/patterns/${slugify(patternTitle)}`}>
+<a href={`/patterns/${slugify(patternTitle)}`} class="article-wrapper">
 	<article>
 		<picture class="img">
 			<source type="image/webp" srcset={`/img/patterns/${slugify(patternTitle)}.webp`} />
@@ -26,7 +26,9 @@
 			<h1>{patternTitle}</h1>
 			<div class="tag-container">
 				{#each patternCategories as category}
-					<Tag theme={category} value={capitalizeFirstLetter(category)} />
+					<a href={`/${category}/`}>
+						<Tag theme={category} value={capitalizeFirstLetter(category)} />
+					</a>
 				{/each}
 			</div>
 		</div>
@@ -44,6 +46,9 @@
 <style lang="scss">
 	a {
 		text-decoration: none;
+	}
+
+	.article-wrapper {
 		width: 100%;
 
 		&:hover {

@@ -54,5 +54,10 @@ export const sidebarRoutes = [
 		title: 'About',
 		path: '/about/',
 		icon: 'person'
+	},
+	{
+		title: 'Old Wiki',
+		path: 'https://oud.ictresearchmethods.nl/Main_Page',
+		icon: 'external'
 	}
 ];

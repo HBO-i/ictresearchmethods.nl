@@ -6,6 +6,7 @@
 	import Star from '$lib/assets/icons/sidebar/star.svelte';
 	import Navigator from '$lib/assets/icons/sidebar/navigator.svelte';
 	import Search from '$lib/assets/icons/sidebar/search.svelte';
+	import External from '$lib/assets/icons/sidebar/external.svelte';
 
 	export let icon: string;
 </script>
@@ -21,6 +22,8 @@
 		<Navigator />
 	{:else if icon === 'search'}
 		<Search />
+	{:else if icon === 'external'}
+		<External />
 	{/if}
 </div>
 
