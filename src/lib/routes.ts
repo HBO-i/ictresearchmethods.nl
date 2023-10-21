@@ -36,6 +36,11 @@ export const sidebarRoutes = [
 		icon: 'dashboard'
 	},
 	{
+		title: 'Per phase',
+		path: '/methods-per-project-phase/',
+		icon: 'list'
+	},
+	{
 		title: 'Patterns',
 		path: '/research-pattern-navigator/',
 		icon: 'search'
