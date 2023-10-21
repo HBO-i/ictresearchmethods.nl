@@ -2,6 +2,7 @@
 	import { allMethods } from '$lib/stores';
 
 	import GoBack from '$lib/components/layout/GoBack.svelte';
+	import Alert from '$lib/components/utils/Alert.svelte';
 
 	// Can probably be shortened, but didn't feel like a prio right now
 	const libraryArr = $allMethods.filter((item) => {
@@ -32,6 +33,11 @@
 <svelte:head>
 	<title>ICT Research Methods — Research Methods for Design-Oriented Research in ICT</title>
 </svelte:head>
+
+<Alert type="primary" title="Switch to old website">
+	You can still access the old design, by visiting
+	<a href="https://oud.ictresearchmethods.nl/Methods" target="_blank">this url</a>.
+</Alert>
 
 <GoBack link="/" text="Go back" />
 
