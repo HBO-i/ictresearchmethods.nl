@@ -1,14 +1,36 @@
 <script lang="ts">
 	import InfoIcon from "$lib/assets/icons/utils/InfoIcon.svelte";
+	import AlertIcon from "$lib/assets/icons/utils/AlertIcon.svelte";
+	import AlertTriangleIcon from "$lib/assets/icons/utils/AlertTriangleIcon.svelte";
+	import CheckCircleIcon from "$lib/assets/icons/utils/CheckCircleIcon.svelte";
 
     export let type: 'error' | 'warn' | 'info' | 'success' | 'primary' = 'info';
     export let title: string = type[0].toUpperCase() + type.slice(1).toLocaleLowerCase();
+		// Optional: overwrite icon by passing Icon component, or disable icon all together by passing null
+		export let icon: Function | null = getIcon();
+
+		function getIcon(): Function {
+			switch (type) {
+				case "error":
+					return AlertIcon
+				case "warn":
+					return AlertTriangleIcon
+				case "info":
+					return InfoIcon
+				case "success":
+					return CheckCircleIcon
+				default:
+					return InfoIcon
+			}
+		}
 </script>
 
 <div class="alert-wrapper">
     <div class="alert alert-{type}">
         <div class="alert-icon">
-            <InfoIcon />
+					{#if icon != null}
+						<svelte:component this="{icon}"/>
+					{/if}
         </div>
         <div class="alert-content">
             <div class="alert-title">{title}</div>
