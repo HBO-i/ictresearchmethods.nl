@@ -10,5 +10,10 @@
 <style lang="scss">
 	p {
 		max-width: 100%;
+		padding: 0 0.75em;
+
+		@include tablet {
+			padding: 0;
+		}
 	}
 </style>
