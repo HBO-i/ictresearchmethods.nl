@@ -1,4 +1,3 @@
-
 # ictresearchmethods.nl
 
 **[Live link](https://ictresearchmethods.nl/)**
@@ -104,6 +103,13 @@ Follow these steps for each of the four image types:
 4.  Toggle "Resize" but do not modify any other settings except for width and height. Set them to the suggested values mentioned above.
 5.  Click on "Save."
 6.  Upload or add the image to the appropriate category.
+
+### Icon usage
+
+1. Go to https://icons.download/ and copy the specific SVG
+2. Create a new Svelte file in `src/lib/icons/..`
+3. Import the specific icon (`import Icon from '$lib/assets/icons/.../Icon.svelte';`)
+4. Use it in your components `<Icon />`
 
 ### Git workflow
 
