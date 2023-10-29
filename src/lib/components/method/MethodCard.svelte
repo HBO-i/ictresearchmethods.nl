@@ -40,7 +40,9 @@
 		<div class="tag-container">
 			{#if method.phases}
 				{#each method.phases as phase}
-					<Tag theme={method.category} value={phase} tooltipText="Project phase of use" />
+					<a href="/methods-per-project-phase/">
+						<Tag theme={method.category} value={phase} tooltipText="Project phase of use" />
+					</a>
 				{/each}
 			{/if}
 		</div>
@@ -49,6 +51,16 @@
 </article>
 
 <style lang="scss">
+	a {
+		text-decoration: none;
+		transition: all 0.2s ease;
+
+		&:hover {
+			font-weight: normal;
+			transform: scale(1.025);
+		}
+	}
+
 	article {
 		min-width: min-content;
 		background-color: var(--color-white);

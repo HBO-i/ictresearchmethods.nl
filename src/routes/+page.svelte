@@ -1,9 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import MethodList from '$lib/components/method/MethodList.svelte';
 	import CategoryTab from '$lib/components/tabs/CategoryTab.svelte';
 	import SiteDescription from '$lib/components/SiteDescription.svelte';
-	import Alert from '$lib/components/utils/Alert.svelte';
+	import MethodTable from '$lib/components/method/MethodTable.svelte';
 
 	export let data: PageData;
 </script>
@@ -12,16 +11,9 @@
 	<title>ICT Research Methods — Research Methods for Design-Oriented Research in ICT</title>
 </svelte:head>
 
-<Alert type="primary" title="Switch to old website">
-	You can still access the old design, by visiting
-	<a href="https://oud.ictresearchmethods.nl/Methods" target="_blank">this url</a>.
-</Alert>
-
 <h1 class="site-title">Methods</h1>
-<SiteDescription />
-<a href="/methods-overview">Show quick overview</a>
 <CategoryTab />
-<MethodList methodsArray={data.methodsArray} />
+<MethodTable />
 
 <style lang="scss">
 	h1 {
