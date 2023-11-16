@@ -18,20 +18,20 @@
 	--color-library: hsl(78, 55%, 52%);
 	--color-library-light: hsl(78, 78%, 74%);
 
-	--color-field: hsl(174,41%,55%);
-	--color-field-light:hsl(174, 48%, 71%);
+	--color-field: hsl(174, 41%, 55%);
+	--color-field-light: hsl(174, 48%, 71%);
 
 	--color-lab: hsl(261, 78%, 70%);
-	--color-lab-light:hsl(245, 33%, 78%);
+	--color-lab-light: hsl(245, 33%, 78%);
 
-	--color-showroom:  hsl(44, 93%, 66%);
+	--color-showroom: hsl(44, 93%, 66%);
 	--color-showroom-light: hsl(44, 85%, 77%);
 
 	--color-workshop: hsl(190, 82%, 45%);
 	--color-workshop-light: hsl(190, 48%, 66%);
 
-	--color-extra: hsl(198,100%,33%);
-	--color-extra-light:hsl(198, 42%, 55%);
+	--color-extra: hsl(198, 100%, 33%);
+	--color-extra-light: hsl(198, 42%, 55%);
 }
 
 html.dark {
@@ -212,10 +212,10 @@ button:hover {
 $categories: library, field, lab, showroom, workshop, extra;
 
 @each $category in $categories {
-  .btn-#{$category} {
-    background-color: var(--color-#{$category});
-	color: #fff;
-  }
+	.btn-#{$category} {
+		background-color: var(--color-#{$category});
+		color: #fff;
+	}
 }
 
 a.active > .sidebar-icon > svg > path {

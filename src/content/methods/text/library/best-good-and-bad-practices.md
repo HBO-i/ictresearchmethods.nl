@@ -11,6 +11,6 @@ ingredients: [
 ]
 category: "library"
 phases: [
-"analysis"
+"analysis", 'problem definition'
 ]
 ---

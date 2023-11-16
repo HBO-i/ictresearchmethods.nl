@@ -10,6 +10,6 @@ ingredients: [
 ]
 category: "showroom"
 phases: [
-"problem definition", "ethical check"
+"problem definition", "evaluation"
 ]
 ---
