@@ -6,11 +6,16 @@
 	import ThemeSwitch from '../ThemeSwitch.svelte';
 
 	import HboiLogo from '$lib/assets/img/hboi-logo.svelte';
+	import HboiLogoDark from '$lib/assets/img/hboi-logo_dark.svelte';
 </script>
 
 <header>
 	<a href="/" title="home" class="logo">
-		<HboiLogo />
+		{#if $isDarkMode}
+			<HboiLogoDark />
+		{:else}
+			<HboiLogo />
+		{/if}
 	</a>
 	<div class="theme-switch-desktop">
 		<ThemeSwitch />
