@@ -22,12 +22,21 @@
 
 <p>
 	The ICT Research Methods Pack is a card set with research methods for design-oriented research
-	within ICT, developed by <a href="https://www.hbo-i.nl/" target="_blank">HBO-i </a>. The set is
+	within ICT, developed by <a href="https://www.hbo-i.nl/" target="_blank">HBO-i</a>. The set is
 	suitable for use within ICT courses such as the broad ICT bachelor, business informatics or
 	technical information. With the set you can orientate yourself on research methods and plan your
 	project. The methods contained in the map set fit with the different research strategies of the
 	Methods Map Practical Research, an internationally recognized framework for design research.
 </p>
+
+<h2>How to cite</h2>
+
+<p>If you want to refer to the physical card set, please use this citation:</p>
+
+<cite>
+	Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT
+	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426.
+</cite>
 
 <h2>Contributing</h2>
 
@@ -60,15 +69,6 @@
 	<li>Koen van Turnhout</li>
 </ul>
 <p>All Method cards were illustrated by Laura Henneke</p>
-
-<h2>How to cite</h2>
-
-<p>If you want to refer to the physical card set, please use this citation:</p>
-
-<p>
-	Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT
-	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426.
-</p>
 
 <EditPage editRoute="about" />
 
