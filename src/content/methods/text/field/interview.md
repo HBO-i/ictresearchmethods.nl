@@ -13,6 +13,6 @@ ingredients: [
 ]
 category: "field"
 phases: [
-"analysis"
+"analysis", "problem definition"
 ]
 ---

@@ -12,6 +12,6 @@ ingredients: [
 ]
 category: "library"
 phases: [
-"design"
+"design", "problem definition", "analysis", "realisation"
 ]
 ---

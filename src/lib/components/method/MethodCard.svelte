@@ -47,7 +47,7 @@
 			{/if}
 		</div>
 	</div>
-	<button class="btn btn-{method.category} more-info">More info</button>
+	<button class="btn btn-primary more-info">More info</button>
 </article>
 
 <style lang="scss">
@@ -111,10 +111,6 @@
 		font-weight: bold;
 		line-height: 0;
 		text-transform: capitalize;
-
-		@include desktop-small {
-			font-size: 0.9em;
-		}
 	}
 
 	button {
@@ -181,11 +177,11 @@
 		}
 	}
 
-	$categories: library, field, lab, showroom, workshop, extra;
+	// $categories: library, field, lab, showroom, workshop, extra;
 
-	@each $category in $categories {
-		.#{$category} h2 {
-			color: var(--color-#{$category});
-		}
-	}
+	// @each $category in $categories {
+	// 	.#{$category} h2 {
+	// 		color: var(--color-#{$category});
+	// 	}
+	// }
 </style>

@@ -10,6 +10,6 @@ ingredients: [
 ]
 category: "workshop"
 phases: [
-"realisation"
+"realisation", "problem-definition"
 ]
 ---

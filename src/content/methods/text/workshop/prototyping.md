@@ -10,6 +10,6 @@ ingredients: [
 category: "workshop"
 phases: [
 "design",
-"prototyping"
+"realisation"
 ]
 ---

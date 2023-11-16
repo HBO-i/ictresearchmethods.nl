@@ -8,11 +8,18 @@ As an ICT student or professional, you need to solve all kind of ICT challenges.
 
 <table>
 <tr>
+<td align="center"><a href="#writing_hand">✍️ How to cite<a></td>
 <td align="center"><a href="#gear-installation">⚙️ Installation<a></td>
 <td align="center"><a href="#v-contributing">✌️ Contributing
 <td align="center"><a href="#memo-copyright">📝 Copyright<a></td>
 </tr>
 </table>
+
+## :writing_hand: How to cite
+
+If you want to refer to the physical card set, please use this citation:
+
+> Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426.
 
 ## :gear: Installation
 
