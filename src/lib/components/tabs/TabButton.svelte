@@ -44,12 +44,12 @@
 		}
 	}
 
-	$categories: library, field, lab, showroom, workshop, extra;
+	// $categories: library, field, lab, showroom, workshop, extra;
 
-	@each $category in $categories {
-		a[title='category #{$category}'] button.selected {
-			color: var(--color-#{$category});
-			border-color: var(--color-#{$category});
-		}
-	}
+	// @each $category in $categories {
+	// 	a[title='category #{$category}'] button.selected {
+	// 		color: var(--color-#{$category});
+	// 		border-color: var(--color-#{$category});
+	// 	}
+	// }
 </style>
