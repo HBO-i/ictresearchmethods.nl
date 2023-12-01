@@ -12,6 +12,7 @@
 </svelte:head>
 
 <h1 class="site-title">Methods</h1>
+<SiteDescription />
 <CategoryTab />
 <MethodTable />
 
