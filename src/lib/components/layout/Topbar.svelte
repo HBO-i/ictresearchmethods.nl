@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isDarkMode } from '$lib/stores';
+	import { isDarkMode } from '$lib/stores/themeStore';
 	import SearchField from '$lib/components/SearchField.svelte';
 	import Github from '$lib/assets/icons/header/github.svelte';
 	import GithubDark from '$lib/assets/icons/header/github-dark.svelte';
