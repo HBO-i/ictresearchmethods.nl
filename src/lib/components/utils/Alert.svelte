@@ -101,7 +101,7 @@
 			/* Custom themes */
 			&-primary {
 				color: rgb(61, 78, 207);
-				background-color: rgba(69, 88, 232, 0.1);
+				background-color: rgba(69, 88, 232, 0.2);
 			}
 		}
 	}
