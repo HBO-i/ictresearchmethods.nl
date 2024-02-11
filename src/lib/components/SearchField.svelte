@@ -170,7 +170,8 @@
 			top: 50%;
 			transform: translate(-10%, -50%);
 			height: 50%;
-			background-color: #fff;
+			background-color: var(--color-white);
+			color: var(--color-black);
 			border: none;
 			outline: 2px solid rgba(0, 0, 0, 0.1);
 			border-radius: 0.5em;
@@ -184,7 +185,7 @@
 			}
 
 			&:hover {
-				background-color: #f3f3f3;
+				opacity: 0.75;
 			}
 
 			&:active {
