@@ -7,11 +7,12 @@
 		showSearchField,
 		allMethods,
 		isJavaScriptDisabled,
-		isDarkMode,
 		isMacDevice
 	} from '$lib/stores';
 
 	import { onMount } from 'svelte';
+	import { getTheme } from '$lib/utils/themeManager';
+	import { themeState } from '$lib/stores/themeStore';
 
 	onMount(() => {
 		setup();
@@ -23,8 +24,7 @@
 		const isClientMac = navigator.platform.indexOf('Mac') > -1;
 		isMacDevice.set(isClientMac);
 
-		const htmlTag = document.documentElement;
-		isDarkMode.set(htmlTag.classList.contains('dark'));
+		themeState.set(getTheme());
 
 		const methodsAreNotAlreadyInStore = $allMethods.length < 1;
 

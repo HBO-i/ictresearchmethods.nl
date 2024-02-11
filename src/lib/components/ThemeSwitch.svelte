@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { isDarkMode, isJavaScriptDisabled } from '$lib/stores';
+	import { isJavaScriptDisabled } from '$lib/stores';
 	import Moon from '$lib/assets/icons/theme/moon.svelte';
 	import Sun from '$lib/assets/icons/theme/sun.svelte';
+	import { isDarkMode, themeState } from '$lib/stores/themeStore';
 
 	const toggleDarkMode = () => {
-		document.documentElement.classList.toggle('dark');
-		isDarkMode.set(!$isDarkMode);
+		themeState.set($themeState === 'dark' ? 'light' : 'dark');
 	};
 </script>
 
