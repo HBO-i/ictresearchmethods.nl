@@ -22,12 +22,12 @@
 		{
 			title: 'Validate',
 			categories: ['workshop', 'lab'],
-			questions: ['How do I choose the right technologies for my project?']
+			questions: ['How do I monitor the quality of my solution?']
 		},
 		{
 			title: 'Choose fitting technology',
 			categories: ['library', 'field', 'workshop'],
-			questions: ['How do I monitor the quality of my solution?']
+			questions: ['How do I choose the right technologies for my project?']
 		},
 		{
 			title: 'Realise as required',
