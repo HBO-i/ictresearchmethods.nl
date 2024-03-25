@@ -148,6 +148,8 @@
 	img {
 		width: 85vw;
 		max-width: 40rem;
+		border-radius: 8px;
+		border: 5px solid white;
 	}
 
 	figure {
