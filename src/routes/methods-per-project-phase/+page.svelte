@@ -85,11 +85,17 @@
 		color: white;
 		padding: 5px;
 		padding: 0;
+    border: 1px solid var(--color-white);
 	}
 
 	.item {
-		padding: 5px;
-		border: 1px solid white;
+    border-top: 1px solid var(--color-white); 
+    border-bottom: 1px solid var(--color-white);
+    padding: 5px;
+
+    &:first-child {
+        border-top: 2px solid var(--color-white);
+    }
 	}
 
 	a {
