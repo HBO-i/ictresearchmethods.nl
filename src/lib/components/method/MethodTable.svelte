@@ -86,7 +86,11 @@
 
 	.item {
 		padding: 5px;
-		border: 1px solid white;
+		border: 1px solid var(--color-white);
+
+    &:first-child {
+        border-top: 2px solid var(--color-white);
+    }
 	}
 
 	a {
