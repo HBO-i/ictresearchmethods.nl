@@ -9,6 +9,7 @@
 	--color-white: hsl(0, 0%, 100%);
 	--color-black: hsl(204, 9%, 11%);
 	--color-grey: hsl(0, 0%, 80%);
+	--color-blue: hsl(233, 78%, 59%);
 
 	--color-tooltip-bg: hsl(0, 0%, 33%);
 
@@ -46,6 +47,7 @@ html.dark {
 	--color-white: hsl(204, 9%, 11%);
 	--color-black: hsl(0, 0%, 90%);
 	--color-tooltip-bg: hsl(0, 0%, 70%);
+	--color-grey: hsl(0, 0%, 50%);
 
 	--color-tag-text: var(--color-text-primary);
 	--color-tag-bg: var(--color-primary);

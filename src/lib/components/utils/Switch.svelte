@@ -52,7 +52,7 @@
 	}
 
 	.switch button[aria-checked='true'] {
-		background-color: var(--color-primary);
+		background-color: var(--color-blue);
 	}
 
 	.switch button[aria-checked='true']::before {
@@ -61,7 +61,7 @@
 	}
 
 	.switch button:focus {
-		box-shadow: 0 0px 0px 1px var(--color-primary);
+		box-shadow: 0 0px 0px 1px var(--color-blue);
 	}
 
 	.switch label {
@@ -77,7 +77,7 @@
 	}
 
 	.switch button:focus {
-		box-shadow: 0 0px 8px var(--color-primary);
+		box-shadow: 0 0px 8px var(--color-blue);
 		border-radius: 1.5em;
 	}
 </style>
