@@ -7,16 +7,27 @@
 	}
 
 	$: pathName = $page.url.pathname;
-	$: isCategorySelected = pathName.slice(1, -1) === category;
+	$: isCategorySelected =
+		category !== undefined ? new RegExp(`^/${category}/?$`).test($page.url.pathname) : false;
+	$: isPhaseSelected =
+		phase !== undefined ? new RegExp(`^/${phase}/?$`).test($page.url.pathname) : false;
 
-	export let category: string;
+	export let category: string | undefined;
+	export let phase: string | undefined;
 	export let content: string;
 </script>
 
-<a href={'/' + category} title={'category ' + category}>
-	<button tabindex="-1" class:selected={isCategorySelected} on:click={() => resetPagination()}
-		>{content}</button
+<a
+	href={'/' + (category || phase || '')}
+	title={(category !== undefined ? 'category ' : 'phase ') + (category || phase || 'All')}
+>
+	<button
+		tabindex="-1"
+		class:selected={isCategorySelected || isPhaseSelected}
+		on:click={resetPagination}
 	>
+		{content}
+	</button>
 </a>
 
 <style lang="scss">

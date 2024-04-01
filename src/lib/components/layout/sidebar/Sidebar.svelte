@@ -4,11 +4,11 @@
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 
 	import { isMenuOpen } from '$lib/stores';
-	import { sidebarRoutes, categoryRoutes } from '$lib/routes';
+	import { sidebarRoutes, categoryRoutes, phaseRoutes } from '$lib/routes';
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 
-	import type { CategoryRoute } from '$lib/types';
+	import type { CategoryRoute, PhaseRoute } from '$lib/types';
 
 	afterNavigate(() => {
 		isMenuOpen.set(false);
@@ -16,12 +16,23 @@
 
 	$: pathName = $page.url.pathname;
 
-	$: categoryName = $page.url.pathname.slice(1, -1); // pathName without the '/'
-	$: checkName = (route: CategoryRoute) => route.category == categoryName; // Check if the current route matches a route in the array
+	$: categoryName = pathName.endsWith('/') ? pathName.slice(1, -1) : pathName.slice(1);
+	$: phaseName = pathName.startsWith('/phases/') ? pathName.split('/')[2] : '';
 
-	$: if (categoryRoutes.some(checkName)) {
-		pathName = '/';
-	}
+	$: checkCategory = (route: CategoryRoute) => route.category === categoryName;
+	$: checkPhase = (route: PhaseRoute) => route.phase === phaseName;
+
+	$: isActive = (routePath: string) => {
+		if (
+			routePath === '/' &&
+			(categoryRoutes.some(checkCategory) || pathName.startsWith('/phases/'))
+		) {
+			return true;
+		} else if (pathName.startsWith('/phases/') && phaseRoutes.some(checkPhase)) {
+			return pathName === routePath;
+		}
+		return pathName === routePath;
+	};
 </script>
 
 <nav class:visible={$isMenuOpen}>
@@ -29,7 +40,7 @@
 		{#each sidebarRoutes as route}
 			<li>
 				<a
-					class:active={pathName === route.path}
+					class:active={isActive(route.path)}
 					href={route.path}
 					target={route.icon === 'external' ? '_blank' : ''}
 				>

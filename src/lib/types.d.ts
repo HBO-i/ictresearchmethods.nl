@@ -14,6 +14,11 @@ export interface CategoryRoute {
 	category: string;
 }
 
+export interface PhaseRoute {
+	title: string;
+	phase: string;
+}
+
 export interface SidebarRoute {
 	title: string;
 	path: string;

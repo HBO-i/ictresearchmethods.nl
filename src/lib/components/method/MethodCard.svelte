@@ -40,7 +40,7 @@
 		<div class="tag-container">
 			{#if method.phases}
 				{#each method.phases as phase}
-					<a href="/methods-per-project-phase/">
+					<a href="/phases/">
 						<Tag theme={method.category} value={phase} tooltipText="Project phase of use" />
 					</a>
 				{/each}
