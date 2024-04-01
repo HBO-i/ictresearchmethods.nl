@@ -47,6 +47,11 @@ export const phaseRoutes = [
 		phase: 'phases/design'
 	},
 	{
+		title: 'Realisation',
+		phase: 'phases/realisation'
+	},
+
+	{
 		title: 'Evaluation',
 		phase: 'phases/evaluation'
 	},

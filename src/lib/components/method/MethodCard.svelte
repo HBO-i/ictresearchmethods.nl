@@ -40,7 +40,7 @@
 		<div class="tag-container">
 			{#if method.phases}
 				{#each method.phases as phase}
-					<a href="/phases/">
+					<a href={'/phases/' + encodeURI(phase.replace(/\s+/g, '-'))}>
 						<Tag theme={method.category} value={phase} tooltipText="Project phase of use" />
 					</a>
 				{/each}

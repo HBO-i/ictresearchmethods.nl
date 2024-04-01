@@ -2,6 +2,7 @@ const phases = new Set([
 	'problem-definition',
 	'analysis',
 	'design',
+	'realisation',
 	'evaluation',
 	'machine-learning'
 ]);

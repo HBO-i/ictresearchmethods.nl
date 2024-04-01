@@ -10,6 +10,8 @@ ingredients: [
 ]
 category: "workshop"
 phases: [
-"needs update"
+"problem definition",
+"analysis",
+"evaluation"
 ]
 ---
