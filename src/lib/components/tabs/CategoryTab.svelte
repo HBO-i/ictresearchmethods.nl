@@ -7,12 +7,6 @@
 	let ul: HTMLElement;
 	let activeTab = $page.url.pathname.slice(1, -1);
 
-	/*
-		I've no idea how this is working, but somehow it works.
-		Will have a better look later on.
-
-		@TODO: Have a look at this function
-	*/
 	const updateSelectedTab = (category: string, event: Event) => {
 		if (event) {
 			const buttonElement = event.target as HTMLElement;
