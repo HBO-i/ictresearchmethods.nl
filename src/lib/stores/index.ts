@@ -8,3 +8,4 @@ export const showSearchField = writable(false);
 export const isJavaScriptDisabled = writable(true);
 export const isMenuOpen = writable(false);
 export const isMacDevice = writable(false);
+export const isGroupedByPhase = writable(false);

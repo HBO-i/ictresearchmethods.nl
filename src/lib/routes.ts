@@ -29,16 +29,43 @@ export const categoryRoutes = [
 	}
 ];
 
+export const phaseRoutes = [
+	{
+		title: 'All Methods',
+		phase: ''
+	},
+	{
+		title: 'Problem definition',
+		phase: 'phases/problem-definition'
+	},
+	{
+		title: 'Analysis',
+		phase: 'phases/analysis'
+	},
+	{
+		title: 'Design',
+		phase: 'phases/design'
+	},
+	{
+		title: 'Realisation',
+		phase: 'phases/realisation'
+	},
+
+	{
+		title: 'Evaluation',
+		phase: 'phases/evaluation'
+	},
+	{
+		title: 'Machine Learning',
+		phase: 'phases/machine-learning'
+	}
+];
+
 export const sidebarRoutes = [
 	{
 		title: 'Methods',
 		path: '/',
 		icon: 'dashboard'
-	},
-	{
-		title: 'Per phase',
-		path: '/methods-per-project-phase/',
-		icon: 'list'
 	},
 	{
 		title: 'Patterns',

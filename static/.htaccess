@@ -62,4 +62,6 @@ Redirect 301 /Choose_fitting_technology /patterns/choose-fitting-technology/
 Redirect 301 /Realise_as_required /patterns/realise-as-required/
 Redirect 301 /Realise_as_an_expert /patterns/realise-as-an-expert/
 
+Redirect 301 /phases/ /
+
 ErrorDocument 404 /error.html

@@ -2,12 +2,12 @@
 	import { page } from '$app/stores';
 	import TabButton from '$lib/components/tabs/TabButton.svelte';
 
-	import { categoryRoutes } from '$lib/routes';
+	import { phaseRoutes } from '$lib/routes';
 
 	let ul: HTMLElement;
 	let activeTab = $page.url.pathname.slice(1, -1);
 
-	const updateSelectedTab = (category: string, event: Event) => {
+	const updateSelectedTab = (phase: string, event: Event) => {
 		if (event) {
 			const buttonElement = event.target as HTMLElement;
 
@@ -43,7 +43,7 @@
 						// ul.scrollLeft = position / 2 + 10; // Works one way => left to right
 						// ul.scrollLeft = position / 2 - 10; // Works one way => right to left
 
-						activeTab = category;
+						activeTab = phase;
 					}
 				}
 			}
@@ -51,19 +51,19 @@
 	};
 </script>
 
-<ul class="non-style category-tab" bind:this={ul}>
-	{#each categoryRoutes as route}
+<ul class="non-style phase-tab" bind:this={ul}>
+	{#each phaseRoutes as route}
 		<li
-			class:active={activeTab === route.category}
-			on:click={(event) => updateSelectedTab(route.category, event)}
+			class:active={activeTab === route.phase}
+			on:click={(event) => updateSelectedTab(route.phase, event)}
 		>
-			<TabButton category={route.category} content={route.title} />
+			<TabButton phase={route.phase} content={route.title} />
 		</li>
 	{/each}
 </ul>
 
 <style lang="scss">
-	ul.category-tab {
+	ul.phase-tab {
 		background-color: var(--color-white);
 		border-radius: 1.5em;
 		max-width: fit-content;
