@@ -1,5 +1,4 @@
 <script lang="ts">
-	import PatternCard from '$lib/components/PatternCard.svelte';
 	import QuestionCard from '$lib/components/QuestionCard.svelte';
 	import Alert from '$lib/components/utils/Alert.svelte';
 
@@ -11,51 +10,6 @@
 		REALISE_AS_REQUIRED: 'Realise as required',
 		REALISE_AS_AN_EXPERT: 'Realise as an expert'
 	};
-
-	// @TODO: Find cleaner way of storing this (+page.ts?)
-	const patternsArray = [
-		{
-			title: 'Clarify focus and scope',
-			categories: ['field', 'workshop'],
-			questions: [
-				'How do I get a grasp on what the stakeholders really want?',
-				'How can I help the stakeholders get clear what they really want?'
-			]
-		},
-		{
-			title: 'Solidify',
-			categories: ['field', 'library'],
-			questions: [
-				'How do I develop a deep enough understanding of the context using available work?'
-			]
-		},
-		{
-			title: 'Validate',
-			categories: ['workshop', 'lab'],
-			questions: ['How do I monitor the quality of my solution?']
-		},
-		{
-			title: 'Choose fitting technology',
-			categories: ['library', 'field', 'workshop'],
-			questions: ['How do I choose the right technologies for my project?']
-		},
-		{
-			title: 'Realise as required',
-			categories: ['field', 'workshop', 'lab'],
-			questions: [
-				'How can I ensure the product meets the needs of the stakeholders throughout the project?'
-			]
-		},
-		{
-			title: 'Realise as an expert',
-			categories: ['library', 'workshop'],
-			questions: [
-				'How do I develop a solution that is more generally applicable than just for my immediate stakeholders?',
-				'How do I develop a state-of-the-art solution that meets professional requirements?',
-				'How do I develop something using technologies or techniques that I don’t know yet?'
-			]
-		}
-	];
 
 	const questionsArray = [
 		{
