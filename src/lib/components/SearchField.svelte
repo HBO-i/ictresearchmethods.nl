@@ -94,7 +94,7 @@
 				type="text"
 				id="search"
 				name="query"
-				placeholder={`Search method ${$isMacDevice ? '(CMD + K)' : '(CTRL + M)'}`}
+				placeholder="Search method (/)"
 				on:keyup={(e) => {
 					updateSearchQuery(e);
 				}}
