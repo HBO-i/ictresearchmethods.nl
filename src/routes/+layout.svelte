@@ -3,12 +3,7 @@
 	import Topbar from '$lib/components/layout/Topbar.svelte';
 	import Sidebar from '$lib/components/layout/sidebar/Sidebar.svelte';
 
-	import {
-		showSearchField,
-		allMethods,
-		isJavaScriptDisabled,
-		isMacDevice
-	} from '$lib/stores';
+	import { showSearchField, allMethods, isJavaScriptDisabled, isMacDevice } from '$lib/stores';
 
 	import { onMount } from 'svelte';
 	import { getTheme } from '$lib/utils/themeManager';
@@ -57,14 +52,16 @@
 			const isKClicked = event.key === 'k';
 			const isMClicked = event.key === 'm';
 			const isEscClicked = event.key === 'Escape';
+			const isSlashClicked = event.key === '/';
 
 			const cmdKWindows = isCtrlClicked && isMClicked; // CTRL + K is existing shortcut in Chrome
 			const cmdKMac = isCommandClicked && isKClicked;
 
 			const searchField = document.getElementById('search');
 
-			if (cmdKWindows || cmdKMac) {
+			if (cmdKWindows || cmdKMac || isSlashClicked) {
 				searchField?.focus();
+				event.preventDefault();
 			}
 
 			if (isEscClicked) {
