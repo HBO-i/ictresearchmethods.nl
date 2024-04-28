@@ -85,7 +85,7 @@
 				id="search"
 				name="query"
 				placeholder="Search method"
-				on:f={(e) => {
+				on:keyup={(e) => {
 					updateSearchQuery(e);
 				}}
 			/>
