@@ -31,11 +31,11 @@
 
 <h2>How to cite</h2>
 
-<p>If you want to refer to the physical card set, please use this citation:</p>
+<p>If you want to refer to the physical card set or the website, please use this citation:</p>
 
 <cite>
-	Bonestroo, W.J., Meesters, M., Niels, R., Schagen, J.D., Henneke, L., Turnhout, K. van (2018): ICT
-	Research Methods. HBO-i, Amsterdam. ISBN/EAN: 9990002067426.
+	HBO-i (2018). <i>ICT Research Methods — Methods Pack for Research in ICT</i>. ICT Research Methods.
+	https://ictresearchmethods.nl/
 </cite>
 
 <h2>Contributing</h2>
@@ -56,13 +56,15 @@
 <h2>Licensing</h2>
 
 <p>
-	All of its contents and the physical Methods pack have been realised as, and are maintained by
-	<a href="https://www.hbo-i.nl/" target="_blank">HBO-i </a> projects.
+	All of the contents of this website and the physical methods pack have been realised as, and are maintained by
+	<a href="https://www.hbo-i.nl/" target="_blank">HBO-i </a> projects. The authors involved are:
 </p>
-<p>The Method cards (except the domain specific cards) were written by:</p>
 
 <ul>
 	<li>Wilco Bonestroo</li>
+	<li>Petra Heck</li>
+	<li>Vincent Kreuzen</li>
+	<li>Tom Langhorst</li>
 	<li>Marcel Meesters</li>
 	<li>Ralph Niels</li>
 	<li>Jan Dirk Schagen</li>
