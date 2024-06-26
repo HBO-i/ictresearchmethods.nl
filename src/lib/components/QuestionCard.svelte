@@ -1,15 +1,31 @@
 <script lang="ts">
-	export let patternTitle: string;
-	export let patternCategories: string[];
-	export let patternQuestions: string[];
+	export let questionTitle: string;
+	export let questionPattern: string;
 
 	import { capitalizeFirstLetter, slugify } from '$lib/utils/format';
 	import Tag from './utils/Tag.svelte';
 </script>
 
-<a href={`/patterns/${slugify(patternTitle)}`} class="article-wrapper">
+<a href={`/patterns/${slugify(questionPattern)}`} class="article-wrapper">
 	<article>
-		<picture class="img">
+		<div class="img-title">
+			<picture class="img">
+				<source type="image/webp" srcset={`/img/patterns/${slugify(questionPattern)}.webp`} />
+				<source type="image/png" srcset={`/img/patterns/${slugify(questionPattern)}.png`} />
+				<img
+					src={`/img/patterns/${slugify(questionPattern)}.png`}
+					loading="lazy"
+					decoding="async"
+					class="img"
+					alt=""
+					height="400"
+					width="400"
+				/>
+			</picture>
+			<h1>{questionTitle}</h1>
+		</div>
+		<p>{questionPattern}</p>
+		<!-- <picture class="img">
 			<source type="image/webp" srcset={`/img/patterns/${slugify(patternTitle)}.webp`} />
 			<source type="image/png" srcset={`/img/patterns/${slugify(patternTitle)}.png`} />
 			<img
@@ -39,72 +55,61 @@
 					<li>{question}</li>
 				{/each}
 			</ul>
-		</div>
+		</div> -->
 	</article>
 </a>
 
 <style lang="scss">
 	a {
 		text-decoration: none;
-	}
-
-	.article-wrapper {
-		width: 100%;
 
 		&:hover {
 			cursor: pointer;
-			font-weight: inherit;
-			transform: scale(1.1);
 		}
 	}
+
 	article {
 		box-sizing: border-box;
 		background-color: var(--color-white);
 		border-radius: 0.5rem;
-		display: grid;
-		grid-template-areas:
-			'img			 heading	 heading	 heading'
-			'questions questions questions questions';
-		grid-template-columns: 7.5rem 1fr;
-		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		height: 100%;
-		padding: 1rem;
-
-		@include tablet {
-			grid-template-areas:
-				'img	heading	 heading	 heading 	 heading'
-				'img questions questions questions questions';
-			grid-template-columns: 10.5rem 1fr;
-			grid-gap: 1.5rem;
-			align-items: center;
-			width: 60rem;
-		}
-
-		@include desktop-small {
-			width: 55rem;
-		}
-
-		@include desktop {
-			width: 65rem;
-		}
-
-		@include desktop-large {
-			width: 75rem;
-		}
+		justify-content: space-between;
+		width: 100%;
+		padding: 1.5rem;
+		height: 100%;
 
 		&:hover {
 			transform: scale(1.01);
 			transition: transform 0.2s ease;
 		}
+
+		p {
+			font-size: 1.2em;
+			margin: 0;
+
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+
+			&::after {
+				content: ' ->';
+			}
+		}
 	}
 
 	.img {
-		height: 6rem;
-		width: 6rem;
+		height: 7.5rem;
+		border-radius: 10px;
+		width: 100%;
+		object-fit: contain;
+		background-color: var(--color-bg);
 
 		@include tablet {
 			height: 10rem;
-			width: 10rem;
 		}
 	}
 
@@ -117,36 +122,9 @@
 		}
 	}
 
-	h2 {
-		font-size: 1.1em;
-
-		@include tablet-landscape {
-			font-size: 1.2em;
-		}
-	}
-
-	li {
-		max-width: 30em;
-		font-size: 1em;
-		line-height: 1.4em;
-	}
-
-	.img {
-		grid-area: img;
-	}
-
-	.heading-container {
-		grid-area: heading;
-	}
-
-	.questions-container {
-		grid-area: questions;
-	}
-
-	.tag-container {
+	.img-title {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin-top: 0.5rem;
+		flex-direction: column;
+		gap: 8px;
 	}
 </style>
