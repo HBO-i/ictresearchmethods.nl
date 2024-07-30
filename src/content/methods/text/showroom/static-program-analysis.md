@@ -6,8 +6,8 @@ practice: "Many companies find code analysis important enough to make it a part 
 ingredients: [
 "Tools to automatically analyse your code.",
 "Eagerness to deliver top-quality code.",
-"Attention to details that can make your code futureproof."
-"Time to configure the tool to conform to chosen code styleguides."
+"Attention to details that can make your code futureproof.",
+"Time to configure the tool to conform to chosen code styleguides.",
 "Understanding static analysis limits—it complements but doesn't replace manual code review."
 ]
 category: "showroom"
