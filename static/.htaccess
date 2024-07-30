@@ -1,3 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 Redirect 301 /Methods /
 Redirect 301 /Main_Page /
 Redirect 301 /The_DOT_Framework /dot-framework/
