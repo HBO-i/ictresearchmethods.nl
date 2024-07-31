@@ -13,4 +13,9 @@ category: "library"
 phases: [
 "problem definition"
 ]
+scales: [
+  { name: "inspiration_data", value: 50 },
+  { name: "expertise_fit", value: 75 },
+  { name: "overview_certainty", value: 30 }
+]
 ---

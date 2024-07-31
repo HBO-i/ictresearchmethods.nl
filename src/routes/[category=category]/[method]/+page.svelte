@@ -71,6 +71,12 @@
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>
+
+	{#if data.method.scales}
+		<div>
+			{data.method.scales[0].name}: {data.method.scales[0].value}
+		</div>
+	{/if}
 </section>
 
 <EditMethod category={data.method.category} methodSlug={data.method.slug} />
