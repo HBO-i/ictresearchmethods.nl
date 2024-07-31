@@ -40,7 +40,7 @@
 		}
 
 		const searchedArray = matchSorter($allMethods, searchQuery, {
-			keys: ['name']
+			keys: ['name', 'why', 'how', 'ingredients']
 		});
 
 		searchedArrayDisplay = searchedArray.splice(0, 3);
@@ -110,7 +110,7 @@
 						<a
 							href={'/' + method.category + '/' + method.slug}
 							on:click={clearSearch}
-							class="custom-style"
+							class="custom-style search-results"
 						>
 							<span>{method.name}</span> - {method.category}
 						</a>
@@ -238,5 +238,10 @@
 		li.no-results {
 			padding: 1.5em;
 		}
+	}
+
+	.search-results:hover {
+		background-color: var(--color-primary);
+		color: var(--color-bg);
 	}
 </style>
