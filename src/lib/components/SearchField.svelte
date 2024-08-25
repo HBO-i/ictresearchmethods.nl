@@ -3,7 +3,6 @@
 	import { allMethods, showSearchField, isJavaScriptDisabled, isMacDevice } from '$lib/stores';
 
 	import { goto } from '$app/navigation';
-	import { matchSorter } from 'match-sorter';
 	import { focusTrap } from 'svelte-focus-trap';
 
 	import { onMount } from 'svelte';
@@ -18,9 +17,9 @@
 	/**
 	 * Updates the search query based on the input field and adds the corresponding methods in the search array
 	 */
-	const updateSearchQuery = (e: KeyboardEvent) => {
+	const updateSearchQuery = async (e: KeyboardEvent) => {
 		const searchInput = e.target as HTMLInputElement;
-		const searchQuery = searchInput.value;
+		const searchQuery = searchInput.value.toLowerCase();
 
 		if (searchQuery.length > 1) {
 			showSearchField.set(true);
@@ -31,19 +30,26 @@
 		}
 
 		if (!$allMethods) {
-			// const res = await fetch('/api/methods');
-			// if (res.ok) {
-			// 	const result = await res.json();
-			// 	const methodsArray = result;
-			// 	allMethods.set(methodsArray);
-			// }
+			const res = await fetch('/api/methods');
+			if (res.ok) {
+				const result = await res.json();
+				const methodsArray = result;
+				allMethods.set(methodsArray);
+			}
 		}
 
-		const searchedArray = matchSorter($allMethods, searchQuery, {
-			keys: ['name']
-		});
-
-		searchedArrayDisplay = searchedArray.splice(0, 3);
+		searchedArrayDisplay = $allMethods
+			.filter((method: Method) => {
+				return (
+					method.name.toLowerCase().includes(searchQuery) ||
+					method.why.toLowerCase().includes(searchQuery) ||
+					method.how.toLowerCase().includes(searchQuery) ||
+					method.practice.toLowerCase().includes(searchQuery) ||
+					method.ingredients.some((ingredient) => ingredient.toLowerCase().includes(searchQuery)) ||
+					method.phases.some((phase) => phase.toLowerCase().includes(searchQuery))
+				);
+			})
+			.splice(0, 3); // Limit to 3 results for display
 	};
 
 	/**
@@ -110,7 +116,7 @@
 						<a
 							href={'/' + method.category + '/' + method.slug}
 							on:click={clearSearch}
-							class="custom-style"
+							class="custom-style search-results"
 						>
 							<span>{method.name}</span> - {method.category}
 						</a>
@@ -238,5 +244,10 @@
 		li.no-results {
 			padding: 1.5em;
 		}
+	}
+
+	.search-results:hover {
+		background-color: var(--color-primary);
+		color: var(--color-bg);
 	}
 </style>
