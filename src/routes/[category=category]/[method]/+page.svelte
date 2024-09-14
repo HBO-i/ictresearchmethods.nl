@@ -71,6 +71,24 @@
 			<li>{capitalizeFirstLetter(phase)}</li>
 		{/each}
 	</ul>
+
+	{#if data.method.scales}
+		<h3>Scales</h3>
+
+		<div class="scales">
+			{#each data.method.scales as scale}
+				<div class="scale">
+					<div class="scale-labels">
+						<span class="scale-name">{scale.name.split('_')[0]}</span>
+						<span class="scale-name">{scale.name.split('_')[1]}</span>
+					</div>
+					<div class="scale-bar">
+						<div class="scale-fill" style="width: {scale.value}%;" />
+					</div>
+				</div>
+			{/each}
+		</div>
+	{/if}
 </section>
 
 <EditMethod category={data.method.category} methodSlug={data.method.slug} />
@@ -132,5 +150,39 @@
 		@include desktop-small {
 			max-width: 50vw;
 		}
+	}
+
+	.scales {
+		margin-top: 1em;
+	}
+
+	.scale {
+		margin-bottom: 1.5em;
+	}
+
+	.scale-labels {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.25em;
+	}
+
+	.scale-name {
+		text-transform: capitalize;
+		font-size: 0.9em;
+		color: var(--color-text-secondary);
+	}
+
+	.scale-bar {
+		width: 100%;
+		height: 20px;
+		background-color: var(--color-bg);
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	.scale-fill {
+		height: 100%;
+		background-color: var(--color-primary);
+		transition: width 0.3s ease;
 	}
 </style>

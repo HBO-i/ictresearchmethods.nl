@@ -13,4 +13,9 @@ category: "workshop"
 phases: [
 "design"
 ]
+scales: [
+  { name: "inspiration_data", value: 30 },
+  { name: "expertise_fit", value: 50 },
+  { name: "overview_certainty", value: 50 }
+]
 ---

@@ -12,4 +12,9 @@ category: "showroom"
 phases: [
 "realisation"
 ]
+scales: [
+  { name: "inspiration_data", value: 90 },
+  { name: "expertise_fit", value: 10 },
+  { name: "overview_certainty", value: 90 }
+]
 ---

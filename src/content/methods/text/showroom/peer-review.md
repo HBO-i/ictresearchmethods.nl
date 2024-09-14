@@ -15,4 +15,9 @@ phases: [
 "design",
 "realisation"
 ]
+scales: [
+  { name: "inspiration_data", value: 50 },
+  { name: "expertise_fit", value: 30 },
+  { name: "overview_certainty", value: 70 }
+]
 ---
