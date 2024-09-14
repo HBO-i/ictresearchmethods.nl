@@ -14,4 +14,9 @@ category: "library"
 phases: [
 "analysis"
 ]
+scales: [
+  { name: "inspiration_data", value: 25 },
+  { name: "expertise_fit", value: 10 },
+  { name: "overview_certainty", value: 25 }
+]
 ---

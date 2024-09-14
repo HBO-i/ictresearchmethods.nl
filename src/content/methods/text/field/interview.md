@@ -15,4 +15,9 @@ category: "field"
 phases: [
 "analysis", "problem definition"
 ]
+scales: [
+  { name: "inspiration_data", value: 50 },
+  { name: "expertise_fit", value: 65 },
+  { name: "overview_certainty", value: 40 }
+]
 ---

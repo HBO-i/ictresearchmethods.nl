@@ -13,4 +13,9 @@ category: "lab"
 phases: [
 "analysis", "design"
 ]
+scales: [
+  { name: "inspiration_data", value: 90 },
+  { name: "expertise_fit", value: 90 },
+  { name: "overview_certainty", value: 50 }
+]
 ---
