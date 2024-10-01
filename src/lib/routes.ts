@@ -86,10 +86,5 @@ export const sidebarRoutes = [
 		title: 'About',
 		path: '/about/',
 		icon: 'person'
-	},
-	{
-		title: 'Old Website',
-		path: 'https://oud.ictresearchmethods.nl/Main_Page',
-		icon: 'external'
 	}
 ];
