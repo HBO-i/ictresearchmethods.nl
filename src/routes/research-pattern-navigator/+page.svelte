@@ -68,12 +68,6 @@
 	<title>Patterns — Research Methods for Design-Oriented Research in ICT</title>
 </svelte:head>
 
-<Alert type="primary" title="Switch to old website">
-	You can still access the old design, by visiting
-	<a href="https://oud.ictresearchmethods.nl/Research_Pattern_Navigator" target="_blank">this url</a
-	>.
-</Alert>
-
 <h1>Research pattern navigator</h1>
 <p>
 	Many research projects can be described in terms of one or more research patterns: each pattern is
