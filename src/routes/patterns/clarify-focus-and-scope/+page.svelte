@@ -116,4 +116,24 @@
 	<li>Library — <i>Break-out</i> Which framework helps me to build this app?</li>
 </ol>
 
+<h3>Mobile Nutrition App</h3>
+<p>
+	You are asked to create a mobile app that uses a trained algorithm to score the nutrition of food via the camera. 
+	To explore what people really need, you organize a hackathon (Workshop) where several teams create throw-away MVPs. 
+	At regular intervals, the teams step out of their building process to apply the Human Impact Score (Field) to reflect on how their concepts might influence users’ autonomy, health, and lifestyle identity. 
+	These reflections feed directly into their design choices.
+	To strengthen their concepts, the teams also conduct a Literature Study (Library) on how people make food choices and what motivates them to change eating behavior. 
+	These insights guide iterations on how the app provides feedback (e.g., scoring formats, coaching styles) and ensure that design decisions are grounded in existing knowledge.
+</p>
+
+<ol>
+	<li>Workshop — Hackathon: Create MVPs for food-recognition and nutrition scoring.</li>
+	<li>Field — Human Impact Score: What ethical and human impacts emerge from these MVPs?</li>
+	<li>Workshop — Iteration: Adjust MVPs based on ethical reflection.</li>
+	<li>Library — Break-out: What do existing studies on food behavior and lifestyle change tell us?</li>
+	<li>Workshop — Iteration: Refine MVPs with literature insights.</li>
+	<li>Field — Human Impact Score: Re-assess user well-being and lifestyle implications.</li>
+</ol>
+
+
 <EditPage editRoute="patterns/clarify-focus-and-scope" />
