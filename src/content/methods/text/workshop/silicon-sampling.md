@@ -13,8 +13,8 @@ phases: [
 "realisation", "analysis"
 ]
 scales: [
-  { name: "inspiration_data", value: 0 },
-  { name: "expertise_fit", value: 0 },
-  { name: "overview_certainty", value: 0 }
+  { name: "inspiration_data", value: 70 },
+  { name: "expertise_fit", value: 50 },
+  { name: "overview_certainty", value: 40 }
 ]
 ---

@@ -14,8 +14,8 @@ phases: [
 "analysis", "problem definition"
 ]
 scales: [
-  { name: "inspiration_data", value: 0 },
-  { name: "expertise_fit", value: 0 },
-  { name: "overview_certainty", value: 0 }
+  { name: "inspiration_data", value: 30 },
+  { name: "expertise_fit", value: 80 },
+  { name: "overview_certainty", value: 20 }
 ]
 ---
