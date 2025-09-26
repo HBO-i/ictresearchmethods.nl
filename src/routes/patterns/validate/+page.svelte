@@ -137,4 +137,21 @@
 	<li>Showroom — How does the method used compare to existing guidelines?</li>
 </ol>
 
+<h3>A serious game for a marketing campaign</h3>
+<p>
+	You designed a serious game to promote new chocolate paste flavors to children. 
+	Earlier, you did a focus group with kids, parents, and teachers (field) and studied literature on ethics in commercials (library). 
+	These results gave you guidelines for what is and isn’t acceptable when advertising to children.
+	With a first prototype ready, you do an ethical check (showroom) with company stakeholders to see if the game follows these guidelines. 
+	Then, you run a usability test (lab) with children to check if ethical problems appear in practice, like the game being too persuasive or unhealthy. 
+	Finally, an ethics expert does a heuristic evaluation (showroom) to make sure the game meets ethical standards. All these insights help you improve the game and keep it ethically sound.
+</p>
+
+<ol>
+	<li>Workshop — Build the first prototype of the game</li>
+	<li>Showroom — Ethical check with company stakeholders</li>
+	<li>Lab — Usability test with children</li>
+	<li>Showroom — Heuristic evaluation by an ethics expert</li>
+</ol>
+
 <EditPage editRoute="patterns/validate" />
