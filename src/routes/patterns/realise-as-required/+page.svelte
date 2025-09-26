@@ -104,4 +104,23 @@
 	<li>Lab — How do users experience the usability of the prototype (when talking out loud)?</li>
 </ol>
 
+<h3>Psy-bot</h3>
+<p>
+	You are asked to develop a chatbot using RAG (retrieval augmented generation) that can support psychological consults for youngsters (12–14 years) struggling with self-regulation. 
+	To understand their needs, you first conduct interviews (Field) and observations (Field) with youngsters to learn how they currently deal with self-regulation challenges. 
+	Based on this input, you create a first prototype of the chatbot (Workshop).
+	Once early iterations are available, you apply Silicon Sampling (Workshop) to explore utopian and dystopian scenarios of how the chatbot could affect youngsters’ autonomy, well-being, and relationships. 
+	The insights from these ethical explorations guide new design iterations. 
+	During these iterations, you conduct usability tests (Lab) to check to what extent the ethical scenarios are recognizable in practice and whether users experience them positively or negatively. 
+	Findings from the tests lead to further refinements of the prototype.
+</p>
+
+<ol>
+	<li>Field — What are the needs and experiences of the youngsters?</li>
+	<li>Workshop — Build a prototype of the chatbot.</li>
+	<li>Workshop — Use Silicon Sampling to explore utopian and dystopian scenarios.</li>
+	<li>Workshop — Adapt the prototype based on ethical reflections.</li>
+	<li>Lab — Usability tests: are ethical scenarios visible and acceptable in practice?</li>
+</ol>
+
 <EditPage editRoute="patterns/realise-as-required" />
