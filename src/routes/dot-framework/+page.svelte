@@ -115,7 +115,7 @@
 	</p>
 
 	<h2><a href="/library">Library</a></h2>
-	<q>Standing on the shoulds of giants.</q>
+	<q>Standing on the shoulders of giants.</q>
 	<p>
 		Library research is done to explore what is already done and what guidelines and theories exist
 		that could help you further your design. Since the advent of the internet library research is
