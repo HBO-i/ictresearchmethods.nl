@@ -1,6 +1,6 @@
 ---
 name: "Inferential statistics"
-why: "To test hypothesis basded on a quantitative dataset."
+why: "To test hypothesis based on a quantitative dataset."
 how: "First, perform descriptive statistics. Next, formulate a hypothesis that can be expressed in variables of your dataset. Test your hypothesis using an appropriate statistical test. Every test makes certain assumptions about the character of your data; make sure your data complies with these assumptions."
 practice: "With the advent of big data, inferential statistics are increasingly important. However, inferential statistics are delicate and companies often use specialists to analyse them. Novices commonly make errors like 'capitalizing on chance'. This happens when an analyst tests so many hypotheses that some turn out 'positive' by accident."
 ingredients: [
